@@ -42,3 +42,11 @@ It does not include true email-auth sign-in or a backend database.
 - scrolls to the top automatically when moving to the next rule
 - highlights missed questions and explains why Next does not proceed
 - uses clearer numbering: absolute question number plus rule item number
+
+
+## Version 6.5 patch
+
+- strengthens automatic top scroll on rule change
+- adds explicit current-rule completion messaging
+- makes unanswered-question highlighting and messaging more forceful
+- keeps absolute numbering across all 100 questions

@@ -35,3 +35,10 @@ It does not include true email-auth sign-in or a backend database.
 ## Version 6.3 patch
 
 - fixes a React hook-order bug in the results dashboard that caused a client-side crash after completing the assessment
+
+
+## Version 6.4 patch
+
+- scrolls to the top automatically when moving to the next rule
+- highlights missed questions and explains why Next does not proceed
+- uses clearer numbering: absolute question number plus rule item number

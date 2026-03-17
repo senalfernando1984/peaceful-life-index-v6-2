@@ -1,6 +1,6 @@
 {
-  "name": "peaceful-life-index-v6-build-fixed",
-  "version": "0.6.2",
+  "name": "peaceful-life-index-v6-results-fixed",
+  "version": "0.6.3",
   "private": true,
   "scripts": {
     "dev": "next dev",

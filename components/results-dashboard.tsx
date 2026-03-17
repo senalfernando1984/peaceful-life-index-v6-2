@@ -1,4 +1,3 @@
-
 'use client';
 
 import Link from 'next/link';
@@ -34,6 +33,38 @@ export function ResultsDashboard() {
     setAll(getAssessments());
   }, []);
 
+  const domainScores = latest?.domainScores ?? [];
+  const sorted = [...domainScores].sort((a, b) => b.adjusted - a.adjusted);
+  const strong = sorted.slice(0, 3);
+  const weak = [...domainScores].sort((a, b) => a.adjusted - b.adjusted).slice(0, 3);
+
+  const trend = [...all]
+    .reverse()
+    .map(item => ({ label: formatDate(item.createdAt), pli: item.pli }));
+
+  const growth = useMemo(
+    () =>
+      weak.map(score => {
+        const rule = RULES.find(item => item.id === score.ruleId);
+        if (!rule) return null;
+
+        const scoreBand = score.adjusted < 3.5 ? 'very-low' : score.adjusted < 5 ? 'low' : 'moderate';
+
+        return {
+          rule,
+          score,
+          interventions: INTERVENTIONS.filter(
+            item => item.ruleId === score.ruleId && item.scoreBand === scoreBand
+          ).slice(0, 1),
+        };
+      }).filter(Boolean),
+    [weak]
+  ) as Array<{
+    rule: (typeof RULES)[number];
+    score: NonNullable<AssessmentResult['domainScores']>[number];
+    interventions: typeof INTERVENTIONS;
+  }>;
+
   if (!latest || !Array.isArray(latest.domainScores)) {
     return (
       <div className="card p-10 text-center">
@@ -50,30 +81,6 @@ export function ResultsDashboard() {
       </div>
     );
   }
-
-  const sorted = [...latest.domainScores].sort((a, b) => b.adjusted - a.adjusted);
-  const strong = sorted.slice(0, 3);
-  const weak = [...latest.domainScores].sort((a, b) => a.adjusted - b.adjusted).slice(0, 3);
-
-  const trend = [...all]
-    .reverse()
-    .map(item => ({ label: formatDate(item.createdAt), pli: item.pli }));
-
-  const growth = useMemo(
-    () =>
-      weak.map(score => {
-        const rule = RULES.find(item => item.id === score.ruleId)!;
-        const scoreBand = score.adjusted < 3.5 ? 'very-low' : score.adjusted < 5 ? 'low' : 'moderate';
-        return {
-          rule,
-          score,
-          interventions: INTERVENTIONS.filter(
-            item => item.ruleId === score.ruleId && item.scoreBand === scoreBand
-          ).slice(0, 1),
-        };
-      }),
-    [latest]
-  );
 
   return (
     <div className="space-y-6">
@@ -118,7 +125,9 @@ export function ResultsDashboard() {
 
       <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-5">
         {latest.domainScores.map(score => {
-          const rule = RULES.find(item => item.id === score.ruleId)!;
+          const rule = RULES.find(item => item.id === score.ruleId);
+          if (!rule) return null;
+
           return (
             <Link key={score.ruleId} href={`/rules/${rule.slug}`} className="card block p-5 hover:-translate-y-0.5">
               <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Rule {rule.index}</p>
@@ -135,7 +144,9 @@ export function ResultsDashboard() {
           <h2 className="font-semibold">Strengths</h2>
           <ul className="mt-4 space-y-3 text-sm text-pli-slate">
             {strong.map(score => {
-              const rule = RULES.find(item => item.id === score.ruleId)!;
+              const rule = RULES.find(item => item.id === score.ruleId);
+              if (!rule) return null;
+
               return (
                 <li key={score.ruleId}>
                   <strong className="text-pli-ink">{rule.title}</strong> · {score.adjusted.toFixed(1)}/10 ·{' '}
@@ -155,7 +166,7 @@ export function ResultsDashboard() {
                   <strong className="text-pli-ink">{rule.title}</strong> · {score.adjusted.toFixed(1)}/10 ·{' '}
                   {scoreBandLabel(score.band)}
                 </p>
-                {interventions.map(item => (
+                {interventions.length ? interventions.map(item => (
                   <div key={item.id} className="mt-3 space-y-2">
                     <p>
                       <strong className="text-pli-ink">SBCC action:</strong> {item.title}
@@ -170,7 +181,9 @@ export function ResultsDashboard() {
                       <strong className="text-pli-ink">Weekly practice:</strong> {item.weeklyPractice}
                     </p>
                   </div>
-                ))}
+                )) : (
+                  <p className="mt-3">No intervention card mapped yet for this score band.</p>
+                )}
               </div>
             ))}
           </div>
@@ -192,7 +205,7 @@ export function ResultsDashboard() {
       <div className="card p-6 text-sm text-pli-slate">
         <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Evidence note</p>
         <p className="mt-3">
-          Version 6 is structured to be evidence-ready, but it is still <strong className="text-pli-ink">not yet a fully peer-reviewed validated instrument</strong>.
+          Version 6.3 is structured to be evidence-ready, but it is still <strong className="text-pli-ink">not yet a fully peer-reviewed validated instrument</strong>.
           A separate literature-mapped research version is needed to attach verified citations and validation notes to every item, subdomain, and intervention.
         </p>
       </div>

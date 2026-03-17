@@ -30,3 +30,8 @@ It does not include true email-auth sign-in or a backend database.
 ## Version 6.2 patch
 
 - fixes the Next.js 15 dynamic route `params` typing in `app/rules/[ruleId]/page.tsx`
+
+
+## Version 6.3 patch
+
+- fixes a React hook-order bug in the results dashboard that caused a client-side crash after completing the assessment

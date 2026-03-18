@@ -19,17 +19,17 @@ export default function AssessmentIntroPage() {
             </p>
           </div>
           <div className="rounded-2xl bg-pli-bg p-5">
-            <h2 className="font-semibold">Use the tool for honest reflection</h2>
+            <h2 className="font-semibold">Read the stories and choose your likely response</h2>
             <p className="mt-2 text-sm text-pli-slate">
-              Choose the response that most accurately reflects your usual pattern over the last month. This helps make the results meaningful for self-monitoring and progress tracking.
+              Each rule contains four short real-life stories. Read each one carefully and choose the answer that best reflects how you would most likely respond in that situation.
             </p>
           </div>
         </div>
 
         <ul className="mt-6 list-disc space-y-2 pl-5 text-sm text-pli-slate">
           <li>There are 10 Golden Rule domains.</li>
-          <li>Each domain contains 10 questions.</li>
-          <li>Complete the full assessment in one sitting if possible.</li>
+          <li>Each domain contains 4 story-based scenarios.</li>
+          <li>Complete all 40 scenarios for a full monthly PLI score.</li>
           <li>Use the same 30-day time window each month for better comparison.</li>
         </ul>
 

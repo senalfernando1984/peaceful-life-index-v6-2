@@ -72,3 +72,12 @@ It does not include true email-auth sign-in or a backend database.
 - replaces the evidence note card with an About the Book and Developer section
 - adds two buttons: About the book and About the developer
 - adds dedicated pages for both buttons
+
+
+## Version 6.9 patch
+
+- replaces the frequency-style questionnaire with a story-based situational assessment
+- uses 4 scenarios per domain and 40 scenarios in total
+- each scenario has 5 tailored I-form answer options scored from 0 to 4
+- updates scoring so each domain is scaled from raw 0–16 to 0–10 before PLI weighting and interaction adjustment
+- keeps the existing dashboard structure and PLI visualization model

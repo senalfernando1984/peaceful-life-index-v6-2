@@ -4,7 +4,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { QUESTIONNAIRE_ITEMS } from '@/data/questionnaire';
 import { RULES } from '@/data/rules';
-import { computeAssessment, isAssessmentComplete, RESPONSE_LABELS } from '@/lib/scoring';
+import { computeAssessment, isAssessmentComplete } from '@/lib/scoring';
 import { purgeLegacyPliStorage, saveAssessment } from '@/lib/storage';
 import { ClearDataButton } from '@/components/clear-data-button';
 
@@ -51,7 +51,7 @@ export function AssessmentRunner() {
 
   const totalAnswered = QUESTIONNAIRE_ITEMS.filter(item => answers[item.id] !== undefined).length;
   const totalQuestions = QUESTIONNAIRE_ITEMS.length;
-  const startNumber = step * 10 + 1;
+  const startNumber = step * 4 + 1;
   const unansweredInCurrentRule = items.filter(item => answers[item.id] === undefined).length;
 
   const focusMissing = (missing: string[]) => {
@@ -60,23 +60,19 @@ export function AssessmentRunner() {
     const target = questionRefs.current[firstMissing];
     if (target) {
       target.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      setTimeout(() => {
-        target.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }, 150);
+      setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'center' }), 150);
     }
   };
 
   const handleNext = () => {
     const missing = items.filter(item => answers[item.id] === undefined).map(item => item.id);
-
     if (missing.length > 0) {
       setValidationMessage(
-        `You still have ${missing.length} unanswered question${missing.length > 1 ? 's' : ''} in Rule ${currentRule.index}. Please answer the highlighted item${missing.length > 1 ? 's' : ''} before moving to the next rule.`
+        `You still have ${missing.length} unanswered scenario${missing.length > 1 ? 's' : ''} in Rule ${currentRule.index}. Please answer the highlighted scenario${missing.length > 1 ? 's' : ''} before moving to the next rule.`
       );
       focusMissing(missing);
       return;
     }
-
     setValidationMessage('');
     setMissingIds([]);
     setStep(prev => Math.min(prev + 1, RULES.length - 1));
@@ -84,22 +80,20 @@ export function AssessmentRunner() {
 
   const handleFinish = () => {
     const missing = items.filter(item => answers[item.id] === undefined).map(item => item.id);
-
     if (missing.length > 0) {
       setValidationMessage(
-        `You still have ${missing.length} unanswered question${missing.length > 1 ? 's' : ''} in Rule ${currentRule.index}. Please answer the highlighted item${missing.length > 1 ? 's' : ''} before finishing the assessment.`
+        `You still have ${missing.length} unanswered scenario${missing.length > 1 ? 's' : ''} in Rule ${currentRule.index}. Please answer the highlighted scenario${missing.length > 1 ? 's' : ''} before finishing the assessment.`
       );
       focusMissing(missing);
       return;
     }
-
     const result = computeAssessment(QUESTIONNAIRE_ITEMS, answers);
     saveAssessment(result);
     router.push('/results');
   };
 
   return (
-    <div ref={topRef} className="grid gap-6 lg:grid-cols-[0.85fr_1.15fr]">
+    <div ref={topRef} className="grid gap-6 lg:grid-cols-[0.82fr_1.18fr]">
       <div className="card p-6">
         <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Assessment progress</p>
         <div className="mt-4 h-2 rounded-full bg-pli-border">
@@ -109,14 +103,15 @@ export function AssessmentRunner() {
           />
         </div>
         <p className="mt-4 text-sm text-pli-slate">
-          Rule {currentRule.index} of {RULES.length}. {totalAnswered} of {totalQuestions} questions answered.
+          Rule {currentRule.index} of {RULES.length}. {totalAnswered} of {totalQuestions} scenarios answered.
         </p>
 
         <div className="mt-6 rounded-2xl border border-pli-border bg-pli-bg p-4 text-sm text-pli-slate">
-          <p className="font-medium text-pli-ink">Answer using the last 30 days</p>
+          <p className="font-medium text-pli-ink">How this scenario-based assessment works</p>
           <p className="mt-2">
-            For every question, think specifically about your <strong className="text-pli-ink">experiences, behaviours, emotions, and habits during the past 30 days</strong>.
-            This assessment is meant to be completed <strong className="text-pli-ink">once every month</strong> for self-monitoring and progress tracking.
+            Each rule contains <strong className="text-pli-ink">4 real-life story scenarios</strong>. Read each story carefully,
+            imagine yourself in that situation over the <strong className="text-pli-ink">last 30 days</strong>, and select the
+            answer that best matches how you would most likely respond.
           </p>
         </div>
 
@@ -125,40 +120,23 @@ export function AssessmentRunner() {
           {preview ? (
             <>
               <p className="mt-2 text-4xl font-semibold text-pli-teal">{preview.pli.toFixed(2)}/10</p>
-              <p className="mt-2 text-xs text-pli-slate">
-                Final preview appears only after all 100 questions are answered.
-              </p>
+              <p className="mt-2 text-xs text-pli-slate">Final preview appears only after all 40 scenarios are answered.</p>
             </>
           ) : (
-            <>
-              <p className="mt-2 text-2xl font-semibold text-pli-slate">
-                Complete all questions to see your final PLI
-              </p>
-            </>
+            <p className="mt-2 text-2xl font-semibold text-pli-slate">Complete all scenarios to see your final PLI</p>
           )}
         </div>
 
         <div className="mt-6 rounded-2xl border border-pli-border p-4 text-sm text-pli-slate">
           <p className="font-medium text-pli-ink">Current rule completion</p>
-          <p className="mt-2">
-            {10 - unansweredInCurrentRule} of 10 questions answered in Rule {currentRule.index}.
-          </p>
+          <p className="mt-2">{4 - unansweredInCurrentRule} of 4 scenarios answered in Rule {currentRule.index}.</p>
           {unansweredInCurrentRule > 0 ? (
             <p className="mt-2 text-red-700">
-              {unansweredInCurrentRule} question{unansweredInCurrentRule > 1 ? 's remain' : ' remains'} unanswered in this rule.
+              {unansweredInCurrentRule} scenario{unansweredInCurrentRule > 1 ? 's remain' : ' remains'} unanswered in this rule.
             </p>
           ) : (
-            <p className="mt-2 text-pli-teal">All 10 questions in this rule are answered.</p>
+            <p className="mt-2 text-pli-teal">All 4 scenarios in this rule are answered.</p>
           )}
-        </div>
-
-        <div className="mt-6 rounded-2xl border border-pli-border p-4 text-sm text-pli-slate">
-          <p className="font-medium text-pli-ink">How reverse-worded items work</p>
-          <p className="mt-2">
-            Some questions describe difficulties, such as losing your temper or neglecting your health.
-            For those items, the healthier answer is usually <strong className="text-pli-ink">Never</strong> or{' '}
-            <strong className="text-pli-ink">Rarely</strong>.
-          </p>
         </div>
 
         <div className="mt-4">
@@ -195,43 +173,37 @@ export function AssessmentRunner() {
                 ref={el => {
                   questionRefs.current[item.id] = el;
                 }}
-                className={`rounded-2xl border p-4 ${
-                  isMissing ? 'border-red-400 bg-red-50 shadow-sm' : 'border-pli-border'
-                }`}
+                className={`rounded-2xl border p-5 ${isMissing ? 'border-red-400 bg-red-50 shadow-sm' : 'border-pli-border'}`}
               >
                 <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">
-                  Question {absoluteNumber} of {totalQuestions} · Rule {currentRule.index}, item {idx + 1} of 10
+                  Scenario {absoluteNumber} of {totalQuestions} · Rule {currentRule.index}, scenario {idx + 1} of 4
                 </p>
-                <p className="mt-2 text-sm font-medium">{item.prompt}</p>
-                {item.reverseCoded ? (
-                  <p className="mt-2 text-xs text-pli-slate">
-                    Reverse-worded item: a lower frequency usually indicates healthier functioning.
-                  </p>
-                ) : null}
+                <p className="mt-2 text-sm font-semibold text-pli-ink">{item.subdomain}</p>
+                <p className="mt-3 whitespace-pre-line text-sm leading-7 text-pli-slate">{item.story}</p>
                 {isMissing ? (
-                  <p className="mt-2 text-xs font-medium text-red-700">
-                    Please answer this question before you continue.
-                  </p>
+                  <p className="mt-3 text-xs font-medium text-red-700">Please choose one response before you continue.</p>
                 ) : null}
-                <div className="mt-4 grid gap-2 sm:grid-cols-5">
-                  {RESPONSE_LABELS.map((label, responseIndex) => (
+
+                <div className="mt-4 space-y-3">
+                  {item.options.map((option, optionIndex) => (
                     <button
-                      key={label}
+                      key={option.key}
                       type="button"
                       onClick={() => {
-                        setAnswers(prev => ({ ...prev, [item.id]: responseIndex }));
+                        setAnswers(prev => ({ ...prev, [item.id]: optionIndex }));
                         setMissingIds(prev => prev.filter(id => id !== item.id));
                         setValidationMessage('');
                       }}
-                      className={`rounded-xl border px-3 py-2 text-sm ${
-                        answers[item.id] === responseIndex
+                      className={`w-full rounded-2xl border px-4 py-3 text-left text-sm ${
+                        answers[item.id] === optionIndex
                           ? 'border-pli-teal bg-pli-teal text-white'
                           : isMissing
                             ? 'border-red-300 bg-white'
-                            : 'border-pli-border bg-white'
+                            : 'border-pli-border bg-white text-pli-ink'
                       }`}
                     >
-                      {label}
+                      <span className="mr-2 font-semibold">{option.key}.</span>
+                      {option.text}
                     </button>
                   ))}
                 </div>

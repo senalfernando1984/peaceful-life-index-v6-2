@@ -1,903 +1,103 @@
 import { QuestionnaireItem } from '@/types/pli';
 export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] = [
-  {
-    "id": "q1",
-    "ruleId": "do-good",
-    "prompt": "When I see a person struggling with a simple task, I offer help if I reasonably can.",
-    "reverseCoded": false,
-    "subdomain": "Kindness",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q2",
-    "ruleId": "do-good",
-    "prompt": "In daily life, I actively look for small ways to make someone else's day easier.",
-    "reverseCoded": false,
-    "subdomain": "Kindness",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q3",
-    "ruleId": "do-good",
-    "prompt": "If a colleague or classmate seems stressed, I check in instead of ignoring it.",
-    "reverseCoded": false,
-    "subdomain": "Kindness",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q4",
-    "ruleId": "do-good",
-    "prompt": "I do helpful things even when no one is likely to notice.",
-    "reverseCoded": false,
-    "subdomain": "Kindness",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q5",
-    "ruleId": "do-good",
-    "prompt": "I make time for practical acts of kindness in my weekly routine.",
-    "reverseCoded": false,
-    "subdomain": "Kindness",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q6",
-    "ruleId": "do-good",
-    "prompt": "I listen carefully when someone needs support instead of rushing the conversation.",
-    "reverseCoded": false,
-    "subdomain": "Kindness",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q7",
-    "ruleId": "do-good",
-    "prompt": "I am willing to share useful information or resources that could help another person.",
-    "reverseCoded": false,
-    "subdomain": "Kindness",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q8",
-    "ruleId": "do-good",
-    "prompt": "I usually wait for others to help first before I get involved.",
-    "reverseCoded": true,
-    "subdomain": "Kindness",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q9",
-    "ruleId": "do-good",
-    "prompt": "I feel that helping others gives my life more meaning.",
-    "reverseCoded": false,
-    "subdomain": "Kindness",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q10",
-    "ruleId": "do-good",
-    "prompt": "I avoid helping if there is no benefit to me personally.",
-    "reverseCoded": true,
-    "subdomain": "Kindness",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q11",
-    "ruleId": "do-right-thing",
-    "prompt": "When a decision is inconvenient, I still try to choose the honest option.",
-    "reverseCoded": false,
-    "subdomain": "Integrity",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q12",
-    "ruleId": "do-right-thing",
-    "prompt": "If I make a promise, I make a real effort to keep it.",
-    "reverseCoded": false,
-    "subdomain": "Integrity",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q13",
-    "ruleId": "do-right-thing",
-    "prompt": "I act in ways that match the values I say I believe in.",
-    "reverseCoded": false,
-    "subdomain": "Integrity",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q14",
-    "ruleId": "do-right-thing",
-    "prompt": "When something is unfair, I try not to stay silent just to keep life easy.",
-    "reverseCoded": false,
-    "subdomain": "Integrity",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q15",
-    "ruleId": "do-right-thing",
-    "prompt": "I tell the truth even when it may make me look bad.",
-    "reverseCoded": false,
-    "subdomain": "Integrity",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q16",
-    "ruleId": "do-right-thing",
-    "prompt": "I avoid taking shortcuts that I know are unethical.",
-    "reverseCoded": false,
-    "subdomain": "Integrity",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q17",
-    "ruleId": "do-right-thing",
-    "prompt": "Before major choices, I ask myself whether my decision is right as well as useful.",
-    "reverseCoded": false,
-    "subdomain": "Integrity",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q18",
-    "ruleId": "do-right-thing",
-    "prompt": "I justify questionable actions by saying 'everyone does it'.",
-    "reverseCoded": false,
-    "subdomain": "Integrity",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q19",
-    "ruleId": "do-right-thing",
-    "prompt": "I behave differently in private from how I present myself to others.",
-    "reverseCoded": false,
-    "subdomain": "Integrity",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q20",
-    "ruleId": "do-right-thing",
-    "prompt": "I am willing to accept short-term discomfort in order to do the right thing.",
-    "reverseCoded": false,
-    "subdomain": "Integrity",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q21",
-    "ruleId": "do-no-harm",
-    "prompt": "Before reacting strongly, I think about whether my words could hurt someone.",
-    "reverseCoded": false,
-    "subdomain": "Non-Harm",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q22",
-    "ruleId": "do-no-harm",
-    "prompt": "When I feel upset, I try not to say things that I will later regret.",
-    "reverseCoded": false,
-    "subdomain": "Non-Harm",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q23",
-    "ruleId": "do-no-harm",
-    "prompt": "I try to avoid habits that clearly damage my own wellbeing.",
-    "reverseCoded": false,
-    "subdomain": "Non-Harm",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q24",
-    "ruleId": "do-no-harm",
-    "prompt": "If I accidentally hurt someone, I try to repair the harm.",
-    "reverseCoded": false,
-    "subdomain": "Non-Harm",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q25",
-    "ruleId": "do-no-harm",
-    "prompt": "I avoid humiliating, mocking, or belittling people in arguments.",
-    "reverseCoded": false,
-    "subdomain": "Non-Harm",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q26",
-    "ruleId": "do-no-harm",
-    "prompt": "I think about the consequences of my actions before making risky choices.",
-    "reverseCoded": false,
-    "subdomain": "Non-Harm",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q27",
-    "ruleId": "do-no-harm",
-    "prompt": "I try to solve conflict without creating more damage.",
-    "reverseCoded": false,
-    "subdomain": "Non-Harm",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q28",
-    "ruleId": "do-no-harm",
-    "prompt": "When I am angry, I sometimes want the other person to feel hurt too.",
-    "reverseCoded": false,
-    "subdomain": "Non-Harm",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q29",
-    "ruleId": "do-no-harm",
-    "prompt": "I ignore the impact of my behaviour on my own health if I want immediate relief.",
-    "reverseCoded": false,
-    "subdomain": "Non-Harm",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q30",
-    "ruleId": "do-no-harm",
-    "prompt": "I spread harsh comments or gossip when I am frustrated.",
-    "reverseCoded": false,
-    "subdomain": "Non-Harm",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q31",
-    "ruleId": "treat-equally",
-    "prompt": "I treat people with respect regardless of their job, status, or background.",
-    "reverseCoded": false,
-    "subdomain": "Equality",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q32",
-    "ruleId": "treat-equally",
-    "prompt": "I try to be fair even when I personally like one person more than another.",
-    "reverseCoded": false,
-    "subdomain": "Equality",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q33",
-    "ruleId": "treat-equally",
-    "prompt": "I notice when I make assumptions about people and try to correct them.",
-    "reverseCoded": false,
-    "subdomain": "Equality",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q34",
-    "ruleId": "treat-equally",
-    "prompt": "I speak to service staff, juniors, and strangers with the same basic courtesy I expect for myself.",
-    "reverseCoded": false,
-    "subdomain": "Equality",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q35",
-    "ruleId": "treat-equally",
-    "prompt": "I try to include people who are usually left out.",
-    "reverseCoded": false,
-    "subdomain": "Equality",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q36",
-    "ruleId": "treat-equally",
-    "prompt": "I listen respectfully to viewpoints that are different from mine.",
-    "reverseCoded": false,
-    "subdomain": "Equality",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q37",
-    "ruleId": "treat-equally",
-    "prompt": "I avoid treating some people as less worthy because of their identity or circumstances.",
-    "reverseCoded": false,
-    "subdomain": "Equality",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q38",
-    "ruleId": "treat-equally",
-    "prompt": "I naturally give more respect to people I see as more important.",
-    "reverseCoded": false,
-    "subdomain": "Equality",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q39",
-    "ruleId": "treat-equally",
-    "prompt": "I become impatient more quickly with people who are different from me.",
-    "reverseCoded": false,
-    "subdomain": "Equality",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q40",
-    "ruleId": "treat-equally",
-    "prompt": "I try to protect the dignity of others even during disagreement.",
-    "reverseCoded": false,
-    "subdomain": "Equality",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q41",
-    "ruleId": "love-yourself-and-all",
-    "prompt": "When I make a mistake, I speak to myself with kindness instead of cruelty.",
-    "reverseCoded": false,
-    "subdomain": "Compassion",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q42",
-    "ruleId": "love-yourself-and-all",
-    "prompt": "I show warmth and care in my close relationships.",
-    "reverseCoded": false,
-    "subdomain": "Compassion",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q43",
-    "ruleId": "love-yourself-and-all",
-    "prompt": "I try to forgive instead of holding onto resentment for a long time.",
-    "reverseCoded": false,
-    "subdomain": "Compassion",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q44",
-    "ruleId": "love-yourself-and-all",
-    "prompt": "I can care for my own needs without feeling guilty for doing so.",
-    "reverseCoded": false,
-    "subdomain": "Compassion",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q45",
-    "ruleId": "love-yourself-and-all",
-    "prompt": "I try to respond gently when someone else is having a difficult day.",
-    "reverseCoded": false,
-    "subdomain": "Compassion",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q46",
-    "ruleId": "love-yourself-and-all",
-    "prompt": "I make room for compassion in how I speak to myself.",
-    "reverseCoded": false,
-    "subdomain": "Compassion",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q47",
-    "ruleId": "love-yourself-and-all",
-    "prompt": "I feel connected to the wellbeing of people beyond my immediate circle.",
-    "reverseCoded": false,
-    "subdomain": "Compassion",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q48",
-    "ruleId": "love-yourself-and-all",
-    "prompt": "I am harsh and unforgiving toward myself when things go wrong.",
-    "reverseCoded": false,
-    "subdomain": "Compassion",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q49",
-    "ruleId": "love-yourself-and-all",
-    "prompt": "I only find it easy to care about people who are very close to me.",
-    "reverseCoded": false,
-    "subdomain": "Compassion",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q50",
-    "ruleId": "love-yourself-and-all",
-    "prompt": "I balance caring for others with caring for myself.",
-    "reverseCoded": false,
-    "subdomain": "Compassion",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q51",
-    "ruleId": "eat-healthy-live-healthy",
-    "prompt": "I make an effort to eat in a reasonably balanced way most days.",
-    "reverseCoded": false,
-    "subdomain": "Health",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q52",
-    "ruleId": "eat-healthy-live-healthy",
-    "prompt": "I include some movement or exercise in my usual week.",
-    "reverseCoded": false,
-    "subdomain": "Health",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q53",
-    "ruleId": "eat-healthy-live-healthy",
-    "prompt": "I try to sleep enough to function well the next day.",
-    "reverseCoded": false,
-    "subdomain": "Health",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q54",
-    "ruleId": "eat-healthy-live-healthy",
-    "prompt": "I drink enough water or take simple steps to stay physically well.",
-    "reverseCoded": false,
-    "subdomain": "Health",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q55",
-    "ruleId": "eat-healthy-live-healthy",
-    "prompt": "I notice how my physical habits affect my mood and peace of mind.",
-    "reverseCoded": false,
-    "subdomain": "Health",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q56",
-    "ruleId": "eat-healthy-live-healthy",
-    "prompt": "I avoid excess in food, substances, or routines that leave me feeling worse.",
-    "reverseCoded": false,
-    "subdomain": "Health",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q57",
-    "ruleId": "eat-healthy-live-healthy",
-    "prompt": "I take practical steps to protect my long-term health.",
-    "reverseCoded": false,
-    "subdomain": "Health",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q58",
-    "ruleId": "eat-healthy-live-healthy",
-    "prompt": "I regularly ignore my health until a problem becomes serious.",
-    "reverseCoded": false,
-    "subdomain": "Health",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q59",
-    "ruleId": "eat-healthy-live-healthy",
-    "prompt": "My daily routine often leaves me physically depleted.",
-    "reverseCoded": false,
-    "subdomain": "Health",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q60",
-    "ruleId": "eat-healthy-live-healthy",
-    "prompt": "I choose short-term comfort even when I know it harms my health.",
-    "reverseCoded": false,
-    "subdomain": "Health",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q61",
-    "ruleId": "financial-freedom",
-    "prompt": "I keep some awareness of where my money is going each month.",
-    "reverseCoded": false,
-    "subdomain": "Finance",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q62",
-    "ruleId": "financial-freedom",
-    "prompt": "I try to live within my means.",
-    "reverseCoded": false,
-    "subdomain": "Finance",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q63",
-    "ruleId": "financial-freedom",
-    "prompt": "I think ahead about future financial needs instead of only reacting to crises.",
-    "reverseCoded": false,
-    "subdomain": "Finance",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q64",
-    "ruleId": "financial-freedom",
-    "prompt": "I make spending decisions that fit my values and priorities.",
-    "reverseCoded": false,
-    "subdomain": "Finance",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q65",
-    "ruleId": "financial-freedom",
-    "prompt": "I avoid impulsive spending that creates later stress.",
-    "reverseCoded": false,
-    "subdomain": "Finance",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q66",
-    "ruleId": "financial-freedom",
-    "prompt": "I keep track of important bills, debts, or financial commitments.",
-    "reverseCoded": false,
-    "subdomain": "Finance",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q67",
-    "ruleId": "financial-freedom",
-    "prompt": "I feel calmer when my finances are organized.",
-    "reverseCoded": false,
-    "subdomain": "Finance",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q68",
-    "ruleId": "financial-freedom",
-    "prompt": "I avoid looking at my finances because it makes me uncomfortable.",
-    "reverseCoded": false,
-    "subdomain": "Finance",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q69",
-    "ruleId": "financial-freedom",
-    "prompt": "My spending habits often create stress that could have been prevented.",
-    "reverseCoded": false,
-    "subdomain": "Finance",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q70",
-    "ruleId": "financial-freedom",
-    "prompt": "I delay dealing with money issues until they become urgent.",
-    "reverseCoded": false,
-    "subdomain": "Finance",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q71",
-    "ruleId": "be-humble",
-    "prompt": "I can admit when I am wrong.",
-    "reverseCoded": false,
-    "subdomain": "Humility",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q72",
-    "ruleId": "be-humble",
-    "prompt": "I am willing to learn from people who know more than I do.",
-    "reverseCoded": false,
-    "subdomain": "Humility",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q73",
-    "ruleId": "be-humble",
-    "prompt": "I do not need constant praise to feel okay about what I do.",
-    "reverseCoded": false,
-    "subdomain": "Humility",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q74",
-    "ruleId": "be-humble",
-    "prompt": "I regularly feel grateful for what others contribute to my life.",
-    "reverseCoded": false,
-    "subdomain": "Humility",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q75",
-    "ruleId": "be-humble",
-    "prompt": "I try to give credit to others where it is due.",
-    "reverseCoded": false,
-    "subdomain": "Humility",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q76",
-    "ruleId": "be-humble",
-    "prompt": "I can receive feedback without becoming overly defensive.",
-    "reverseCoded": false,
-    "subdomain": "Humility",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q77",
-    "ruleId": "be-humble",
-    "prompt": "I reflect on whether ego is shaping my behaviour in important situations.",
-    "reverseCoded": false,
-    "subdomain": "Humility",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q78",
-    "ruleId": "be-humble",
-    "prompt": "I feel a strong need to prove my value to others all the time.",
-    "reverseCoded": false,
-    "subdomain": "Humility",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q79",
-    "ruleId": "be-humble",
-    "prompt": "I become defensive quickly when my faults are pointed out.",
-    "reverseCoded": false,
-    "subdomain": "Humility",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q80",
-    "ruleId": "be-humble",
-    "prompt": "I try to stay grounded when things go well for me.",
-    "reverseCoded": false,
-    "subdomain": "Humility",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q81",
-    "ruleId": "stay-calm",
-    "prompt": "I notice the early signs of anger or tension in my body.",
-    "reverseCoded": false,
-    "subdomain": "Calmness",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q82",
-    "ruleId": "stay-calm",
-    "prompt": "When I feel provoked, I try to pause before reacting.",
-    "reverseCoded": false,
-    "subdomain": "Calmness",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q83",
-    "ruleId": "stay-calm",
-    "prompt": "I use healthy ways to calm myself instead of escalating conflict.",
-    "reverseCoded": false,
-    "subdomain": "Calmness",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q84",
-    "ruleId": "stay-calm",
-    "prompt": "I recover from emotional upset without staying stuck for too long.",
-    "reverseCoded": false,
-    "subdomain": "Calmness",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q85",
-    "ruleId": "stay-calm",
-    "prompt": "I try not to let anger make important decisions for me.",
-    "reverseCoded": false,
-    "subdomain": "Calmness",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q86",
-    "ruleId": "stay-calm",
-    "prompt": "I value peace more than winning every argument.",
-    "reverseCoded": false,
-    "subdomain": "Calmness",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q87",
-    "ruleId": "stay-calm",
-    "prompt": "In stressful situations, I can usually lower my intensity before responding.",
-    "reverseCoded": false,
-    "subdomain": "Calmness",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q88",
-    "ruleId": "stay-calm",
-    "prompt": "I lose my temper easily.",
-    "reverseCoded": false,
-    "subdomain": "Calmness",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q89",
-    "ruleId": "stay-calm",
-    "prompt": "When I am angry, I often react in ways I later regret.",
-    "reverseCoded": false,
-    "subdomain": "Calmness",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q90",
-    "ruleId": "stay-calm",
-    "prompt": "I can return to a calmer baseline after conflict or pressure.",
-    "reverseCoded": false,
-    "subdomain": "Calmness",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q91",
-    "ruleId": "accept-change",
-    "prompt": "I accept that life naturally includes change, uncertainty, and disappointment.",
-    "reverseCoded": false,
-    "subdomain": "Adaptability",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q92",
-    "ruleId": "accept-change",
-    "prompt": "When plans change unexpectedly, I try to adapt rather than collapse.",
-    "reverseCoded": false,
-    "subdomain": "Adaptability",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q93",
-    "ruleId": "accept-change",
-    "prompt": "I can let go of situations I cannot control.",
-    "reverseCoded": false,
-    "subdomain": "Adaptability",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q94",
-    "ruleId": "accept-change",
-    "prompt": "I try to create a Plan B when something important is uncertain.",
-    "reverseCoded": false,
-    "subdomain": "Adaptability",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q95",
-    "ruleId": "accept-change",
-    "prompt": "After a setback, I focus on what I can do next.",
-    "reverseCoded": false,
-    "subdomain": "Adaptability",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q96",
-    "ruleId": "accept-change",
-    "prompt": "I remind myself that difficult periods are usually temporary.",
-    "reverseCoded": false,
-    "subdomain": "Adaptability",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q97",
-    "ruleId": "accept-change",
-    "prompt": "I can move forward after disappointment.",
-    "reverseCoded": false,
-    "subdomain": "Adaptability",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q98",
-    "ruleId": "accept-change",
-    "prompt": "I stay emotionally stuck for a long time when life does not go my way.",
-    "reverseCoded": false,
-    "subdomain": "Adaptability",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q99",
-    "ruleId": "accept-change",
-    "prompt": "Unexpected change disrupts me more than it should.",
-    "reverseCoded": false,
-    "subdomain": "Adaptability",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  },
-  {
-    "id": "q100",
-    "ruleId": "accept-change",
-    "prompt": "I try to remain steady during both success and difficulty.",
-    "reverseCoded": false,
-    "subdomain": "Adaptability",
-    "scenario": true,
-    "evidenceTag": "peer-review-mapping-pending"
-  }
+  {"id": "q1", "ruleId": "do-good", "prompt": "A co-worker is overloaded and you have a few spare minutes. How often do you offer practical help if you reasonably can?", "reverseCoded": false, "subdomain": "Helping action", "scenario": true, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q2", "ruleId": "do-good", "prompt": "You notice someone in public struggling with a simple everyday task. How often do you step in respectfully to help?", "reverseCoded": false, "subdomain": "Kindness", "scenario": true, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q3", "ruleId": "do-good", "prompt": "A friend seems unusually quiet or stressed. How often do you check in instead of assuming they are fine?", "reverseCoded": false, "subdomain": "Empathy", "scenario": true, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q4", "ruleId": "do-good", "prompt": "At home, there is an unpleasant chore that nobody wants to do. How often do you help without waiting to be asked?", "reverseCoded": false, "subdomain": "Social contribution", "scenario": true, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q5", "ruleId": "do-good", "prompt": "I actively look for small ways to make life easier for people around me.", "reverseCoded": false, "subdomain": "Kindness", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q6", "ruleId": "do-good", "prompt": "I do helpful things even when no one is likely to notice.", "reverseCoded": false, "subdomain": "Helping action", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q7", "ruleId": "do-good", "prompt": "I follow through when I say I will support someone.", "reverseCoded": false, "subdomain": "Social contribution", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q8", "ruleId": "do-good", "prompt": "I notice when people need encouragement, not only practical help.", "reverseCoded": false, "subdomain": "Empathy", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q9", "ruleId": "do-good", "prompt": "I ignore opportunities to be helpful because they feel inconvenient.", "reverseCoded": true, "subdomain": "Helping action", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q10", "ruleId": "do-good", "prompt": "I treat kindness as something optional rather than part of daily life.", "reverseCoded": true, "subdomain": "Kindness", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q11", "ruleId": "do-right-thing", "prompt": "You made a small mistake at work or at home and nobody noticed. How often do you admit it rather than hide it?", "reverseCoded": false, "subdomain": "Honesty", "scenario": true, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q12", "ruleId": "do-right-thing", "prompt": "A situation gives you an easy chance to gain something unfairly. How often do you choose the fair option instead?", "reverseCoded": false, "subdomain": "Fairness", "scenario": true, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q13", "ruleId": "do-right-thing", "prompt": "People around you are doing something you believe is wrong but common. How often do you stay aligned with your values instead of copying them?", "reverseCoded": false, "subdomain": "Moral courage", "scenario": true, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q14", "ruleId": "do-right-thing", "prompt": "You promised something that later becomes inconvenient. How often do you still try to do what you said you would do?", "reverseCoded": false, "subdomain": "Value-action alignment", "scenario": true, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q15", "ruleId": "do-right-thing", "prompt": "I try to make decisions that I would still respect later.", "reverseCoded": false, "subdomain": "Value-action alignment", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q16", "ruleId": "do-right-thing", "prompt": "I act honestly even when it is less comfortable.", "reverseCoded": false, "subdomain": "Honesty", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q17", "ruleId": "do-right-thing", "prompt": "I think about what is right, not only what is easy.", "reverseCoded": false, "subdomain": "Moral courage", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q18", "ruleId": "do-right-thing", "prompt": "I try to be fair even when it does not personally benefit me.", "reverseCoded": false, "subdomain": "Fairness", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q19", "ruleId": "do-right-thing", "prompt": "I justify questionable behaviour when it serves my interests.", "reverseCoded": true, "subdomain": "Honesty", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q20", "ruleId": "do-right-thing", "prompt": "My actions often drift away from the values I claim to hold.", "reverseCoded": true, "subdomain": "Value-action alignment", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q21", "ruleId": "do-no-harm", "prompt": "You are irritated and someone says something minor. How often do you stop yourself from speaking in a way that would hurt them?", "reverseCoded": false, "subdomain": "Safe speech", "scenario": true, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q22", "ruleId": "do-no-harm", "prompt": "You are under pressure and tempted to skip a health or safety precaution. How often do you still protect yourself and others?", "reverseCoded": false, "subdomain": "Self-protection", "scenario": true, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q23", "ruleId": "do-no-harm", "prompt": "After saying or doing something hurtful, how often do you try to repair the damage instead of pretending nothing happened?", "reverseCoded": false, "subdomain": "Repair after harm", "scenario": true, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q24", "ruleId": "do-no-harm", "prompt": "When you are upset, how often do you avoid taking out your frustration on people who were not the cause?", "reverseCoded": false, "subdomain": "Impulse control", "scenario": true, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q25", "ruleId": "do-no-harm", "prompt": "I think about whether my actions could cause avoidable harm.", "reverseCoded": false, "subdomain": "Self-protection", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q26", "ruleId": "do-no-harm", "prompt": "I try to control impulsive reactions before they cause damage.", "reverseCoded": false, "subdomain": "Impulse control", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q27", "ruleId": "do-no-harm", "prompt": "I take responsibility when my behaviour harms another person.", "reverseCoded": false, "subdomain": "Repair after harm", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q28", "ruleId": "do-no-harm", "prompt": "I choose restraint when strong emotion could make things worse.", "reverseCoded": false, "subdomain": "Safe speech", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q29", "ruleId": "do-no-harm", "prompt": "When angry, I sometimes say things without caring how much they hurt.", "reverseCoded": true, "subdomain": "Safe speech", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q30", "ruleId": "do-no-harm", "prompt": "I neglect consequences when I am frustrated or rushed.", "reverseCoded": true, "subdomain": "Impulse control", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q31", "ruleId": "treat-equally", "prompt": "Someone from a different background joins your group. How often do you treat them with the same courtesy and openness as everyone else?", "reverseCoded": false, "subdomain": "Respect", "scenario": true, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q32", "ruleId": "treat-equally", "prompt": "A quieter person is being overlooked in a discussion. How often do you make space for them to be included?", "reverseCoded": false, "subdomain": "Inclusion", "scenario": true, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q33", "ruleId": "treat-equally", "prompt": "You disagree with someone's beliefs or lifestyle. How often do you still treat them with basic dignity?", "reverseCoded": false, "subdomain": "Respect", "scenario": true, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q34", "ruleId": "treat-equally", "prompt": "You notice someone being treated unfairly because of status or background. How often do you respond in a fairer way yourself?", "reverseCoded": false, "subdomain": "Fairness", "scenario": true, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q35", "ruleId": "treat-equally", "prompt": "I try to treat all people as equally worthy of respect.", "reverseCoded": false, "subdomain": "Respect", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q36", "ruleId": "treat-equally", "prompt": "I check myself for unfair assumptions about people.", "reverseCoded": false, "subdomain": "Bias awareness", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q37", "ruleId": "treat-equally", "prompt": "I try to be inclusive, not just polite.", "reverseCoded": false, "subdomain": "Inclusion", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q38", "ruleId": "treat-equally", "prompt": "I believe fairness should guide daily interactions, not only big decisions.", "reverseCoded": false, "subdomain": "Fairness", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q39", "ruleId": "treat-equally", "prompt": "I become less respectful when someone is different from me.", "reverseCoded": true, "subdomain": "Bias awareness", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q40", "ruleId": "treat-equally", "prompt": "I sometimes give more dignity to people with status than to others.", "reverseCoded": true, "subdomain": "Respect", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q41", "ruleId": "love-yourself-and-all", "prompt": "After making a mistake, how often do you speak to yourself with kindness rather than harsh self-criticism?", "reverseCoded": false, "subdomain": "Self-compassion", "scenario": true, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q42", "ruleId": "love-yourself-and-all", "prompt": "Someone close to you is having a difficult day. How often do you respond with patience and warmth instead of irritation?", "reverseCoded": false, "subdomain": "Care for others", "scenario": true, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q43", "ruleId": "love-yourself-and-all", "prompt": "A person disappoints you in a small way. How often do you try to understand before reacting coldly?", "reverseCoded": false, "subdomain": "Forgiveness", "scenario": true, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q44", "ruleId": "love-yourself-and-all", "prompt": "You are tired and emotionally low. How often do you still make one small caring choice for yourself rather than neglecting yourself completely?", "reverseCoded": false, "subdomain": "Self-compassion", "scenario": true, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q45", "ruleId": "love-yourself-and-all", "prompt": "I try to treat myself with the same compassion I would offer to someone I care about.", "reverseCoded": false, "subdomain": "Self-compassion", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q46", "ruleId": "love-yourself-and-all", "prompt": "I try to show care through my words and actions.", "reverseCoded": false, "subdomain": "Care for others", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q47", "ruleId": "love-yourself-and-all", "prompt": "I work on releasing resentment instead of holding onto it.", "reverseCoded": false, "subdomain": "Forgiveness", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q48", "ruleId": "love-yourself-and-all", "prompt": "I value connection and emotional warmth in everyday life.", "reverseCoded": false, "subdomain": "Connection", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q49", "ruleId": "love-yourself-and-all", "prompt": "I am often much harsher with myself than I would be with anyone else.", "reverseCoded": true, "subdomain": "Self-compassion", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q50", "ruleId": "love-yourself-and-all", "prompt": "When hurt, I tend to shut down care and goodwill toward others.", "reverseCoded": true, "subdomain": "Connection", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q51", "ruleId": "eat-healthy-live-healthy", "prompt": "You have a busy day and convenience food is the easiest option. How often do you still try to make a reasonably healthy choice?", "reverseCoded": false, "subdomain": "Nutrition", "scenario": true, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q52", "ruleId": "eat-healthy-live-healthy", "prompt": "After a tiring day, how often do you still choose at least some movement instead of becoming completely inactive?", "reverseCoded": false, "subdomain": "Movement", "scenario": true, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q53", "ruleId": "eat-healthy-live-healthy", "prompt": "When your routine becomes stressful, how often do you protect your sleep rather than sacrificing it repeatedly?", "reverseCoded": false, "subdomain": "Rest", "scenario": true, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q54", "ruleId": "eat-healthy-live-healthy", "prompt": "You feel run down but still have more to do. How often do you notice the signal and take a healthier step rather than pushing through recklessly?", "reverseCoded": false, "subdomain": "Health protection", "scenario": true, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q55", "ruleId": "eat-healthy-live-healthy", "prompt": "I try to keep my health habits sustainable rather than extreme.", "reverseCoded": false, "subdomain": "Nutrition", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q56", "ruleId": "eat-healthy-live-healthy", "prompt": "I pay attention to what supports my energy and functioning.", "reverseCoded": false, "subdomain": "Health protection", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q57", "ruleId": "eat-healthy-live-healthy", "prompt": "I try to maintain regular rest and recovery.", "reverseCoded": false, "subdomain": "Rest", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q58", "ruleId": "eat-healthy-live-healthy", "prompt": "I make choices that support my long-term wellbeing, not only short-term comfort.", "reverseCoded": false, "subdomain": "Movement", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q59", "ruleId": "eat-healthy-live-healthy", "prompt": "I often neglect sleep, food, movement, or recovery until my body forces me to stop.", "reverseCoded": true, "subdomain": "Health protection", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q60", "ruleId": "eat-healthy-live-healthy", "prompt": "My health habits become poor when life gets busy or stressful.", "reverseCoded": true, "subdomain": "Rest", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q61", "ruleId": "financial-freedom", "prompt": "You want to buy something non-essential on impulse. How often do you pause and check whether it truly fits your priorities?", "reverseCoded": false, "subdomain": "Impulse control", "scenario": true, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q62", "ruleId": "financial-freedom", "prompt": "A monthly bill is due and money is tight. How often do you still face the situation directly instead of avoiding it?", "reverseCoded": false, "subdomain": "Planning", "scenario": true, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q63", "ruleId": "financial-freedom", "prompt": "You receive income or money to manage. How often do you plan at least part of it instead of letting it disappear without tracking?", "reverseCoded": false, "subdomain": "Budgeting", "scenario": true, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q64", "ruleId": "financial-freedom", "prompt": "Two choices compete for your money: one immediate pleasure and one longer-term need. How often do you consider the long-term option carefully?", "reverseCoded": false, "subdomain": "Values in money", "scenario": true, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q65", "ruleId": "financial-freedom", "prompt": "I try to keep some structure in how I spend, save, or plan money.", "reverseCoded": false, "subdomain": "Budgeting", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q66", "ruleId": "financial-freedom", "prompt": "I think about the future impact of financial choices.", "reverseCoded": false, "subdomain": "Planning", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q67", "ruleId": "financial-freedom", "prompt": "I try to align spending with what matters most to me.", "reverseCoded": false, "subdomain": "Values in money", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q68", "ruleId": "financial-freedom", "prompt": "I avoid unnecessary financial chaos by paying attention early.", "reverseCoded": false, "subdomain": "Planning", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q69", "ruleId": "financial-freedom", "prompt": "I often spend reactively without checking whether it supports my real priorities.", "reverseCoded": true, "subdomain": "Impulse control", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q70", "ruleId": "financial-freedom", "prompt": "I postpone dealing with money issues until they become more stressful.", "reverseCoded": true, "subdomain": "Budgeting", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q71", "ruleId": "be-humble", "prompt": "You receive praise for something that others also contributed to. How often do you share the credit fairly?", "reverseCoded": false, "subdomain": "Gratitude", "scenario": true, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q72", "ruleId": "be-humble", "prompt": "Someone gives you feedback you do not like. How often do you listen first instead of becoming immediately defensive?", "reverseCoded": false, "subdomain": "Teachability", "scenario": true, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q73", "ruleId": "be-humble", "prompt": "You realise you were wrong in a discussion. How often do you admit it openly?", "reverseCoded": false, "subdomain": "Accountability", "scenario": true, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q74", "ruleId": "be-humble", "prompt": "A less experienced person suggests a good idea. How often do you take it seriously instead of dismissing it?", "reverseCoded": false, "subdomain": "Low ego", "scenario": true, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q75", "ruleId": "be-humble", "prompt": "I try to stay grateful instead of acting entitled.", "reverseCoded": false, "subdomain": "Gratitude", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q76", "ruleId": "be-humble", "prompt": "I see learning from others as a strength, not a weakness.", "reverseCoded": false, "subdomain": "Teachability", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q77", "ruleId": "be-humble", "prompt": "I take responsibility rather than protecting my ego.", "reverseCoded": false, "subdomain": "Accountability", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q78", "ruleId": "be-humble", "prompt": "I try not to make everything about my own importance.", "reverseCoded": false, "subdomain": "Low ego", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q79", "ruleId": "be-humble", "prompt": "I become defensive quickly when my image or pride feels threatened.", "reverseCoded": true, "subdomain": "Low ego", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q80", "ruleId": "be-humble", "prompt": "I find it hard to admit mistakes even when I know I made them.", "reverseCoded": true, "subdomain": "Accountability", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q81", "ruleId": "stay-calm", "prompt": "After a stressful day, someone says something small that annoys you. How often do you respond more calmly than your first impulse?", "reverseCoded": false, "subdomain": "Response delay", "scenario": true, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q82", "ruleId": "stay-calm", "prompt": "When you feel anger rising in a conversation, how often do you notice it early enough to slow yourself down?", "reverseCoded": false, "subdomain": "Early awareness", "scenario": true, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q83", "ruleId": "stay-calm", "prompt": "A disagreement begins to escalate. How often do you try to de-escalate instead of trying to win the argument?", "reverseCoded": false, "subdomain": "Conflict calmness", "scenario": true, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q84", "ruleId": "stay-calm", "prompt": "When something goes wrong unexpectedly, how often do you return to emotional balance without staying upset for a long time?", "reverseCoded": false, "subdomain": "Recovery", "scenario": true, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q85", "ruleId": "stay-calm", "prompt": "I try to keep my voice and behaviour steady under pressure.", "reverseCoded": false, "subdomain": "Conflict calmness", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q86", "ruleId": "stay-calm", "prompt": "I recognize early signs that I am becoming angry or overwhelmed.", "reverseCoded": false, "subdomain": "Early awareness", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q87", "ruleId": "stay-calm", "prompt": "I use at least one strategy to calm myself before reacting.", "reverseCoded": false, "subdomain": "Response delay", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q88", "ruleId": "stay-calm", "prompt": "I try to recover emotionally after stress instead of carrying it for too long.", "reverseCoded": false, "subdomain": "Recovery", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q89", "ruleId": "stay-calm", "prompt": "I often react too sharply before I realize how upset I am.", "reverseCoded": true, "subdomain": "Early awareness", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q90", "ruleId": "stay-calm", "prompt": "Once I am angry, it is hard for me to come back down.", "reverseCoded": true, "subdomain": "Recovery", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q91", "ruleId": "accept-change", "prompt": "A plan you depended on suddenly changes. How often do you adapt without losing your emotional balance for too long?", "reverseCoded": false, "subdomain": "Flexibility", "scenario": true, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q92", "ruleId": "accept-change", "prompt": "You face an outcome you cannot control. How often do you focus on your next wise response rather than only resisting reality?", "reverseCoded": false, "subdomain": "Acceptance", "scenario": true, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q93", "ruleId": "accept-change", "prompt": "A setback interrupts your progress. How often do you recover and re-engage instead of giving up or staying stuck?", "reverseCoded": false, "subdomain": "Recovery", "scenario": true, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q94", "ruleId": "accept-change", "prompt": "Something important does not go the way you hoped. How often do you make a workable Plan B instead of remaining fixed on the lost plan?", "reverseCoded": false, "subdomain": "Flexibility", "scenario": true, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q95", "ruleId": "accept-change", "prompt": "I try to accept that change is part of life rather than treating it as a personal attack.", "reverseCoded": false, "subdomain": "Acceptance", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q96", "ruleId": "accept-change", "prompt": "I can usually adjust when life becomes uncertain or unpredictable.", "reverseCoded": false, "subdomain": "Flexibility", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q97", "ruleId": "accept-change", "prompt": "I try to recover steadily after disappointment or disruption.", "reverseCoded": false, "subdomain": "Recovery", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q98", "ruleId": "accept-change", "prompt": "I work on not becoming too attached to one exact outcome.", "reverseCoded": false, "subdomain": "Non-attachment", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q99", "ruleId": "accept-change", "prompt": "Unexpected change can throw me off balance for longer than it should.", "reverseCoded": true, "subdomain": "Recovery", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
+  {"id": "q100", "ruleId": "accept-change", "prompt": "I resist change so strongly that it creates extra stress for me.", "reverseCoded": true, "subdomain": "Acceptance", "scenario": false, "evidenceTag": "peer-review-mapping-pending"},
 ];

@@ -1,6 +1,6 @@
 {
-  "name": "peaceful-life-index-v6-monthly-sbcc-updated",
-  "version": "0.6.6",
+  "name": "peaceful-life-index-v6-practical-scenarios",
+  "version": "0.6.7",
   "private": true,
   "scripts": {
     "dev": "next dev",

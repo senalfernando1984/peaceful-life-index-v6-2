@@ -58,3 +58,10 @@ It does not include true email-auth sign-in or a backend database.
 - removes the Version 6 homepage sentence
 - adds clear monthly 30-day assessment instructions before the questionnaire starts
 - adds more tailored SBCC guidance by domain and score band
+
+
+## Version 6.7 patch
+
+- keeps the Version 6.6 homepage and monthly 30-day instruction changes
+- refines question wording so every rule contains clearer practical daily-life scenario items
+- ensures at least 4 scenario-style items per domain while keeping 10 items per domain

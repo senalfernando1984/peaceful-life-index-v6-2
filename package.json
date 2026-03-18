@@ -1,6 +1,6 @@
 {
-  "name": "peaceful-life-index-v6-scenario-assessment",
-  "version": "0.6.9",
+  "name": "peaceful-life-index-v6-story-flow-book-messages",
+  "version": "0.6.10",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -25,4 +25,4 @@
     "tailwindcss": "^3.4.17",
     "typescript": "^5.7.3"
   }
-}
+}\n

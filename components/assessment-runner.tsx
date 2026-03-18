@@ -176,7 +176,7 @@ export function AssessmentRunner() {
                 className={`rounded-2xl border p-5 ${isMissing ? 'border-red-400 bg-red-50 shadow-sm' : 'border-pli-border'}`}
               >
                 <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">
-                  Scenario {absoluteNumber} of {totalQuestions} · Rule {currentRule.index}, scenario {idx + 1} of 4
+                  Rule {currentRule.index} · Scenario {idx + 1} of 4
                 </p>
                 <p className="mt-2 text-sm font-semibold text-pli-ink">{item.subdomain}</p>
                 <p className="mt-3 whitespace-pre-line text-sm leading-7 text-pli-slate">{item.story}</p>

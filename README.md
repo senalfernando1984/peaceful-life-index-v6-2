@@ -96,3 +96,12 @@ It does not include true email-auth sign-in or a backend database.
 - keeps the same domain structure, scoring, dashboard, and result logic
 - swaps story text according to the selected character pathway while preserving score comparability
 - shows the selected story pathway on the assessment and results screens
+
+
+## Version 6.13 patch
+
+- adds a Practice Plan page
+- builds a monthly SBCC plan from the latest PLI result
+- shows weakest domain and subdomain focus
+- provides an intervention table for the next 30 days
+- suggests the next PLI assessment date automatically

@@ -16,6 +16,7 @@ export function SiteHeader() {
         <nav className="hidden gap-5 text-sm text-pli-slate md:flex">
           <Link href="/assessment">Assessment</Link>
           <Link href="/results">Dashboard</Link>
+          <Link href="/practice-plan">Practice Plan</Link>
           <Link href="/progress">Progress</Link>
         </nav>
       </div>

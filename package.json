@@ -1,6 +1,6 @@
 {
-  "name": "peaceful-life-index-v6-monthly-practice-planner",
-  "version": "0.6.13",
+  "name": "peaceful-life-index-v6-monthly-practice-planner-fixed",
+  "version": "0.6.13.1",
   "private": true,
   "scripts": {
     "dev": "next dev",

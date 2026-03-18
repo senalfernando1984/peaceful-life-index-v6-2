@@ -12,6 +12,7 @@ import { formatDate } from '@/lib/utils';
 import { scoreBandLabel } from '@/lib/scoring';
 import { AssessmentResult } from '@/types/pli';
 import { INTERVENTIONS } from '@/data/interventions';
+import { buildPracticePlan } from '@/lib/practice-plan';
 
 function overallBandLabel(score: number) {
   if (score < 2) return 'Very Low';
@@ -68,6 +69,8 @@ export function ResultsDashboard() {
     score: NonNullable<AssessmentResult['domainScores']>[number];
     interventions: typeof INTERVENTIONS;
   }>;
+
+  const practicePlan = latest ? buildPracticePlan(latest) : null;
 
   if (!latest || !Array.isArray(latest.domainScores)) {
     return (
@@ -199,6 +202,33 @@ export function ResultsDashboard() {
           </div>
         </div>
       </div>
+
+      {practicePlan ? (
+        <div className="card p-6">
+          <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Next month improvement plan</p>
+          <h2 className="mt-2 text-2xl font-semibold">Create your SBCC practice plan</h2>
+          <p className="mt-3 text-sm text-pli-slate">
+            Your weakest domain right now is <strong className="text-pli-ink">{practicePlan.weakestDomain}</strong>.
+            Focus especially on <strong className="text-pli-ink">{practicePlan.weakestSubdomains.join(' and ')}</strong> over the next 30 days.
+          </p>
+          <div className="mt-4 rounded-2xl bg-pli-bg p-4 text-sm text-pli-slate">
+            <p>
+              <strong className="text-pli-ink">Next recommended PLI assessment date:</strong> {practicePlan.nextAssessmentDate}
+            </p>
+            <p className="mt-2">
+              Practice your selected SBCC activities during the next month, revisit them weekly, then reassess on the date above.
+            </p>
+          </div>
+          <div className="mt-5 flex flex-wrap gap-3">
+            <Link href="/practice-plan" className="rounded-full bg-pli-teal px-5 py-3 text-sm font-medium text-white">
+              Open My Practice Plan
+            </Link>
+            <Link href="/assessment" className="rounded-full border border-pli-border px-5 py-3 text-sm font-medium text-pli-ink">
+              Revisit Assessment
+            </Link>
+          </div>
+        </div>
+      ) : null}
 
       <div className="card p-6">
         <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Interaction grid</p>

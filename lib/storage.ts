@@ -1,8 +1,9 @@
-import { AssessmentResult } from '@/types/pli';
+import { AssessmentCharacter, AssessmentResult } from '@/types/pli';
 
 const STORAGE_VERSION = 'v6_1';
 const PROFILE_KEY = `pli-profile-${STORAGE_VERSION}`;
 const ASSESSMENTS_KEY = `pli-assessments-${STORAGE_VERSION}`;
+const CHARACTER_KEY = `pli-character-${STORAGE_VERSION}`;
 
 export type BrowserProfile = { name: string; email: string };
 
@@ -48,6 +49,18 @@ export function getProfile(): BrowserProfile | null {
   };
 }
 
+
+export function saveAssessmentCharacter(character: AssessmentCharacter) {
+  if (!isBrowser()) return;
+  localStorage.setItem(CHARACTER_KEY, character);
+}
+
+export function getAssessmentCharacter(): AssessmentCharacter {
+  if (!isBrowser()) return 'nimal';
+  const raw = localStorage.getItem(CHARACTER_KEY);
+  return raw === 'maya' ? 'maya' : 'nimal';
+}
+
 export function saveAssessment(result: AssessmentResult) {
   if (!isBrowser()) return;
   const current = getAssessments();
@@ -69,12 +82,13 @@ export function clearAllPliData() {
   if (!isBrowser()) return;
   localStorage.removeItem(PROFILE_KEY);
   localStorage.removeItem(ASSESSMENTS_KEY);
+  localStorage.removeItem(CHARACTER_KEY);
 }
 
 export function purgeLegacyPliStorage() {
   if (!isBrowser()) return;
 
-  const protectedKeys = new Set([PROFILE_KEY, ASSESSMENTS_KEY]);
+  const protectedKeys = new Set([PROFILE_KEY, ASSESSMENTS_KEY, CHARACTER_KEY]);
   const legacyPrefixes = [
     'pli-profile',
     'pli-assessments',

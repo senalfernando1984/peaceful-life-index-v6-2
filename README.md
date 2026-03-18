@@ -88,3 +88,11 @@ It does not include true email-auth sign-in or a backend database.
 - updates all 40 questionnaire scenarios to the realistic named-character story set
 - aligns all answer choices to the specific people, tasks, and events in each story
 - keeps the Version 6.10 dashboard, numbering, and book-message structure
+
+
+## Version 6.12 patch
+
+- adds a Nimal/Maya assessment character selector before the questionnaire starts
+- keeps the same domain structure, scoring, dashboard, and result logic
+- swaps story text according to the selected character pathway while preserving score comparability
+- shows the selected story pathway on the assessment and results screens

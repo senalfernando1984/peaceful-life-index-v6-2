@@ -1,6 +1,6 @@
 {
-  "name": "peaceful-life-index-v6-realistic-stories",
-  "version": "0.6.11",
+  "name": "peaceful-life-index-v6-dual-character",
+  "version": "0.6.12",
   "private": true,
   "scripts": {
     "dev": "next dev",

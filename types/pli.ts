@@ -22,6 +22,8 @@ export interface DomainScore{
   answeredCount:number;
 }
 
+export type AssessmentCharacter='nimal'|'maya';
+
 export interface AssessmentResult{
   id:string;
   createdAt:string;
@@ -30,6 +32,7 @@ export interface AssessmentResult{
   pliBase:number;
   balanceFactor:number;
   profileSpread:number;
+  selectedCharacter?:AssessmentCharacter;
   domainScores:DomainScore[];
 }
 
@@ -44,6 +47,7 @@ export interface QuestionnaireItem{
   ruleId:RuleId;
   title:string;
   story:string;
+  stories?:Record<AssessmentCharacter,string>;
   subdomain:string;
   scenario?:boolean;
   evidenceTag?:string;

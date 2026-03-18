@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { AssessmentCharacterSelector } from '@/components/assessment-character-selector';
 
 export default function AssessmentIntroPage() {
   return (
@@ -19,29 +20,29 @@ export default function AssessmentIntroPage() {
             </p>
           </div>
           <div className="rounded-2xl bg-pli-bg p-5">
-            <h2 className="font-semibold">Read the stories and choose your likely response</h2>
+            <h2 className="font-semibold">Choose your story character first</h2>
             <p className="mt-2 text-sm text-pli-slate">
-              Each rule contains four short real-life stories. Read each one carefully and choose the answer that best reflects how you would most likely respond in that situation.
+              You can now take the same assessment through either the <strong className="text-pli-ink">Nimal</strong> or <strong className="text-pli-ink">Maya</strong> story pathway.
+              The scoring remains the same. Only the story perspective changes.
             </p>
           </div>
         </div>
 
         <ul className="mt-6 list-disc space-y-2 pl-5 text-sm text-pli-slate">
           <li>There are 10 Golden Rule domains.</li>
-          <li>Each domain contains 4 story-based scenarios.</li>
+          <li>Each domain contains 4 connected story-based scenarios.</li>
           <li>Complete all 40 scenarios for a full monthly PLI score.</li>
           <li>Use the same 30-day time window each month for better comparison.</li>
         </ul>
 
         <div className="mt-8 flex flex-wrap gap-4">
-          <Link href="/assessment/run" className="rounded-full bg-pli-teal px-6 py-3 font-medium text-white">
-            Begin assessment
-          </Link>
           <Link href="/" className="rounded-full border border-pli-border px-6 py-3 font-medium">
             Back to home
           </Link>
         </div>
       </div>
+
+      <AssessmentCharacterSelector />
     </div>
   );
 }

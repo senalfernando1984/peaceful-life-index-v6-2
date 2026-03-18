@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import { QUESTIONNAIRE_ITEMS } from '@/data/questionnaire';
 import { RULES } from '@/data/rules';
 import { computeAssessment, isAssessmentComplete } from '@/lib/scoring';
-import { purgeLegacyPliStorage, saveAssessment } from '@/lib/storage';
+import { getAssessmentCharacter, purgeLegacyPliStorage, saveAssessment } from '@/lib/storage';
 import { ClearDataButton } from '@/components/clear-data-button';
 
 export function AssessmentRunner() {
@@ -14,11 +14,13 @@ export function AssessmentRunner() {
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [validationMessage, setValidationMessage] = useState('');
   const [missingIds, setMissingIds] = useState<string[]>([]);
+  const [selectedCharacter, setSelectedCharacter] = useState<'nimal' | 'maya'>('nimal');
   const questionRefs = useRef<Record<string, HTMLDivElement | null>>({});
   const topRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     purgeLegacyPliStorage();
+    setSelectedCharacter(getAssessmentCharacter());
   }, []);
 
   useEffect(() => {
@@ -88,7 +90,7 @@ export function AssessmentRunner() {
       return;
     }
     const result = computeAssessment(QUESTIONNAIRE_ITEMS, answers);
-    saveAssessment(result);
+    saveAssessment({ ...result, selectedCharacter });
     router.push('/results');
   };
 
@@ -179,7 +181,7 @@ export function AssessmentRunner() {
                   Rule {currentRule.index} · Scenario {idx + 1} of 4
                 </p>
                 <p className="mt-2 text-sm font-semibold text-pli-ink">{item.subdomain}</p>
-                <p className="mt-3 whitespace-pre-line text-sm leading-7 text-pli-slate">{item.story}</p>
+                <p className="mt-3 whitespace-pre-line text-sm leading-7 text-pli-slate">{item.stories?.[selectedCharacter] ?? item.story}</p>
                 {isMissing ? (
                   <p className="mt-3 text-xs font-medium text-red-700">Please choose one response before you continue.</p>
                 ) : null}

@@ -112,6 +112,14 @@ export function AssessmentRunner() {
           Rule {currentRule.index} of {RULES.length}. {totalAnswered} of {totalQuestions} questions answered.
         </p>
 
+        <div className="mt-6 rounded-2xl border border-pli-border bg-pli-bg p-4 text-sm text-pli-slate">
+          <p className="font-medium text-pli-ink">Answer using the last 30 days</p>
+          <p className="mt-2">
+            For every question, think specifically about your <strong className="text-pli-ink">experiences, behaviours, emotions, and habits during the past 30 days</strong>.
+            This assessment is meant to be completed <strong className="text-pli-ink">once every month</strong> for self-monitoring and progress tracking.
+          </p>
+        </div>
+
         <div className="mt-6 rounded-2xl bg-pli-bg p-4">
           <p className="text-sm text-pli-slate">PLI preview</p>
           {preview ? (

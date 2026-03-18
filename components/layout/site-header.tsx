@@ -10,7 +10,7 @@ export function SiteHeader() {
           </div>
           <div>
             <p className="text-lg font-semibold">Peaceful Life Index</p>
-            <p className="text-xs text-pli-slate">The Happiness Blueprint · Browser Edition</p>
+            <p className="text-xs text-pli-slate">The Happiness Blueprint</p>
           </div>
         </Link>
         <nav className="hidden gap-5 text-sm text-pli-slate md:flex">

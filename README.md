@@ -50,3 +50,11 @@ It does not include true email-auth sign-in or a backend database.
 - adds explicit current-rule completion messaging
 - makes unanswered-question highlighting and messaging more forceful
 - keeps absolute numbering across all 100 questions
+
+
+## Version 6.6 patch
+
+- removes Browser Edition wording from visible homepage branding
+- removes the Version 6 homepage sentence
+- adds clear monthly 30-day assessment instructions before the questionnaire starts
+- adds more tailored SBCC guidance by domain and score band

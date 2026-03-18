@@ -48,7 +48,11 @@ export function ResultsDashboard() {
         const rule = RULES.find(item => item.id === score.ruleId);
         if (!rule) return null;
 
-        const scoreBand = score.adjusted < 3.5 ? 'very-low' : score.adjusted < 5 ? 'low' : 'moderate';
+        let scoreBand: 'very-low' | 'low' | 'moderate' | 'maintenance';
+        if (score.adjusted < 2) scoreBand = 'very-low';
+        else if (score.adjusted < 5) scoreBand = 'low';
+        else if (score.adjusted < 7.5) scoreBand = 'moderate';
+        else scoreBand = 'maintenance';
 
         return {
           rule,
@@ -169,7 +173,7 @@ export function ResultsDashboard() {
                 {interventions.length ? interventions.map(item => (
                   <div key={item.id} className="mt-3 space-y-2">
                     <p>
-                      <strong className="text-pli-ink">SBCC action:</strong> {item.title}
+                      <strong className="text-pli-ink">Tailored SBCC action:</strong> {item.title}
                     </p>
                     <p>
                       <strong className="text-pli-ink">What to do:</strong> {item.whatToDo}
@@ -178,7 +182,13 @@ export function ResultsDashboard() {
                       <strong className="text-pli-ink">Quick action:</strong> {item.quickAction}
                     </p>
                     <p>
+                      <strong className="text-pli-ink">Why it may help:</strong> {item.whyItHelps}
+                    </p>
+                    <p>
                       <strong className="text-pli-ink">Weekly practice:</strong> {item.weeklyPractice}
+                    </p>
+                    <p>
+                      <strong className="text-pli-ink">Longer habit:</strong> {item.longerHabit}
                     </p>
                   </div>
                 )) : (

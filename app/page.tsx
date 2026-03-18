@@ -1,4 +1,3 @@
-
 import Link from 'next/link';
 import { RULES } from '@/data/rules';
 import { ProfileForm } from '@/components/profile-form';
@@ -27,10 +26,6 @@ export default function HomePage() {
               Open dashboard
             </Link>
           </div>
-          <p className="mt-4 text-sm text-pli-slate">
-            Version 6 is the most stable browser-based edition so far. It includes 10 questions per domain, stronger scoring logic,
-            clearer growth feedback, safer result handling, and a clear-data reset option.
-          </p>
         </div>
 
         <div className="card p-6">

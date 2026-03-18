@@ -5,35 +5,35 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
   {
     "id": "q1",
     "ruleId": "do-good",
-    "title": "Scenario 1",
-    "story": "You are just about to leave work after a long day. As you walk out, you notice a colleague struggling to carry several files and a laptop while also trying to answer a phone call. You feel tired and you have your own plans waiting, but you can see they are having a genuinely difficult moment. You have just enough time to decide whether to get involved or keep moving.",
+    "title": "Nimal’s weekday of small chances to help — Scene 1",
+    "story": "It is 5.20 pm and Nimal is finally leaving the office after a long day. As he reaches the corridor near the lift, he sees his colleague Ravi trying to carry two heavy files, a laptop bag, and a half-finished cup of tea while also answering a phone call. Ravi looks flustered, and no one else seems to notice. Nimal is tired and wants to get home quickly, but he can clearly see that Ravi is struggling right in front of him.",
     "subdomain": "Spontaneous helping",
     "scenario": true,
-    "evidenceTag": "scenario-bank-v69",
+    "evidenceTag": "realistic-named-character-v611",
     "options": [
       {
         "key": "A",
-        "text": "I ignore the situation and leave because it is not my responsibility.",
+        "text": "I keep walking because Ravi’s problem is not my responsibility.",
         "score": 0
       },
       {
         "key": "B",
-        "text": "I notice the problem but avoid helping because it may inconvenience me.",
+        "text": "I notice Ravi struggling, but I avoid helping because I do not want to be delayed.",
         "score": 1
       },
       {
         "key": "C",
-        "text": "I smile or acknowledge them but do not actually step in to help.",
+        "text": "I smile at Ravi and say something polite, but I do not actually help him.",
         "score": 2
       },
       {
         "key": "D",
-        "text": "I offer a small amount of practical help before I leave.",
+        "text": "I offer some practical help before I leave.",
         "score": 3
       },
       {
         "key": "E",
-        "text": "I step in willingly, help them properly, and make sure they are settled before I go.",
+        "text": "I step in willingly, carry some of Ravi’s things, and make sure he is settled before I continue.",
         "score": 4
       }
     ]
@@ -41,15 +41,15 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
   {
     "id": "q2",
     "ruleId": "do-good",
-    "title": "Scenario 2",
-    "story": "Late in the evening, a friend sends you a message saying they had a terrible day and feel emotionally overwhelmed. You are not in crisis yourself, but you are already tired and tempted to put your phone away. At the same time, you know this person rarely asks for support unless they really need it. You have to decide how present and responsive you will be.",
+    "title": "Nimal’s weekday of small chances to help — Scene 2",
+    "story": "At about 8.30 pm, after dinner, Nimal sits down to rest and checks his phone. He sees a message from his close friend Anjali saying she had a very difficult day at the hospital and feels emotionally overwhelmed. Nimal is already tired and wants a quiet night, but he also knows Anjali usually does not reach out unless she genuinely needs support. He now has to decide how present he is willing to be.",
     "subdomain": "Emotional support",
     "scenario": true,
-    "evidenceTag": "scenario-bank-v69",
+    "evidenceTag": "realistic-named-character-v611",
     "options": [
       {
         "key": "A",
-        "text": "I ignore the message completely and decide not to respond.",
+        "text": "I ignore Anjali’s message and decide not to get involved.",
         "score": 0
       },
       {
@@ -59,17 +59,17 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
       },
       {
         "key": "C",
-        "text": "I reply kindly, but I do not really make space to listen or support them.",
+        "text": "I reply kindly, but I do not really make space to listen or support her.",
         "score": 2
       },
       {
         "key": "D",
-        "text": "I respond with concern and make some time to listen and support them.",
+        "text": "I respond with concern and make some time to listen and support her.",
         "score": 3
       },
       {
         "key": "E",
-        "text": "I respond warmly, listen carefully, and support them in a thoughtful and steady way.",
+        "text": "I respond warmly, listen carefully, and support Anjali in a thoughtful and steady way.",
         "score": 4
       }
     ]
@@ -77,35 +77,35 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
   {
     "id": "q3",
     "ruleId": "do-good",
-    "title": "Scenario 3",
-    "story": "At home, there is an unpleasant task that clearly needs to be done. Everyone seems tired and nobody is volunteering. You can see that if you do not step in, the responsibility will likely fall on someone else who is also already stretched. You are in a position to help, but you have to decide whether you will take responsibility, wait, or avoid it.",
+    "title": "Nimal’s weekday of small chances to help — Scene 3",
+    "story": "A little later, Nimal walks into the kitchen and notices that the dinner dishes are still in the sink and the kitchen bin is overflowing. His sister Maya is trying to finish some urgent office work on her laptop at the dining table, and their mother has already gone to rest. It is obvious that if Nimal does nothing, Maya will probably have to wash the dishes and empty the bin after finishing her work. He has been busy all day, but he can see clearly what needs to be done.",
     "subdomain": "Contribution at home",
     "scenario": true,
-    "evidenceTag": "scenario-bank-v69",
+    "evidenceTag": "realistic-named-character-v611",
     "options": [
       {
         "key": "A",
-        "text": "I leave it completely for someone else to deal with.",
+        "text": "I leave the dishes and overflowing bin for someone else to deal with.",
         "score": 0
       },
       {
         "key": "B",
-        "text": "I complain about the situation but still do nothing helpful.",
+        "text": "I complain about the mess but still do nothing useful.",
         "score": 1
       },
       {
         "key": "C",
-        "text": "I help only if somebody directly asks me to do it.",
+        "text": "I help only if Maya directly asks me to do it.",
         "score": 2
       },
       {
         "key": "D",
-        "text": "I take initiative and do my share without making a fuss.",
+        "text": "I wash the dishes or empty the bin without making a fuss.",
         "score": 3
       },
       {
         "key": "E",
-        "text": "I step in willingly, do what is needed, and help keep the atmosphere cooperative.",
+        "text": "I take initiative, clear the sink, empty the bin, and help keep the home atmosphere cooperative and calm.",
         "score": 4
       }
     ]
@@ -113,11 +113,11 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
   {
     "id": "q4",
     "ruleId": "do-good",
-    "title": "Scenario 4",
-    "story": "You become aware of a small way to help someone without them ever knowing it was you. There is no praise, credit, or personal gain involved. In fact, nobody would even notice whether you helped or not. The only reason to do it would be because it would genuinely make life a bit easier for another person.",
+    "title": "Nimal’s weekday of small chances to help — Scene 4",
+    "story": "Before going to bed, Nimal notices that Maya’s work bag is still by the door and that tomorrow’s lunch containers have not been packed. He realizes that if he quietly fills the water bottles and packs the empty lunch box into the bag now, Maya’s morning will be much easier. No one will know he did it, and there will be no praise or thanks unless he tells someone. The only reason to do it would be because it would genuinely help.",
     "subdomain": "Kindness without recognition",
     "scenario": true,
-    "evidenceTag": "scenario-bank-v69",
+    "evidenceTag": "realistic-named-character-v611",
     "options": [
       {
         "key": "A",
@@ -126,12 +126,12 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
       },
       {
         "key": "B",
-        "text": "I would only help if other people knew I had done it.",
+        "text": "I would only do it if someone knew I had done it.",
         "score": 1
       },
       {
         "key": "C",
-        "text": "I think about helping, but I decide it is not worth the effort.",
+        "text": "I think about doing it, but I decide it is not worth the effort.",
         "score": 2
       },
       {
@@ -141,7 +141,7 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
       },
       {
         "key": "E",
-        "text": "I do it gladly because I value the act of kindness itself, even when nobody sees it.",
+        "text": "I do it gladly because making Maya’s morning easier matters to me even if nobody notices.",
         "score": 4
       }
     ]
@@ -149,15 +149,15 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
   {
     "id": "q5",
     "ruleId": "do-right-thing",
-    "title": "Scenario 1",
-    "story": "You discover that you made a small mistake in a report or responsibility you completed earlier. No one else has noticed it yet and there is a realistic chance that it may never be traced back to you. Correcting it now might feel embarrassing, and staying silent would be easier in the short term. You have to decide how truthful and responsible you will be.",
+    "title": "Nimal’s day of integrity under pressure — Scene 1",
+    "story": "At 9.15 am, Nimal reopens a report he sent the previous evening and realizes he entered one figure incorrectly. The mistake is small enough that nobody may notice, but if the report is used later, it could create confusion. Correcting it now means admitting the error to his supervisor and probably feeling embarrassed in front of the team. Staying quiet would be much easier in the short term.",
     "subdomain": "Honesty",
     "scenario": true,
-    "evidenceTag": "scenario-bank-v69",
+    "evidenceTag": "realistic-named-character-v611",
     "options": [
       {
         "key": "A",
-        "text": "I hide the mistake and hope nobody discovers it.",
+        "text": "I stay silent and hope nobody notices the mistake.",
         "score": 0
       },
       {
@@ -167,17 +167,17 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
       },
       {
         "key": "C",
-        "text": "I admit it only if correction becomes unavoidable later.",
+        "text": "I admit it only if correcting it later becomes unavoidable.",
         "score": 2
       },
       {
         "key": "D",
-        "text": "I report it promptly and help correct it.",
+        "text": "I report the mistake promptly and help correct it.",
         "score": 3
       },
       {
         "key": "E",
-        "text": "I take responsibility openly and focus on fixing it properly, even if it feels uncomfortable.",
+        "text": "I take responsibility openly, explain the issue clearly, and focus on correcting it properly even if it is uncomfortable.",
         "score": 4
       }
     ]
@@ -185,20 +185,20 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
   {
     "id": "q6",
     "ruleId": "do-right-thing",
-    "title": "Scenario 2",
-    "story": "A group task has gone well and your role is visible, but you know another person also contributed in an important way behind the scenes. When praise starts coming your way, you realize that you could easily accept the recognition without anyone questioning it. In that moment, fairness depends entirely on what you choose to say and do.",
+    "title": "Nimal’s day of integrity under pressure — Scene 2",
+    "story": "Around noon, Nimal’s manager praises a presentation that went well. The slides were delivered by Nimal, but he knows his co-worker Farah did a great deal of the background analysis that made the presentation strong. The room is focused on Nimal, and he could easily accept the praise without anyone questioning it. In the next few seconds, he has to decide whether he will let the recognition stay unfairly on himself or share it properly.",
     "subdomain": "Fairness",
     "scenario": true,
-    "evidenceTag": "scenario-bank-v69",
+    "evidenceTag": "realistic-named-character-v611",
     "options": [
       {
         "key": "A",
-        "text": "I take the credit as if the work were mainly mine.",
+        "text": "I accept the praise as if the result were mainly mine.",
         "score": 0
       },
       {
         "key": "B",
-        "text": "I mostly take the credit and mention the other person only lightly.",
+        "text": "I mostly take the credit and mention Farah only lightly.",
         "score": 1
       },
       {
@@ -208,12 +208,12 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
       },
       {
         "key": "D",
-        "text": "I clearly acknowledge that the work was shared.",
+        "text": "I clearly acknowledge that Farah and I both contributed.",
         "score": 3
       },
       {
         "key": "E",
-        "text": "I make sure the other person is recognized fairly, even if it means less praise for me.",
+        "text": "I make sure Farah is recognized fairly even if it means less praise for me.",
         "score": 4
       }
     ]
@@ -221,11 +221,11 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
   {
     "id": "q7",
     "ruleId": "do-right-thing",
-    "title": "Scenario 3",
-    "story": "You are in a social or work setting where people around you are pressuring you to go along with something you believe is wrong. The behaviour is being treated as normal, and resisting it may make you stand out. You feel the pull of wanting to belong, but you also know your decision will say something about the kind of person you are trying to be.",
+    "title": "Nimal’s day of integrity under pressure — Scene 3",
+    "story": "Later in the afternoon, a few colleagues encourage Nimal to sign off on a shortcut that would save time but does not fully follow the process he believes is right. They tell him that everyone does it and that he is making life too difficult by hesitating. Refusing may make him look awkward or overly rigid, while agreeing would be easier socially and professionally in the moment.",
     "subdomain": "Value-based action",
     "scenario": true,
-    "evidenceTag": "scenario-bank-v69",
+    "evidenceTag": "realistic-named-character-v611",
     "options": [
       {
         "key": "A",
@@ -239,7 +239,7 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
       },
       {
         "key": "C",
-        "text": "I avoid active involvement but I do not clearly resist it either.",
+        "text": "I avoid active involvement but do not clearly resist it either.",
         "score": 2
       },
       {
@@ -249,7 +249,7 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
       },
       {
         "key": "E",
-        "text": "I stay aligned with my values clearly and calmly, even when there is social pressure to do otherwise.",
+        "text": "I stay aligned with my values clearly and calmly even when others pressure me to do otherwise.",
         "score": 4
       }
     ]
@@ -257,11 +257,11 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
   {
     "id": "q8",
     "ruleId": "do-right-thing",
-    "title": "Scenario 4",
-    "story": "You promised someone you would help them with something important. Later, a more enjoyable opportunity comes up at the same time, and nobody is forcing you to keep your original word. You know the other person is counting on you, but you are tempted to rationalize cancelling. You have to decide whether convenience or commitment will guide your choice.",
+    "title": "Nimal’s day of integrity under pressure — Scene 4",
+    "story": "In the evening, Nimal remembers that he promised his neighbour Uncle Sunil that he would help him move a heavy cupboard before sunset. Just then, one of Nimal’s friends calls and invites him to a more enjoyable outing that starts at the same time. Uncle Sunil is elderly and is likely waiting. No one is forcing Nimal to keep his word, but he knows exactly what his choice will reveal about his reliability.",
     "subdomain": "Keeping commitments",
     "scenario": true,
-    "evidenceTag": "scenario-bank-v69",
+    "evidenceTag": "realistic-named-character-v611",
     "options": [
       {
         "key": "A",
@@ -293,11 +293,11 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
   {
     "id": "q9",
     "ruleId": "do-no-harm",
-    "title": "Scenario 1",
-    "story": "You have been emotionally exhausted for several days and can tell that your judgement is not as steady as usual. You are tempted to keep pushing through without rest or support, even though part of you knows that continuing this pattern may damage your wellbeing. In that moment, the decision is not only about productivity but about whether you protect yourself or keep neglecting warning signs.",
+    "title": "A day of choices about harm and restraint — Scene 1",
+    "story": "For several nights, Nimal has slept badly and skipped proper meals while pushing himself through work. By morning he feels emotionally worn down and physically shaky, but he is tempted to continue exactly the same way because slowing down feels inconvenient. He knows he is not in the best state to keep functioning normally, yet he also feels pressure to keep going as if nothing is wrong.",
     "subdomain": "Self-protection / self-damaging behaviour",
     "scenario": true,
-    "evidenceTag": "scenario-bank-v69",
+    "evidenceTag": "realistic-named-character-v611",
     "options": [
       {
         "key": "A",
@@ -329,11 +329,11 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
   {
     "id": "q10",
     "ruleId": "do-no-harm",
-    "title": "Scenario 2",
-    "story": "You are already tense when someone close to you says something small that irritates you more than it should. You can feel the pressure of the day inside you, and it would be easy to let your frustration spill out onto the other person. You realize that your response in the next few seconds could either create avoidable harm or prevent it.",
+    "title": "A day of choices about harm and restraint — Scene 2",
+    "story": "That evening, Nimal comes home already tense. While he is trying to settle down, his younger brother Kasun asks why Nimal forgot to bring something he had promised. The question is small, but because Nimal is already carrying stress, it irritates him more than it should. He can feel his frustration rising and knows his next few words could either hurt Kasun unnecessarily or keep the situation safe.",
     "subdomain": "Harm to others",
     "scenario": true,
-    "evidenceTag": "scenario-bank-v69",
+    "evidenceTag": "realistic-named-character-v611",
     "options": [
       {
         "key": "A",
@@ -342,7 +342,7 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
       },
       {
         "key": "B",
-        "text": "I speak coldly and let my frustration land on the other person.",
+        "text": "I speak coldly and let my frustration land on Kasun.",
         "score": 1
       },
       {
@@ -357,7 +357,7 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
       },
       {
         "key": "E",
-        "text": "I recognize what is happening inside me and choose a calm response that protects both the other person and the relationship.",
+        "text": "I recognize what is happening inside me and choose a calm response that protects both Kasun and the relationship.",
         "score": 4
       }
     ]
@@ -365,30 +365,30 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
   {
     "id": "q11",
     "ruleId": "do-no-harm",
-    "title": "Scenario 3",
-    "story": "You are spending time outdoors with other people, and by the end there is plastic waste and litter being left behind casually. Nobody seems especially concerned, and it would be easy to treat it as unimportant. At the same time, you know that these small repeated choices are part of how environmental harm becomes normal in daily life. Your action will show how seriously you take avoidable harm beyond yourself.",
+    "title": "A day of choices about harm and restraint — Scene 3",
+    "story": "The next day, Nimal and his friends stop near the beach after buying snacks and drinks. When they finish, a few wrappers and bottles are left on the wall beside them, and someone says they can just leave them because “the cleaners will take care of it.” There is a bin a short walk away, but using it would take a little effort. Nimal now has to decide how seriously he treats avoidable environmental harm in a small everyday moment.",
     "subdomain": "Environmental harm",
     "scenario": true,
-    "evidenceTag": "scenario-bank-v69",
+    "evidenceTag": "realistic-named-character-v611",
     "options": [
       {
         "key": "A",
-        "text": "I add to the waste and leave without concern.",
+        "text": "I leave my waste and do not care what happens next.",
         "score": 0
       },
       {
         "key": "B",
-        "text": "I leave my own waste behind if proper disposal feels inconvenient.",
+        "text": "I leave my rubbish behind if proper disposal feels inconvenient.",
         "score": 1
       },
       {
         "key": "C",
-        "text": "I manage only my own waste but ignore the wider avoidable harm around me.",
+        "text": "I manage only my own waste but ignore the wider mess around me.",
         "score": 2
       },
       {
         "key": "D",
-        "text": "I make sure I do not contribute to the environmental mess and dispose of my waste properly.",
+        "text": "I make sure I do not contribute to the mess and dispose of my own waste properly.",
         "score": 3
       },
       {
@@ -401,25 +401,25 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
   {
     "id": "q12",
     "ruleId": "do-no-harm",
-    "title": "Scenario 4",
-    "story": "You are with people who are casually smoking or using a substance in a way that could easily become a repeated pattern. There is social pressure to join in, and refusing may feel awkward or make you seem less fun in that moment. You know the choice is not only about one occasion, but about how you respond to habits that can become harmful over time.",
+    "title": "A day of choices about harm and restraint — Scene 4",
+    "story": "Later that night, Nimal is at a small gathering where a few friends are smoking and offering him a cigarette. They joke that one cigarette will not matter and tell him not to be so serious. Refusing may make him feel slightly awkward in front of them, but accepting means stepping into a pattern he knows is not healthy for him.",
     "subdomain": "Smoking / substance use",
     "scenario": true,
-    "evidenceTag": "scenario-bank-v69",
+    "evidenceTag": "realistic-named-character-v611",
     "options": [
       {
         "key": "A",
-        "text": "I join in without thinking about the harm it may cause.",
+        "text": "I take the cigarette without thinking about the harm it may cause.",
         "score": 0
       },
       {
         "key": "B",
-        "text": "I know it may be harmful, but I still go along with it mainly because of the social pressure.",
+        "text": "I know it is unhealthy, but I still go along with it mainly because of the social pressure.",
         "score": 1
       },
       {
         "key": "C",
-        "text": "I hesitate and try to limit it, but I still do it.",
+        "text": "I hesitate and try to limit it, but I still smoke it.",
         "score": 2
       },
       {
@@ -429,7 +429,7 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
       },
       {
         "key": "E",
-        "text": "I refuse the harmful option clearly and choose the healthier path even if it feels socially uncomfortable.",
+        "text": "I refuse clearly and choose the healthier path even if it feels socially uncomfortable.",
         "score": 4
       }
     ]
@@ -437,35 +437,35 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
   {
     "id": "q13",
     "ruleId": "treat-equally",
-    "title": "Scenario 1",
-    "story": "A new person joins your team or group and their background, language, or way of speaking is different from what most people are used to. You can sense that some people are already making quiet assumptions. Your own behaviour in the first few minutes will either reinforce exclusion or help establish equal dignity and respect from the start.",
+    "title": "A social day shaped by fairness and dignity — Scene 1",
+    "story": "A new staff member named Ibrahim joins Nimal’s office today. Ibrahim speaks more quietly than the others and has a different accent from most of the team. Nimal notices two colleagues exchanging amused looks after Ibrahim introduces himself. In the next few minutes, Nimal’s behaviour can either reinforce that distance or make Ibrahim feel equally respected from the start.",
     "subdomain": "Dignity",
     "scenario": true,
-    "evidenceTag": "scenario-bank-v69",
+    "evidenceTag": "realistic-named-character-v611",
     "options": [
       {
         "key": "A",
-        "text": "I treat the person as less important or make them feel unwelcome.",
+        "text": "I treat Ibrahim as less important or make him feel unwelcome.",
         "score": 0
       },
       {
         "key": "B",
-        "text": "I stay polite on the surface but inwardly treat them as less equal.",
+        "text": "I stay polite on the surface but inwardly treat him as less equal.",
         "score": 1
       },
       {
         "key": "C",
-        "text": "I remain neutral and distant without making any real effort to treat them fairly.",
+        "text": "I remain neutral and distant without making any real effort to treat him fairly.",
         "score": 2
       },
       {
         "key": "D",
-        "text": "I treat the person with the same respect and courtesy I would offer anyone else.",
+        "text": "I treat Ibrahim with the same respect and courtesy I would offer anyone else.",
         "score": 3
       },
       {
         "key": "E",
-        "text": "I actively help create a respectful and inclusive atmosphere without making the person feel singled out.",
+        "text": "I actively help create a respectful and inclusive atmosphere without making Ibrahim feel singled out.",
         "score": 4
       }
     ]
@@ -473,11 +473,11 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
   {
     "id": "q14",
     "ruleId": "treat-equally",
-    "title": "Scenario 2",
-    "story": "During a meeting or group conversation, a few confident people keep dominating the discussion. A quieter person tries several times to contribute but is repeatedly overlooked or interrupted. You can see that the discussion is becoming unbalanced, and you have to decide whether you will let that continue or help restore fairness.",
+    "title": "A social day shaped by fairness and dignity — Scene 2",
+    "story": "Later in a meeting, two confident colleagues dominate the discussion while a quieter employee named Tharushi tries several times to contribute and keeps getting interrupted. The conversation is moving ahead without her input even though she clearly has something useful to say. Nimal can see the imbalance clearly and has to decide whether he will let it pass or help correct it.",
     "subdomain": "Fairness in discussion",
     "scenario": true,
-    "evidenceTag": "scenario-bank-v69",
+    "evidenceTag": "realistic-named-character-v611",
     "options": [
       {
         "key": "A",
@@ -496,7 +496,7 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
       },
       {
         "key": "D",
-        "text": "I make some space for the quieter person to contribute.",
+        "text": "I make some space for Tharushi to contribute.",
         "score": 3
       },
       {
@@ -509,11 +509,11 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
   {
     "id": "q15",
     "ruleId": "treat-equally",
-    "title": "Scenario 3",
-    "story": "You notice that you have made a quick assumption about someone based on how they look, sound, or what role they have. The assumption comes automatically, and nobody else knows you have made it. In that moment, you can either accept the bias as truth or consciously challenge it before it shapes how you behave.",
+    "title": "A social day shaped by fairness and dignity — Scene 3",
+    "story": "At another moment in the day, Nimal catches himself making a quick assumption about a delivery worker based on the man’s clothes and manner of speaking. No one else knows what went through his mind, but he can tell the thought could shape how respectfully he behaves. He now has to choose whether he will accept the bias or question it before it turns into unfair treatment.",
     "subdomain": "Bias awareness",
     "scenario": true,
-    "evidenceTag": "scenario-bank-v69",
+    "evidenceTag": "realistic-named-character-v611",
     "options": [
       {
         "key": "A",
@@ -537,7 +537,7 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
       },
       {
         "key": "E",
-        "text": "I consciously challenge the assumption and choose a more respectful, fair response.",
+        "text": "I consciously challenge the assumption and choose a more respectful and fair response.",
         "score": 4
       }
     ]
@@ -545,15 +545,15 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
   {
     "id": "q16",
     "ruleId": "treat-equally",
-    "title": "Scenario 4",
-    "story": "You strongly disagree with another person's beliefs, choices, or opinions. The disagreement matters to you, and part of you feels tempted to reduce your respect because of it. At the same time, you know that equal dignity should not depend on agreement. The way you respond will show whether your respect is conditional or principled.",
+    "title": "A social day shaped by fairness and dignity — Scene 4",
+    "story": "By evening, Nimal ends up in a strong disagreement with his cousin Suresh about a social issue. The discussion becomes tense, and Nimal can feel himself becoming less respectful because he thinks Suresh is completely wrong. Even so, he knows that dignity should not depend on agreement. The real test is how he treats Suresh while disagreeing.",
     "subdomain": "Equal respect despite disagreement",
     "scenario": true,
-    "evidenceTag": "scenario-bank-v69",
+    "evidenceTag": "realistic-named-character-v611",
     "options": [
       {
         "key": "A",
-        "text": "I treat the person with contempt because I disagree with them.",
+        "text": "I treat Suresh with contempt because I disagree with him.",
         "score": 0
       },
       {
@@ -563,7 +563,7 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
       },
       {
         "key": "C",
-        "text": "I stay outwardly civil but inwardly dismiss the person's worth.",
+        "text": "I stay outwardly civil but inwardly dismiss his worth.",
         "score": 2
       },
       {
@@ -581,11 +581,11 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
   {
     "id": "q17",
     "ruleId": "love-yourself-and-all",
-    "title": "Scenario 1",
-    "story": "You make an embarrassing mistake in front of others and feel the sting of shame immediately. The event is already over, but your mind starts deciding what kind of story to tell you about yourself. One path leads to harsh self-criticism and emotional punishment. The other leads to honesty, kindness, and recovery. Your inner response matters as much as the mistake itself.",
+    "title": "A connected day of self-compassion and relational care — Scene 1",
+    "story": "At work, Nimal makes an embarrassing mistake during a discussion and immediately feels exposed. The moment passes quickly, but his mind keeps replaying it and deciding what it says about him as a person. One inner path leads to harsh self-criticism and shame. The other leads to honesty, kindness, and recovery.",
     "subdomain": "Self-compassion",
     "scenario": true,
-    "evidenceTag": "scenario-bank-v69",
+    "evidenceTag": "realistic-named-character-v611",
     "options": [
       {
         "key": "A",
@@ -617,11 +617,11 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
   {
     "id": "q18",
     "ruleId": "love-yourself-and-all",
-    "title": "Scenario 2",
-    "story": "Someone close to you is clearly having a difficult day and is not at their best. They are not being abusive, but they are a bit tense, impatient, or emotionally heavy. You are also not fully rested yourself. In that moment, your response can either add more coldness to the situation or bring a little steadiness and warmth.",
+    "title": "A connected day of self-compassion and relational care — Scene 2",
+    "story": "Later that evening, Nimal’s wife Maya returns home clearly upset after a difficult day. She is not being cruel, but she is tense, tired, and less patient than usual. Nimal is also not fully rested, and part of him wants to withdraw. His next response can either add coldness to the home or bring some warmth into the moment.",
     "subdomain": "Warmth to others",
     "scenario": true,
-    "evidenceTag": "scenario-bank-v69",
+    "evidenceTag": "realistic-named-character-v611",
     "options": [
       {
         "key": "A",
@@ -630,7 +630,7 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
       },
       {
         "key": "B",
-        "text": "I become cold and distant because their mood inconveniences me.",
+        "text": "I become cold and distant because Maya’s mood inconveniences me.",
         "score": 1
       },
       {
@@ -653,11 +653,11 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
   {
     "id": "q19",
     "ruleId": "love-yourself-and-all",
-    "title": "Scenario 3",
-    "story": "A person disappoints you in a way that hurts more than it may seem on the surface. You cannot change what happened, but you can choose whether to keep feeding resentment or begin a healthier process of letting go. The issue is not whether the event was acceptable, but whether you remain emotionally trapped by it.",
+    "title": "A connected day of self-compassion and relational care — Scene 3",
+    "story": "Later, while resting quietly, Nimal finds himself thinking about a close friend who disappointed him recently. The issue still hurts, and part of him wants to keep replaying it and holding on tightly to the resentment. Another part of him knows that the hurt cannot heal if he keeps feeding it the whole time.",
     "subdomain": "Forgiveness",
     "scenario": true,
-    "evidenceTag": "scenario-bank-v69",
+    "evidenceTag": "realistic-named-character-v611",
     "options": [
       {
         "key": "A",
@@ -689,15 +689,15 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
   {
     "id": "q20",
     "ruleId": "love-yourself-and-all",
-    "title": "Scenario 4",
-    "story": "You feel emotionally drained and you also know that someone around you needs support. If you ignore yourself completely, you may become resentful or collapse into exhaustion. If you ignore them completely, you may harden or withdraw too far. The challenge is not choosing one person over the other, but finding a balanced response that keeps care alive in both directions.",
+    "title": "A connected day of self-compassion and relational care — Scene 4",
+    "story": "By night, Nimal is emotionally drained, and at the same time Maya needs support with something important she is dealing with. If he ignores himself completely, he may become resentful or exhausted. If he ignores her completely, he may harden and disconnect. The challenge is finding a response that protects care in both directions.",
     "subdomain": "Balanced care",
     "scenario": true,
-    "evidenceTag": "scenario-bank-v69",
+    "evidenceTag": "realistic-named-character-v611",
     "options": [
       {
         "key": "A",
-        "text": "I neglect both myself and the other person in a chaotic or avoidant way.",
+        "text": "I neglect both myself and Maya in a chaotic or avoidant way.",
         "score": 0
       },
       {
@@ -712,7 +712,7 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
       },
       {
         "key": "D",
-        "text": "I try to care for both myself and the other person in a reasonable way.",
+        "text": "I try to care for both myself and Maya in a reasonable way.",
         "score": 3
       },
       {
@@ -725,11 +725,11 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
   {
     "id": "q21",
     "ruleId": "eat-healthy-live-healthy",
-    "title": "Scenario 1",
-    "story": "It has been a busy day and you are hungry, tired, and short on time. An unhealthy convenience option is easy and immediately available, while a more nourishing choice would require a little more intention. You know this is not about one perfect meal but about the repeated pattern your choices create over time. The question is what you actually do in real life when convenience and health compete.",
+    "title": "Nimal’s health decisions across one ordinary day — Scene 1",
+    "story": "At lunchtime, Nimal is hungry, pressed for time, and standing near a fast-food counter that would be easy and convenient. A more nourishing option is available, but it would require a little more effort and planning. He knows this is not only about one meal but about the pattern he keeps creating through repeated everyday choices.",
     "subdomain": "Food",
     "scenario": true,
-    "evidenceTag": "scenario-bank-v69",
+    "evidenceTag": "realistic-named-character-v611",
     "options": [
       {
         "key": "A",
@@ -753,7 +753,7 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
       },
       {
         "key": "E",
-        "text": "I choose in a way that supports my health and I use the situation to strengthen better food habits over time.",
+        "text": "I choose in a way that supports my health and use the situation to strengthen better food habits over time.",
         "score": 4
       }
     ]
@@ -761,11 +761,11 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
   {
     "id": "q22",
     "ruleId": "eat-healthy-live-healthy",
-    "title": "Scenario 2",
-    "story": "You are already somewhat tired, but there is still work, entertainment, or scrolling that could keep you up much later than is healthy. Nobody will stop you, and it is easy to tell yourself that losing sleep tonight does not matter much. At the same time, you know that repeated sleep sacrifice affects your mood, patience, concentration, and long-term wellbeing.",
+    "title": "Nimal’s health decisions across one ordinary day — Scene 2",
+    "story": "That night, Nimal is already somewhat tired, but he is tempted to keep scrolling on his phone and watch videos for another hour or two. Nobody will stop him, and telling himself “one late night won’t matter” would be easy. Yet he knows repeated poor sleep affects his patience, focus, and wellbeing the next day.",
     "subdomain": "Sleep",
     "scenario": true,
-    "evidenceTag": "scenario-bank-v69",
+    "evidenceTag": "realistic-named-character-v611",
     "options": [
       {
         "key": "A",
@@ -797,11 +797,11 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
   {
     "id": "q23",
     "ruleId": "eat-healthy-live-healthy",
-    "title": "Scenario 3",
-    "story": "You are moving through a busy day and realize you have barely had any water. You feel a bit tired and less clear-headed, but it is easy to keep going without paying attention. Hydration is not dramatic, so neglecting it can become normal without much thought. The situation tests whether you notice small but important foundations of health in everyday life.",
+    "title": "Nimal’s health decisions across one ordinary day — Scene 3",
+    "story": "On another busy afternoon, Nimal suddenly realizes that he has barely had any water all day. He feels slightly tired and less clear-headed, but it would be very easy to continue without correcting it. Hydration is not dramatic, so neglecting it can quietly become normal if he is not intentional.",
     "subdomain": "Hydration",
     "scenario": true,
-    "evidenceTag": "scenario-bank-v69",
+    "evidenceTag": "realistic-named-character-v611",
     "options": [
       {
         "key": "A",
@@ -833,11 +833,11 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
   {
     "id": "q24",
     "ruleId": "eat-healthy-live-healthy",
-    "title": "Scenario 4",
-    "story": "You have had a long and demanding day and the easiest option is to become completely inactive for the rest of it. At the same time, you know that some movement would help your energy, body, and emotional state. The issue is not athletic performance but whether you protect a realistic level of physical activity even when motivation is low.",
+    "title": "Nimal’s health decisions across one ordinary day — Scene 4",
+    "story": "By evening, after a long and demanding day, the easiest option is to sit down and become completely inactive for the rest of the night. At the same time, Nimal knows that some movement would help his body, energy, and emotional state. The issue is not intense exercise, but whether he protects a realistic habit of moving even when motivation is low.",
     "subdomain": "Physical activity",
     "scenario": true,
-    "evidenceTag": "scenario-bank-v69",
+    "evidenceTag": "realistic-named-character-v611",
     "options": [
       {
         "key": "A",
@@ -869,11 +869,11 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
   {
     "id": "q25",
     "ruleId": "financial-freedom",
-    "title": "Scenario 1",
-    "story": "You are browsing online or walking through a shop and see something attractive that you had not planned to buy. It would feel good to purchase it immediately, and nobody is stopping you. At the same time, you know that repeated impulse decisions often weaken financial stability quietly over time. This moment tests whether you can separate desire from direction.",
+    "title": "Nimal’s month of money decisions — Scene 1",
+    "story": "While walking through a shopping mall after work, Nimal sees a smartwatch on sale that he had not planned to buy. It looks attractive, and buying it would feel rewarding in the moment. At the same time, he knows repeated impulse decisions quietly weaken financial stability over time.",
     "subdomain": "Impulse spending",
     "scenario": true,
-    "evidenceTag": "scenario-bank-v69",
+    "evidenceTag": "realistic-named-character-v611",
     "options": [
       {
         "key": "A",
@@ -905,11 +905,11 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
   {
     "id": "q26",
     "ruleId": "financial-freedom",
-    "title": "Scenario 2",
-    "story": "A financial obligation is coming due and your money feels tighter than you would like. Part of you wants to avoid looking at the numbers because the situation is uncomfortable. Avoidance would reduce stress for a few minutes, but it could make the real problem worse later. The moment tests whether you face financial reality or retreat from it.",
+    "title": "Nimal’s month of money decisions — Scene 2",
+    "story": "A few days later, Nimal sees that a utility bill is due and his money feels tighter than he would like this month. Part of him wants to avoid looking closely at the details because the situation is uncomfortable. Avoidance would reduce stress for a short while, but it could make the problem worse later.",
     "subdomain": "Facing money issues",
     "scenario": true,
-    "evidenceTag": "scenario-bank-v69",
+    "evidenceTag": "realistic-named-character-v611",
     "options": [
       {
         "key": "A",
@@ -941,11 +941,11 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
   {
     "id": "q27",
     "ruleId": "financial-freedom",
-    "title": "Scenario 3",
-    "story": "You receive income or money to manage this month. There are several competing demands on it, and if you do not give it structure, it could disappear quickly without supporting your most important needs. Nobody will force you to plan it. The question is whether you create intentional order or drift through spending reactively.",
+    "title": "Nimal’s month of money decisions — Scene 3",
+    "story": "When his salary comes in, Nimal knows there are several demands on the money: household expenses, transport, food, and a few personal wants. If he does not give the money some structure, it could disappear quickly without serving his real priorities. No one else is going to plan it for him.",
     "subdomain": "Budgeting",
     "scenario": true,
-    "evidenceTag": "scenario-bank-v69",
+    "evidenceTag": "realistic-named-character-v611",
     "options": [
       {
         "key": "A",
@@ -977,11 +977,11 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
   {
     "id": "q28",
     "ruleId": "financial-freedom",
-    "title": "Scenario 4",
-    "story": "You must choose between a short-term pleasure and a more responsible longer-term need. Both options feel real, but one supports stability while the other mainly serves immediate desire. You know this kind of decision shapes the quality of your financial life over time. The situation tests whether your money choices align with peace and values or just with the moment.",
+    "title": "Nimal’s month of money decisions — Scene 4",
+    "story": "Near the end of the month, Nimal must choose between spending on a short-term pleasure and putting that money toward a more responsible longer-term need. Both options feel real in the moment, but one supports stability while the other mainly serves immediate desire. The choice reflects what kind of financial life he is building.",
     "subdomain": "Value-based money decisions",
     "scenario": true,
-    "evidenceTag": "scenario-bank-v69",
+    "evidenceTag": "realistic-named-character-v611",
     "options": [
       {
         "key": "A",
@@ -1013,11 +1013,11 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
   {
     "id": "q29",
     "ruleId": "be-humble",
-    "title": "Scenario 1",
-    "story": "You are praised publicly for something that went well, but you know that other people also contributed in meaningful ways. In the moment, it would be easy to absorb the praise and let the spotlight stay on you. At the same time, you know that how you handle credit reveals whether you are grounded or ego-driven when things go well.",
+    "title": "Nimal’s day of praise, correction, and learning — Scene 1",
+    "story": "At a team meeting, Nimal is publicly praised for a project that went well, but he knows several other people contributed in important ways. It would be easy to absorb the praise and let the spotlight stay fully on him. At the same time, he knows that how he handles credit reveals whether he is grounded or ego-driven when things go well.",
     "subdomain": "Receiving praise",
     "scenario": true,
-    "evidenceTag": "scenario-bank-v69",
+    "evidenceTag": "realistic-named-character-v611",
     "options": [
       {
         "key": "A",
@@ -1049,11 +1049,11 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
   {
     "id": "q30",
     "ruleId": "be-humble",
-    "title": "Scenario 2",
-    "story": "Someone gives you feedback about a weakness or mistake in something you did. The feedback may be uncomfortable to hear, and your first inner reaction is to protect yourself. Even so, you know that growth depends on whether you can stay teachable rather than defensive. The situation tests humility under emotional pressure.",
+    "title": "Nimal’s day of praise, correction, and learning — Scene 2",
+    "story": "Later that day, Nimal’s supervisor points out a weakness in part of his work. The feedback feels uncomfortable, and his first inner reaction is to defend himself. Even so, he knows that growth depends on whether he can stay teachable rather than becoming defensive.",
     "subdomain": "Accepting feedback",
     "scenario": true,
-    "evidenceTag": "scenario-bank-v69",
+    "evidenceTag": "realistic-named-character-v611",
     "options": [
       {
         "key": "A",
@@ -1085,11 +1085,11 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
   {
     "id": "q31",
     "ruleId": "be-humble",
-    "title": "Scenario 3",
-    "story": "In the middle of a conversation or disagreement, you realize that you were mistaken. Nobody is forcing you to admit it clearly, and you could still try to protect your image. At that moment, your response will reveal whether truth matters more to you than ego.",
+    "title": "Nimal’s day of praise, correction, and learning — Scene 3",
+    "story": "During a discussion later in the afternoon, Nimal realizes that he misunderstood part of the issue and that another colleague was actually correct. Nobody is forcing him to admit it clearly, and he could still try to protect his image if he wanted to. His next response will show whether truth matters more than pride.",
     "subdomain": "Admitting wrong",
     "scenario": true,
-    "evidenceTag": "scenario-bank-v69",
+    "evidenceTag": "realistic-named-character-v611",
     "options": [
       {
         "key": "A",
@@ -1113,7 +1113,7 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
       },
       {
         "key": "E",
-        "text": "I admit it calmly and appreciate being corrected because learning matters more to my ego.",
+        "text": "I admit it calmly and appreciate being corrected because learning matters more to me than ego.",
         "score": 4
       }
     ]
@@ -1121,11 +1121,11 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
   {
     "id": "q32",
     "ruleId": "be-humble",
-    "title": "Scenario 4",
-    "story": "A younger, quieter, or less experienced person offers an idea that is genuinely useful. You can feel a subtle temptation to dismiss it because of who it came from, even though the idea itself has value. The situation tests whether your openness to learning depends on status or on truth.",
+    "title": "Nimal’s day of praise, correction, and learning — Scene 4",
+    "story": "Before leaving, a younger intern named Sahan offers a simple suggestion that would genuinely improve a process Nimal has been working on. Because Sahan is junior, it would be easy to dismiss the idea without much thought. Yet the idea itself is useful. Nimal now has to decide whether he values truth and learning more than status.",
     "subdomain": "Learning from anyone",
     "scenario": true,
-    "evidenceTag": "scenario-bank-v69",
+    "evidenceTag": "realistic-named-character-v611",
     "options": [
       {
         "key": "A",
@@ -1157,11 +1157,11 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
   {
     "id": "q33",
     "ruleId": "stay-calm",
-    "title": "Scenario 1",
-    "story": "You return home after a draining day with your mind already tense. A small irritation happens almost immediately, and you can feel anger beginning to rise faster than the situation itself really deserves. In that moment, the key question is whether you notice the internal shift early enough to influence what happens next.",
+    "title": "Nimal’s stressful evening from tension to recovery — Scene 1",
+    "story": "Nimal comes home after a draining day with his mind already tense. Just after entering the house, he notices the kitchen light has been left on and the groceries he asked someone to put away are still on the table. A small irritation rises much faster than the situation itself really deserves. The first challenge is whether he notices that internal shift early enough to influence what happens next.",
     "subdomain": "Early awareness",
     "scenario": true,
-    "evidenceTag": "scenario-bank-v69",
+    "evidenceTag": "realistic-named-character-v611",
     "options": [
       {
         "key": "A",
@@ -1193,11 +1193,11 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
   {
     "id": "q34",
     "ruleId": "stay-calm",
-    "title": "Scenario 2",
-    "story": "Someone says something that feels unfair or irritating while you are already under pressure. Your first impulse is to respond immediately and strongly. You know that a few seconds of pause could change the whole direction of the interaction. The moment tests whether you can delay reaction long enough to choose a better one.",
+    "title": "Nimal’s stressful evening from tension to recovery — Scene 2",
+    "story": "As the situation continues, Maya says something that feels unfair while Nimal is already under pressure. His first impulse is to answer sharply and immediately. He knows that even a few seconds of pause could change the whole direction of the interaction, but the urge to react is strong.",
     "subdomain": "Response delay",
     "scenario": true,
-    "evidenceTag": "scenario-bank-v69",
+    "evidenceTag": "realistic-named-character-v611",
     "options": [
       {
         "key": "A",
@@ -1229,11 +1229,11 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
   {
     "id": "q35",
     "ruleId": "stay-calm",
-    "title": "Scenario 3",
-    "story": "A disagreement with someone close to you is starting to intensify. Both of you are becoming more emotional, and the conversation is drifting away from the original issue into a struggle for who will win. At this point, your behaviour can either add more fuel or help restore steadiness. The situation tests your ability to choose peace over escalation.",
+    "title": "Nimal’s stressful evening from tension to recovery — Scene 3",
+    "story": "The disagreement starts intensifying, and both Nimal and Maya are becoming more emotional. The conversation is drifting away from the original issue and turning into a struggle over who is right. At this point, Nimal’s behaviour can either add more fuel or help restore steadiness and safety in the interaction.",
     "subdomain": "De-escalation",
     "scenario": true,
-    "evidenceTag": "scenario-bank-v69",
+    "evidenceTag": "realistic-named-character-v611",
     "options": [
       {
         "key": "A",
@@ -1265,11 +1265,11 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
   {
     "id": "q36",
     "ruleId": "stay-calm",
-    "title": "Scenario 4",
-    "story": "Something frustrating or upsetting happens unexpectedly and disrupts your plans. Even after the event is over, the emotional charge continues to affect your body, mood, and attention. The challenge is no longer the event itself but how long you remain trapped inside it. The moment tests your capacity to recover emotional balance.",
+    "title": "Nimal’s stressful evening from tension to recovery — Scene 4",
+    "story": "Even after the discussion ends, the emotional charge is still sitting inside Nimal. He notices that the event is affecting his body, mood, and attention long after it happened. The challenge is no longer the event itself, but how long he remains trapped inside it and whether he can come back to emotional balance in a healthy way.",
     "subdomain": "Recovery",
     "scenario": true,
-    "evidenceTag": "scenario-bank-v69",
+    "evidenceTag": "realistic-named-character-v611",
     "options": [
       {
         "key": "A",
@@ -1301,11 +1301,11 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
   {
     "id": "q37",
     "ruleId": "accept-change",
-    "title": "Scenario 1",
-    "story": "A plan you were depending on changes suddenly at the last minute. You had mentally prepared for one path, and now you have to deal with a different reality that you did not choose. Frustration is understandable, but the deeper question is whether you can shift with the situation or remain locked into what should have happened.",
+    "title": "Nimal’s week of disrupted plans and adaptation — Scene 1",
+    "story": "Nimal has carefully planned his week around an important meeting and a family event. On Monday morning, a key arrangement suddenly changes at the last minute and the whole schedule begins to shift. He had mentally prepared for one path, and now he has to deal with a different reality he did not choose. The first test is whether he can adjust or remain locked into what should have happened.",
     "subdomain": "Flexibility",
     "scenario": true,
-    "evidenceTag": "scenario-bank-v69",
+    "evidenceTag": "realistic-named-character-v611",
     "options": [
       {
         "key": "A",
@@ -1337,11 +1337,11 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
   {
     "id": "q38",
     "ruleId": "accept-change",
-    "title": "Scenario 2",
-    "story": "An outcome has happened that you cannot change, no matter how strongly you wish it were different. Part of you wants to keep fighting reality itself, even though doing so only increases emotional pain. The situation tests whether you can distinguish between what should be acted on and what must be accepted with maturity.",
+    "title": "Nimal’s week of disrupted plans and adaptation — Scene 2",
+    "story": "Soon after, another outcome becomes clear that Nimal cannot change no matter how much he dislikes it. Part of him wants to keep fighting reality itself, even though doing so only increases emotional pain. The deeper challenge is whether he can distinguish between what should be acted on and what must be accepted with maturity.",
     "subdomain": "Acceptance",
     "scenario": true,
-    "evidenceTag": "scenario-bank-v69",
+    "evidenceTag": "realistic-named-character-v611",
     "options": [
       {
         "key": "A",
@@ -1373,11 +1373,11 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
   {
     "id": "q39",
     "ruleId": "accept-change",
-    "title": "Scenario 3",
-    "story": "You worked hard toward something important and it did not turn out as you hoped. The disappointment is real, and it would be easy to stay discouraged or emotionally defeated. Yet this is also the kind of moment that reveals how you recover after loss rather than how you perform when everything goes well.",
+    "title": "Nimal’s week of disrupted plans and adaptation — Scene 3",
+    "story": "By midweek, something Nimal worked hard for does not turn out as he hoped. The disappointment is real, and it would be easy to stay discouraged or emotionally defeated. Yet this kind of moment also reveals how he recovers after loss rather than how he functions when things are going smoothly.",
     "subdomain": "Recovery after disappointment",
     "scenario": true,
-    "evidenceTag": "scenario-bank-v69",
+    "evidenceTag": "realistic-named-character-v611",
     "options": [
       {
         "key": "A",
@@ -1409,11 +1409,11 @@ export const QUESTIONNAIRE_ITEMS: QuestionnaireItem[] =
   {
     "id": "q40",
     "ruleId": "accept-change",
-    "title": "Scenario 4",
-    "story": "A goal still matters to you, but the original route to reach it is blocked. You can keep focusing on the closed path, or you can redirect yourself toward another workable route. The situation tests not whether change feels comfortable, but whether you can stay purposeful when the exact plan has to change.",
+    "title": "Nimal’s week of disrupted plans and adaptation — Scene 4",
+    "story": "At the end of the week, the original route to one of Nimal’s goals is clearly blocked, but the goal itself still matters. He can keep staring at the closed path, or he can redirect himself toward another workable route. This final moment tests not whether change feels comfortable, but whether he can stay purposeful when the exact plan must change.",
     "subdomain": "Plan B mindset",
     "scenario": true,
-    "evidenceTag": "scenario-bank-v69",
+    "evidenceTag": "realistic-named-character-v611",
     "options": [
       {
         "key": "A",

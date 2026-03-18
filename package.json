@@ -1,6 +1,6 @@
 {
-  "name": "peaceful-life-index-v6-story-flow-book-messages",
-  "version": "0.6.10",
+  "name": "peaceful-life-index-v6-realistic-stories",
+  "version": "0.6.11",
   "private": true,
   "scripts": {
     "dev": "next dev",

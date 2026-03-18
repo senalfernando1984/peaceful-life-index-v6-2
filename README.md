@@ -82,3 +82,9 @@ It does not include true email-auth sign-in or a backend database.
 - updates scoring so each domain is scaled from raw 0–16 to 0–10 before PLI weighting and interaction adjustment
 - keeps the existing dashboard structure and PLI visualization model
 \n\n## Version 6.10 patch\n\n- simplifies the scenario numbering on the assessment cards\n- removes the Evidence note from each rule detail page\n- adds a Happiness Blueprint message card for each Golden Rule domain\n- keeps the Version 6.9 scenario-based structure and dashboard layout\n
+
+## Version 6.11 patch
+
+- updates all 40 questionnaire scenarios to the realistic named-character story set
+- aligns all answer choices to the specific people, tasks, and events in each story
+- keeps the Version 6.10 dashboard, numbering, and book-message structure

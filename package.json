@@ -1,6 +1,6 @@
 {
-  "name": "peaceful-life-index-v6-practical-scenarios",
-  "version": "0.6.7",
+  "name": "peaceful-life-index-v6-book-developer-buttons",
+  "version": "0.6.8",
   "private": true,
   "scripts": {
     "dev": "next dev",

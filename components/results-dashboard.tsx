@@ -213,11 +213,25 @@ export function ResultsDashboard() {
       </div>
 
       <div className="card p-6 text-sm text-pli-slate">
-        <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Evidence note</p>
+        <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">About the book and developer</p>
         <p className="mt-3">
-          Version 6.3 is structured to be evidence-ready, but it is still <strong className="text-pli-ink">not yet a fully peer-reviewed validated instrument</strong>.
-          A separate literature-mapped research version is needed to attach verified citations and validation notes to every item, subdomain, and intervention.
+          <strong className="text-pli-ink">The Happiness Blueprint: The 10 Golden Rules for a Peaceful and Purposeful Life</strong> by
+          <strong className="text-pli-ink"> Dr Senal Fernando</strong> is the conceptual foundation of the Peaceful Life Index.
+          The book offers a practical guide to understanding the 10 Golden Rules and applying them in daily life to build greater peace, purpose, balance, and happiness.
         </p>
+        <p className="mt-3">
+          If you want to improve your Peaceful Life Index in a deeper and more meaningful way, this book is an ideal companion to the assessment.
+          <strong className="text-pli-ink"> Dr Senal Fernando</strong> is the developer and conceptual creator of the
+          <strong className="text-pli-ink"> Peaceful Life Index (PLI)</strong>.
+        </p>
+        <div className="mt-5 flex flex-wrap gap-3">
+          <Link href="/about-book" className="rounded-full bg-pli-teal px-5 py-3 text-sm font-medium text-white">
+            About the book
+          </Link>
+          <Link href="/about-developer" className="rounded-full border border-pli-border px-5 py-3 text-sm font-medium text-pli-ink">
+            About the developer
+          </Link>
+        </div>
       </div>
     </div>
   );

@@ -65,3 +65,10 @@ It does not include true email-auth sign-in or a backend database.
 - keeps the Version 6.6 homepage and monthly 30-day instruction changes
 - refines question wording so every rule contains clearer practical daily-life scenario items
 - ensures at least 4 scenario-style items per domain while keeping 10 items per domain
+
+
+## Version 6.8 patch
+
+- replaces the evidence note card with an About the Book and Developer section
+- adds two buttons: About the book and About the developer
+- adds dedicated pages for both buttons

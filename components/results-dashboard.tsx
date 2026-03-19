@@ -115,21 +115,21 @@ export function ResultsDashboard() {
             </div>
           </div>
           <div className="mx-auto md:mx-0">
-            <CharacterIllustration character={character} size="md" className="sm:[width:216px]" />
+            <CharacterIllustration character={character} size="lg" />
           </div>
         </div>
       </div>
 
       <div className="grid gap-6 xl:grid-cols-[1.05fr_0.95fr]">
         <div className="space-y-6">
-          <div className="card overflow-hidden p-4 sm:p-6">
+          <div className="card p-6">
             <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Domain profile</p>
             <div className="mt-4">
               <PliRadarChart scores={domainScores} />
             </div>
           </div>
 
-          <div className="card overflow-hidden p-4 sm:p-6">
+          <div className="card p-6">
             <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Interaction matrix</p>
             <div className="mt-4">
               <InteractionGrid />

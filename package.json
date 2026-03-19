@@ -1,6 +1,6 @@
 {
-  "name": "peaceful-life-index-v6-premium-character-scene-integration",
-  "version": "0.6.17",
+  "name": "peaceful-life-index-v6-premium-portraits-lite",
+  "version": "0.6.17-lite",
   "private": true,
   "scripts": {
     "dev": "next dev",

@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -21,16 +22,12 @@ export function PliRadarChart({ scores }: { scores: DomainScore[] }) {
   }));
 
   return (
-    <div className="mx-auto w-full max-w-[300px] sm:max-w-[360px] md:max-w-none">
-      <div className="h-[248px] w-full sm:h-80">
+    <div className="mx-auto w-full max-w-[360px] sm:max-w-none">
+      <div className="h-[260px] w-full sm:h-80">
         <ResponsiveContainer width="100%" height="100%">
-          <RadarChart
-            data={data}
-            outerRadius={isMobile ? '52%' : '70%'}
-            margin={{ top: isMobile ? 8 : 16, right: isMobile ? 2 : 18, bottom: isMobile ? 8 : 12, left: isMobile ? 2 : 18 }}
-          >
+          <RadarChart data={data} outerRadius={isMobile ? '58%' : '70%'} margin={{ top: isMobile ? 8 : 16, right: isMobile ? 8 : 18, bottom: isMobile ? 8 : 12, left: isMobile ? 8 : 18 }}>
             <PolarGrid stroke="#DEE5E2" />
-            <PolarAngleAxis dataKey="rule" tick={{ fill: '#667885', fontSize: isMobile ? 9 : 12 }} />
+            <PolarAngleAxis dataKey="rule" tick={{ fill: '#667885', fontSize: isMobile ? 10 : 12 }} />
             <Radar dataKey="value" stroke="#195A63" fill="#195A63" fillOpacity={0.28} />
           </RadarChart>
         </ResponsiveContainer>

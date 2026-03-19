@@ -5,16 +5,16 @@ import { CharacterIllustration } from '@/components/visuals/character-illustrati
 
 export default function HomePage() {
   return (
-    <div className="space-y-8">
-      <section className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+    <div className="space-y-6">
+      <section className="grid gap-6 lg:grid-cols-[1.02fr_0.98fr] lg:items-start">
         <div>
           <span className="inline-flex rounded-full border border-pli-border px-3 py-1 text-xs font-medium text-pli-teal">
             The Happiness Blueprint
           </span>
-          <h1 className="mt-6 max-w-4xl text-4xl font-semibold tracking-tight md:text-6xl">
+          <h1 className="mt-4 max-w-4xl text-3xl font-semibold tracking-tight sm:text-4xl xl:text-5xl">
             Measure your <span className="text-pli-teal">Peaceful Life Index</span> through the 10 Golden Rules.
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-pli-slate">
+          <p className="mt-4 max-w-2xl text-base leading-8 text-pli-slate sm:text-lg">
             The Peaceful Life Index translates the philosophy of <strong className="text-pli-ink">The Happiness Blueprint: The 10 Golden Rules</strong> into a practical self-assessment.
             It helps you reflect on peace, balance, everyday behaviour, relationships, health, financial stability, humility, calmness, and adaptability,
             then shows your strengths, growth areas, and practical next steps.
@@ -29,7 +29,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="card w-full overflow-hidden p-0 lg:max-w-[760px] lg:justify-self-end">
+        <div className="card w-full overflow-hidden p-0 lg:max-w-[720px] lg:justify-self-end">
           <div className="grid gap-4 bg-gradient-to-br from-white via-[#f7f3ec] to-[#eef7f5] p-4 sm:grid-cols-1 sm:grid-cols-2 md:p-6">
             <div className="fade-up min-w-0 flex flex-col items-center rounded-3xl border border-pli-border bg-white/85 p-4 text-center">
               <CharacterIllustration character="nimal" size="md" />
@@ -42,12 +42,12 @@ export default function HomePage() {
               <p className="mt-1 text-sm text-pli-slate">Choose Maya for the female pathway.</p>
             </div>
           </div>
-          <div className="grid gap-3 border-t border-pli-border p-6 sm:grid-cols-1 sm:grid-cols-2">
+          <div className="grid gap-3 border-t border-pli-border p-4 sm:grid-cols-2 lg:grid-cols-2">
             {RULES.map(rule => (
-              <div key={rule.id} className="rounded-2xl border border-pli-border bg-pli-bg p-4">
+              <div key={rule.id} className="rounded-2xl border border-pli-border bg-pli-bg p-3.5">
                 <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Rule {rule.index}</p>
-                <h3 className="mt-2 font-medium">{rule.title}</h3>
-                <p className="mt-2 text-sm text-pli-slate">{rule.whyItMatters}</p>
+                <h3 className="mt-2 text-base font-medium">{rule.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-pli-slate">{rule.whyItMatters}</p>
               </div>
             ))}
           </div>

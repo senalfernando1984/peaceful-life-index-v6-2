@@ -1,6 +1,6 @@
 {
-  "name": "peaceful-life-index-v6-domain-detail-sbcc-quotes",
-  "version": "0.6.16.2",
+  "name": "peaceful-life-index-v6-layout-image-fixes",
+  "version": "0.6.16.3",
   "private": true,
   "scripts": {
     "dev": "next dev",

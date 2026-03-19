@@ -149,3 +149,12 @@ It does not include true email-auth sign-in or a backend database.
 - restores all 10 individual domain scores on the dashboard with clickable detail links
 - enriches each rule detail page with subdomain-tailored SBCC bundles from PLI_Scientific_Evidence_Master_Workbook_v3
 - keeps the relevant Happiness Blueprint quote section at the bottom of each rule page
+
+
+## Version 6.16.3 patch
+
+- fixes rule hero image rendering more safely with fallback handling
+- rescales oversized rule images in assessment and rule detail views
+- reduces homepage hero dominance so the heading is visible sooner
+- shrinks dashboard domain cards and improves right-column fit
+- slightly reduces character illustration size for better desktop and mobile balance

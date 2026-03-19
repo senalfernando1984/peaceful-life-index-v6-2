@@ -65,12 +65,12 @@ export function RuleDetail({ slug }: { slug: string }) {
   const bookMessage = RULE_BOOK_MESSAGES[rule.id];
 
   return (
-    <div className="space-y-6">
-      <div className="card p-6">
+    <div className="space-y-5">
+      <div className="card p-5">
         <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Golden Rule detail</p>
         <h1 className="mt-2 text-3xl font-semibold">{rule.title}</h1>
         <p className="mt-3 text-sm text-pli-slate">{rule.definition}</p>
-        <div className="mt-4">
+        <div className="mt-3">
           <RuleHero slug={rule.slug} title={rule.title} />
         </div>
         <p className="mt-4 text-sm text-pli-slate">
@@ -83,7 +83,7 @@ export function RuleDetail({ slug }: { slug: string }) {
             </a>
           ))}
         </div>
-        <div className="mt-4 flex flex-wrap items-end gap-6">
+        <div className="mt-4 flex flex-wrap items-end gap-5">
           <div>
             <p className="text-sm text-pli-slate">Assessment scenarios in this domain</p>
             <p className="mt-1 text-xl font-semibold text-pli-ink">{itemCount}</p>

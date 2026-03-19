@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 const MAP: Record<string, string> = {
   'do-good': '/rules/do-good.svg',
   'do-the-right-thing': '/rules/do-the-right-thing.svg',
@@ -15,16 +13,22 @@ const MAP: Record<string, string> = {
 
 export function RuleHero({ slug, title }: { slug: string; title: string }) {
   const src = MAP[slug] ?? '/rules/do-good.svg';
+
   return (
     <div className="overflow-hidden rounded-3xl border border-pli-border bg-white shadow-soft">
-      <Image
-        src={src}
-        alt={`${title} visual`}
-        width={480}
-        height={280}
-        className="h-auto w-full object-cover"
-        sizes="(max-width: 768px) 100vw, 480px"
-      />
+      <div className="mx-auto flex w-full max-w-[760px] items-center justify-center p-2 sm:p-3">
+        <img
+          src={src}
+          alt={`${title} visual`}
+          className="h-auto max-h-[210px] w-full object-contain sm:max-h-[260px] lg:max-h-[320px]"
+          onError={(e) => {
+            const target = e.currentTarget as HTMLImageElement;
+            if (!target.src.endsWith('/rules/do-good.svg')) {
+              target.src = '/rules/do-good.svg';
+            }
+          }}
+        />
+      </div>
     </div>
   );
 }

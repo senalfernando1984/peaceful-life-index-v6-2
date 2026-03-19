@@ -89,7 +89,7 @@ export function ResultsDashboard() {
   const character = latest.selectedCharacter ?? 'nimal';
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-5">
       <div className="card overflow-hidden p-0">
         <div className="grid gap-6 bg-gradient-to-br from-white via-[#f7f3ec] to-[#eef7f5] p-6 sm:p-8 md:grid-cols-[1fr_auto] md:items-center">
           <div>
@@ -102,12 +102,12 @@ export function ResultsDashboard() {
               <div>
                 <p className="text-sm text-pli-slate">Overall PLI</p>
                 <p className="mt-1 text-5xl font-semibold text-pli-teal">{latest.pli.toFixed(2)}/10</p>
-                <p className="mt-2 text-sm text-pli-slate">{overallBandLabel(latest.pli)}</p>
+                <p className="mt-2 text-sm leading-6 text-pli-slate">{overallBandLabel(latest.pli)}</p>
               </div>
               <div className="min-w-[180px] rounded-2xl border border-pli-border bg-white/80 p-4">
                 <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Priority growth domain</p>
                 <p className="mt-2 text-lg font-semibold">{practicePlan?.weakestDomain ?? 'Growth area'}</p>
-                <p className="mt-2 text-sm text-pli-slate">
+                <p className="mt-2 text-sm leading-6 text-pli-slate">
                   Next recommended PLI: <strong className="text-pli-ink">{practicePlan?.nextAssessmentDate ?? '—'}</strong>
                 </p>
               </div>
@@ -124,26 +124,26 @@ export function ResultsDashboard() {
           <div>
             <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">All domain scores</p>
             <h2 className="mt-2 text-xl font-semibold">Open any Golden Rule for domain detail</h2>
-            <p className="mt-2 text-sm text-pli-slate">
+            <p className="mt-2 text-sm leading-6 text-pli-slate">
               Tap a domain to view its score, trend, tailored SBCC activities, and a relevant quote from The Happiness Blueprint.
             </p>
           </div>
         </div>
-        <div className="mt-5 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-5 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
           {RULES.map(rule => {
             const score = domainScores.find(item => item.ruleId === rule.id);
             return (
               <Link
                 key={rule.id}
                 href={`/rules/${rule.slug}`}
-                className="rounded-2xl border border-pli-border bg-pli-bg p-4 transition hover:border-pli-teal hover:shadow-soft"
+                className="rounded-2xl border border-pli-border bg-pli-bg p-3.5 transition hover:border-pli-teal hover:shadow-soft"
               >
                 <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Rule {rule.index}</p>
-                <p className="mt-2 text-lg font-semibold text-pli-ink">{rule.title}</p>
-                <p className="mt-2 text-sm text-pli-slate">{rule.definition}</p>
+                <p className="mt-2 text-base font-semibold text-pli-ink">{rule.title}</p>
+                <p className="mt-2 text-sm leading-6 text-pli-slate">{rule.definition}</p>
                 <div className="mt-4 flex items-end justify-between gap-3">
                   <div>
-                    <p className="text-3xl font-semibold text-pli-teal">
+                    <p className="text-2xl font-semibold text-pli-teal">
                       {score ? `${score.adjusted.toFixed(1)}/10` : '—'}
                     </p>
                     <p className="mt-1 text-sm text-pli-slate">
@@ -158,8 +158,8 @@ export function ResultsDashboard() {
         </div>
       </div>
 
-      <div className="grid gap-6 xl:grid-cols-[1.05fr_0.95fr]">
-        <div className="space-y-6">
+      <div className="grid gap-5 xl:grid-cols-[minmax(0,1fr)_320px]">
+        <div className="space-y-5">
           <div className="card p-6">
             <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Domain profile</p>
             <div className="mt-4">
@@ -182,7 +182,7 @@ export function ResultsDashboard() {
           </div>
         </div>
 
-        <div className="space-y-6">
+        <div className="space-y-5">
           {strongestRule ? (
             <div className="card p-6">
               <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Strongest area</p>
@@ -193,14 +193,14 @@ export function ResultsDashboard() {
             </div>
           ) : null}
 
-          <div className="card p-6">
+          <div className="card p-5">
             <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Strengths</p>
             <div className="mt-4 space-y-3">
               {strong.map(score => {
                 const rule = RULES.find(item => item.id === score.ruleId);
                 if (!rule) return null;
                 return (
-                  <Link key={score.ruleId} href={`/rules/${rule.slug}`} className="block rounded-2xl border border-pli-border bg-pli-bg p-4">
+                  <Link key={score.ruleId} href={`/rules/${rule.slug}`} className="block rounded-2xl border border-pli-border bg-pli-bg p-3.5">
                     <p className="font-medium">{rule.title}</p>
                     <p className="mt-1 text-sm text-pli-slate">{score.adjusted.toFixed(1)}/10 · {scoreBandLabel(score.band)}</p>
                   </Link>
@@ -209,11 +209,11 @@ export function ResultsDashboard() {
             </div>
           </div>
 
-          <div className="card p-6">
+          <div className="card p-5">
             <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Growth areas</p>
             <div className="mt-4 space-y-4">
               {growth.map(entry => (
-                <Link key={entry.rule.id} href={`/rules/${entry.rule.slug}`} className="block rounded-2xl border border-pli-border p-4">
+                <Link key={entry.rule.id} href={`/rules/${entry.rule.slug}`} className="block rounded-2xl border border-pli-border p-3.5">
                   <p className="font-medium">{entry.rule.title}</p>
                   <p className="mt-1 text-sm text-pli-slate">{entry.score.adjusted.toFixed(1)}/10 · {scoreBandLabel(entry.score.band)}</p>
                   {entry.interventions[0] ? (
@@ -226,7 +226,7 @@ export function ResultsDashboard() {
             </div>
           </div>
 
-          <div className="card p-6">
+          <div className="card p-5">
             <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Priority growth planning</p>
             <p className="mt-3 text-sm text-pli-slate">
               Create a guided monthly practice plan based on your weakest domain and subdomain pattern.

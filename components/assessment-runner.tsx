@@ -87,7 +87,7 @@ export function AssessmentRunner() {
   };
 
   return (
-    <div ref={topRef} className="grid gap-6 lg:grid-cols-[0.84fr_1.16fr]">
+    <div ref={topRef} className="grid gap-5 lg:grid-cols-[0.86fr_1.14fr]">
       <div className="space-y-6">
         <div className="card overflow-hidden p-0">
           <div className="grid gap-4 bg-gradient-to-br from-white via-[#f7f3ec] to-[#eef7f5] p-6 md:grid-cols-[1fr_auto] md:items-center">
@@ -142,7 +142,7 @@ export function AssessmentRunner() {
       </div>
 
       <div className="space-y-6">
-        <div className="card p-6">
+        <div className="card p-5">
           <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Rule {currentRule.index}</p>
           <h1 className="mt-2 text-2xl font-semibold">{currentRule.title}</h1>
           <p className="mt-2 text-sm text-pli-slate">{currentRule.definition}</p>

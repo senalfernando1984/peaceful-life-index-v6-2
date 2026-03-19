@@ -136,3 +136,13 @@ It does not include true email-auth sign-in or a backend database.
 - fixes homepage hero card spacing and Maya text wrapping
 - upgrades weak domain visuals with character-based action scenes for health, financial freedom, and accepting change
 - keeps previous chart and practice-plan fixes
+
+
+## Version 6.17 patch
+
+- adds a SceneIllustration component for the first premium scene integration pass
+- shows meaningful action scenes on matching assessment subdomains
+- improves homepage and character-selection text wrapping
+- further tightens radar chart mobile fit
+- improves interaction-grid small-screen usability
+- refines Nimal and Maya character SVGs

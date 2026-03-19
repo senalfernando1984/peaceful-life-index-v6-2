@@ -10,6 +10,7 @@ import { ClearDataButton } from '@/components/clear-data-button';
 import { CharacterIllustration } from '@/components/visuals/character-illustration';
 import { RuleHero } from '@/components/visuals/rule-hero';
 import { SubdomainBadge } from '@/components/visuals/subdomain-badge';
+import { SceneIllustration } from '@/components/visuals/scene-illustration';
 
 export function AssessmentRunner() {
   const router = useRouter();
@@ -180,6 +181,9 @@ export function AssessmentRunner() {
                     <p className="mt-2 text-sm font-semibold text-pli-ink">{item.subdomain}</p>
                   </div>
                   <SubdomainBadge label={item.subdomain} index={idx} />
+                </div>
+                <div className="mt-4">
+                  <SceneIllustration subdomain={item.subdomain} character={selectedCharacter} />
                 </div>
                 <p className="mt-4 whitespace-pre-line text-sm leading-7 text-pli-slate">
                   {item.stories?.[selectedCharacter] ?? item.story}

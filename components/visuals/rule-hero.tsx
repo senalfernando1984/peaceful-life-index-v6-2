@@ -16,11 +16,11 @@ export function RuleHero({ slug, title }: { slug: string; title: string }) {
 
   return (
     <div className="overflow-hidden rounded-3xl border border-pli-border bg-white shadow-soft">
-      <div className="mx-auto flex w-full max-w-[760px] items-center justify-center p-2 sm:p-3">
+      <div className="mx-auto flex w-full items-center justify-center p-2 sm:p-3">
         <img
           src={src}
           alt={`${title} visual`}
-          className="h-auto max-h-[120px] w-full object-contain sm:max-h-[210px] lg:max-h-[280px]"
+          className="h-auto max-h-[96px] w-full object-contain sm:max-h-[180px] lg:max-h-[240px]"
           onError={(e) => {
             const target = e.currentTarget as HTMLImageElement;
             if (!target.src.endsWith('/rules/do-good.svg')) {

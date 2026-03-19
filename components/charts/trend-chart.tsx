@@ -14,19 +14,19 @@ export function TrendChart({ data }: { data: Array<{ label: string; pli: number 
   }, []);
 
   return (
-    <div className="h-56 w-full sm:h-72">
+    <div className="h-40 w-full sm:h-72">
       <ResponsiveContainer width="100%" height="100%">
-        <LineChart data={data} margin={{ top: 8, right: isMobile ? 6 : 14, left: isMobile ? -20 : 0, bottom: isMobile ? 18 : 8 }}>
+        <LineChart data={data} margin={{ top: 6, right: isMobile ? 4 : 14, left: isMobile ? -24 : 0, bottom: isMobile ? 24 : 8 }}>
           <CartesianGrid stroke="#E7ECE9" strokeDasharray="4 4" />
           <XAxis
             dataKey="label"
-            tick={{ fill: '#667885', fontSize: isMobile ? 10 : 12 }}
+            tick={{ fill: '#667885', fontSize: isMobile ? 9 : 12 }}
             interval="preserveStartEnd"
             angle={isMobile ? -18 : 0}
             textAnchor={isMobile ? 'end' : 'middle'}
-            height={isMobile ? 42 : 30}
+            height={isMobile ? 38 : 30}
           />
-          <YAxis domain={[0, 10]} tick={{ fill: '#667885', fontSize: isMobile ? 10 : 12 }} width={isMobile ? 26 : 40} />
+          <YAxis domain={[0, 10]} tick={{ fill: '#667885', fontSize: isMobile ? 9 : 12 }} width={isMobile ? 24 : 40} />
           <Tooltip />
           <Line dataKey="pli" type="monotone" stroke="#195A63" strokeWidth={3} dot={{ r: isMobile ? 3 : 4 }} />
         </LineChart>

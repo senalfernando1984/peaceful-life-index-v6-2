@@ -1,6 +1,6 @@
 {
-  "name": "peaceful-life-index-v6-homepage-premium-clean",
-  "version": "0.6.16.6",
+  "name": "peaceful-life-index-v6-practice-plan-rich-mobile-dashboard-fixes",
+  "version": "0.6.16.7",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -25,4 +25,4 @@
     "tailwindcss": "^3.4.17",
     "typescript": "^5.7.3"
   }
-}
+}\n

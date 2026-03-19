@@ -185,7 +185,7 @@ export function ResultsDashboard() {
             <div className="card p-5 sm:p-6">
               <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Strongest area</p>
               <h2 className="mt-2 text-xl font-semibold">{strongestRule.title}</h2>
-              <div className="mt-4">
+              <div className="mt-4 max-w-full overflow-hidden">
                 <RuleHero slug={strongestRule.slug} title={strongestRule.title} />
               </div>
             </div>

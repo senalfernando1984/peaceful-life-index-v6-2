@@ -182,3 +182,9 @@ It does not include true email-auth sign-in or a backend database.
 - rebalances the homepage hero into a brand-first full-width section
 - keeps character selection inside the assessment flow instead of the homepage
 - preserves the 10 Golden Rules preview section below the hero
+
+
+## Version 6.16.7.1 patch
+
+- fixes invalid package.json formatting in v6.16.7
+- removes the stray literal characters after the JSON closing brace so Vercel can build normally

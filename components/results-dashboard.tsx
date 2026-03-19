@@ -130,7 +130,7 @@ export function ResultsDashboard() {
           <div className="card p-6">
             <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Interaction matrix</p>
             <div className="mt-4">
-              <InteractionGrid scores={domainScores} />
+              <InteractionGrid />
             </div>
           </div>
 

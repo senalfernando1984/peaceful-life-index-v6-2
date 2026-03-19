@@ -113,3 +113,10 @@ It does not include true email-auth sign-in or a backend database.
 - adds domain hero visuals for each Golden Rule
 - adds subdomain badges and gentle motion styling
 - refreshes homepage, character selection, assessment, results, and rule detail pages with more engaging visuals
+
+
+## Version 6.14.2 patch
+
+- fixes results dashboard chart prop mismatches
+- PliRadarChart now receives `scores`
+- InteractionGrid is rendered without unsupported props

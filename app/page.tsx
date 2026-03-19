@@ -29,8 +29,8 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="card w-full overflow-hidden p-0 lg:max-w-[700px] lg:justify-self-end">
-          <div className="grid gap-4 bg-gradient-to-br from-white via-[#f7f3ec] to-[#eef7f5] p-4 sm:grid-cols-2 md:p-6">
+        <div className="card w-full overflow-hidden p-0 lg:max-w-[760px] lg:justify-self-end">
+          <div className="grid gap-4 bg-gradient-to-br from-white via-[#f7f3ec] to-[#eef7f5] p-4 sm:grid-cols-1 sm:grid-cols-2 md:p-6">
             <div className="fade-up min-w-0 flex flex-col items-center rounded-3xl border border-pli-border bg-white/85 p-4 text-center">
               <CharacterIllustration character="nimal" size="md" />
               <p className="mt-2 text-lg font-semibold">Nimal</p>
@@ -42,8 +42,8 @@ export default function HomePage() {
               <p className="mt-1 text-sm text-pli-slate">Choose Maya for the female pathway.</p>
             </div>
           </div>
-          <div className="grid gap-3 border-t border-pli-border p-6 sm:grid-cols-2">
-            {RULES.slice(0, 4).map(rule => (
+          <div className="grid gap-3 border-t border-pli-border p-6 sm:grid-cols-1 sm:grid-cols-2">
+            {RULES.map(rule => (
               <div key={rule.id} className="rounded-2xl border border-pli-border bg-pli-bg p-4">
                 <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Rule {rule.index}</p>
                 <h3 className="mt-2 font-medium">{rule.title}</h3>

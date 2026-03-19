@@ -1,6 +1,6 @@
 {
-  "name": "peaceful-life-index-v6-realistic-cartoon-characters",
-  "version": "0.6.16",
+  "name": "peaceful-life-index-v6-homepage-10-rules",
+  "version": "0.6.16.1",
   "private": true,
   "scripts": {
     "dev": "next dev",

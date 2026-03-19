@@ -136,3 +136,9 @@ It does not include true email-auth sign-in or a backend database.
 - fixes homepage hero card spacing and Maya text wrapping
 - upgrades weak domain visuals with character-based action scenes for health, financial freedom, and accepting change
 - keeps previous chart and practice-plan fixes
+
+
+## Version 6.16.1 patch
+
+- fixes homepage to show all 10 Golden Rules instead of only 4
+- keeps the rest of Version 6.16 unchanged

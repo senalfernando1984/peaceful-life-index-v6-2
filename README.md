@@ -158,3 +158,11 @@ It does not include true email-auth sign-in or a backend database.
 - reduces homepage hero dominance so the heading is visible sooner
 - shrinks dashboard domain cards and improves right-column fit
 - slightly reduces character illustration size for better desktop and mobile balance
+
+
+## Version 6.16.4 patch
+
+- rescales dashboard domain profile, strongest-area, strengths, and growth-area blocks for mobile
+- improves trend chart sizing and label handling on phones
+- converts monthly practice table to mobile cards under small screens
+- reduces oversized mobile hero and chart sections while keeping desktop layout intact

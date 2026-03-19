@@ -1,6 +1,6 @@
 {
-  "name": "peaceful-life-index-v6-layout-image-fixes",
-  "version": "0.6.16.3",
+  "name": "peaceful-life-index-v6-mobile-rescaling-fixes",
+  "version": "0.6.16.4",
   "private": true,
   "scripts": {
     "dev": "next dev",

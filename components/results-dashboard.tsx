@@ -72,12 +72,12 @@ export function ResultsDashboard() {
 
   if (!latest || !Array.isArray(latest.domainScores)) {
     return (
-      <div className="card p-10 text-center">
+      <div className="card p-8 text-center sm:p-10">
         <h2 className="text-2xl font-semibold">No valid assessment saved yet</h2>
         <p className="mt-3 text-sm text-pli-slate">
           Complete your first assessment or clear old browser data if this device holds an older incompatible version.
         </p>
-        <div className="mt-6 flex justify-center gap-4">
+        <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row sm:gap-4">
           <Link href="/assessment" className="rounded-full bg-pli-teal px-5 py-3 text-sm font-medium text-white">Start assessment</Link>
           <ClearDataButton label="Clear browser data" />
         </div>
@@ -91,20 +91,20 @@ export function ResultsDashboard() {
   return (
     <div className="space-y-5">
       <div className="card overflow-hidden p-0">
-        <div className="grid gap-6 bg-gradient-to-br from-white via-[#f7f3ec] to-[#eef7f5] p-6 sm:p-8 md:grid-cols-[1fr_auto] md:items-center">
+        <div className="grid gap-5 bg-gradient-to-br from-white via-[#f7f3ec] to-[#eef7f5] p-5 sm:p-8 md:grid-cols-[1fr_auto] md:items-center">
           <div>
             <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Latest result</p>
-            <h1 className="mt-2 text-3xl font-semibold">Peaceful Life Index Dashboard</h1>
+            <h1 className="mt-2 text-2xl font-semibold sm:text-3xl">Peaceful Life Index Dashboard</h1>
             <p className="mt-3 text-sm text-pli-slate">
               Completed on {formatDate(latest.createdAt)} through the {character === 'maya' ? 'Maya' : 'Nimal'} story pathway.
             </p>
-            <div className="mt-6 flex flex-wrap gap-6">
+            <div className="mt-5 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:gap-6">
               <div>
                 <p className="text-sm text-pli-slate">Overall PLI</p>
-                <p className="mt-1 text-5xl font-semibold text-pli-teal">{latest.pli.toFixed(2)}/10</p>
+                <p className="mt-1 text-4xl font-semibold text-pli-teal sm:text-5xl">{latest.pli.toFixed(2)}/10</p>
                 <p className="mt-2 text-sm leading-6 text-pli-slate">{overallBandLabel(latest.pli)}</p>
               </div>
-              <div className="min-w-[180px] rounded-2xl border border-pli-border bg-white/80 p-4">
+              <div className="min-w-0 rounded-2xl border border-pli-border bg-white/80 p-4 sm:min-w-[180px]">
                 <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Priority growth domain</p>
                 <p className="mt-2 text-lg font-semibold">{practicePlan?.weakestDomain ?? 'Growth area'}</p>
                 <p className="mt-2 text-sm leading-6 text-pli-slate">
@@ -114,20 +114,18 @@ export function ResultsDashboard() {
             </div>
           </div>
           <div className="mx-auto md:mx-0">
-            <CharacterIllustration character={character} size="lg" />
+            <CharacterIllustration character={character} size="md" />
           </div>
         </div>
       </div>
 
-      <div className="card p-6">
-        <div className="flex items-center justify-between gap-4">
-          <div>
-            <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">All domain scores</p>
-            <h2 className="mt-2 text-xl font-semibold">Open any Golden Rule for domain detail</h2>
-            <p className="mt-2 text-sm leading-6 text-pli-slate">
-              Tap a domain to view its score, trend, tailored SBCC activities, and a relevant quote from The Happiness Blueprint.
-            </p>
-          </div>
+      <div className="card p-5 sm:p-6">
+        <div>
+          <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">All domain scores</p>
+          <h2 className="mt-2 text-lg font-semibold sm:text-xl">Open any Golden Rule for domain detail</h2>
+          <p className="mt-2 text-sm leading-6 text-pli-slate">
+            Tap a domain to view its score, trend, tailored SBCC activities, and a relevant quote from The Happiness Blueprint.
+          </p>
         </div>
         <div className="mt-5 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
           {RULES.map(rule => {
@@ -160,23 +158,23 @@ export function ResultsDashboard() {
 
       <div className="grid gap-5 xl:grid-cols-[minmax(0,1fr)_320px]">
         <div className="space-y-5">
-          <div className="card p-6">
+          <div className="card p-5 sm:p-6">
             <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Domain profile</p>
-            <div className="mt-4">
+            <div className="mt-3 sm:mt-4">
               <PliRadarChart scores={domainScores} />
             </div>
           </div>
 
-          <div className="card p-6">
+          <div className="card p-5 sm:p-6">
             <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Interaction matrix</p>
-            <div className="mt-4">
+            <div className="mt-3 sm:mt-4">
               <InteractionGrid />
             </div>
           </div>
 
-          <div className="card p-6">
+          <div className="card p-5 sm:p-6">
             <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Trend over time</p>
-            <div className="mt-4">
+            <div className="mt-3 sm:mt-4">
               <TrendChart data={trend} />
             </div>
           </div>
@@ -184,7 +182,7 @@ export function ResultsDashboard() {
 
         <div className="space-y-5">
           {strongestRule ? (
-            <div className="card p-6">
+            <div className="card p-5 sm:p-6">
               <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Strongest area</p>
               <h2 className="mt-2 text-xl font-semibold">{strongestRule.title}</h2>
               <div className="mt-4">
@@ -213,11 +211,11 @@ export function ResultsDashboard() {
             <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Growth areas</p>
             <div className="mt-4 space-y-4">
               {growth.map(entry => (
-                <Link key={entry.rule.id} href={`/rules/${entry.rule.slug}`} className="block rounded-2xl border border-pli-border p-3.5">
+                <Link key={entry.rule.id} href={`/rules/${entry.rule.slug}`} className="block overflow-hidden rounded-2xl border border-pli-border p-3.5">
                   <p className="font-medium">{entry.rule.title}</p>
                   <p className="mt-1 text-sm text-pli-slate">{entry.score.adjusted.toFixed(1)}/10 · {scoreBandLabel(entry.score.band)}</p>
                   {entry.interventions[0] ? (
-                    <p className="mt-3 text-sm text-pli-slate">
+                    <p className="mt-3 line-clamp-3 text-sm leading-6 text-pli-slate">
                       <strong className="text-pli-ink">{entry.interventions[0].title}:</strong> {entry.interventions[0].whatToDo}
                     </p>
                   ) : null}
@@ -228,7 +226,7 @@ export function ResultsDashboard() {
 
           <div className="card p-5">
             <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Priority growth planning</p>
-            <p className="mt-3 text-sm text-pli-slate">
+            <p className="mt-3 text-sm leading-6 text-pli-slate">
               Create a guided monthly practice plan based on your weakest domain and subdomain pattern.
             </p>
             <div className="mt-4">

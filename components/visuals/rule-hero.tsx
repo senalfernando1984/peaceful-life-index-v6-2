@@ -20,7 +20,7 @@ export function RuleHero({ slug, title }: { slug: string; title: string }) {
         <img
           src={src}
           alt={`${title} visual`}
-          className="h-auto max-h-[210px] w-full object-contain sm:max-h-[260px] lg:max-h-[320px]"
+          className="h-auto max-h-[120px] w-full object-contain sm:max-h-[210px] lg:max-h-[280px]"
           onError={(e) => {
             const target = e.currentTarget as HTMLImageElement;
             if (!target.src.endsWith('/rules/do-good.svg')) {

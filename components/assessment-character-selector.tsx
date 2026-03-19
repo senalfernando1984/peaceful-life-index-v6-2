@@ -49,11 +49,11 @@ export function AssessmentCharacterSelector() {
               onClick={() => choose(card.id)}
               className={`rounded-3xl border p-5 text-left transition ${active ? 'border-pli-teal bg-pli-bg shadow-sm' : 'border-pli-border bg-white hover:-translate-y-0.5 hover:shadow-sm'}`}
             >
-              <div className="flex items-center gap-4">
+              <div className="flex min-w-0 items-center gap-4">
                 <CharacterIllustration character={card.id} size="md" />
-                <div>
+                <div className="min-w-0">
                   <p className="text-lg font-semibold text-pli-ink">{card.name}</p>
-                  <p className="mt-2 text-sm text-pli-slate">{card.description}</p>
+                  <p className="mt-2 text-sm leading-6 text-pli-slate break-words">{card.description}</p>
                   <p className="mt-3 text-xs uppercase tracking-[0.14em] text-pli-gold">
                     {active ? 'Selected' : 'Tap to select'}
                   </p>

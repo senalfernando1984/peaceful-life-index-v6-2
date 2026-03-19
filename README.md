@@ -128,3 +128,11 @@ It does not include true email-auth sign-in or a backend database.
 - replaces abstract rule art with action-based scene visuals
 - improves radar-chart sizing for mobile screens
 - keeps existing v6.14.2 chart-prop fixes
+
+
+## Version 6.16 patch
+
+- improves Nimal and Maya with more realistic cartoon-style SVG character art
+- fixes homepage hero card spacing and Maya text wrapping
+- upgrades weak domain visuals with character-based action scenes for health, financial freedom, and accepting change
+- keeps previous chart and practice-plan fixes

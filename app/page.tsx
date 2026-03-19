@@ -29,17 +29,17 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="card overflow-hidden p-0">
-          <div className="grid gap-6 bg-gradient-to-br from-white via-[#f7f3ec] to-[#eef7f5] p-6 md:grid-cols-[1fr_1fr]">
-            <div className="fade-up flex flex-col items-center rounded-3xl border border-pli-border bg-white/80 p-4 text-center">
-              <CharacterIllustration character="nimal" size="lg" />
+        <div className="card w-full overflow-hidden p-0 lg:max-w-[700px] lg:justify-self-end">
+          <div className="grid gap-4 bg-gradient-to-br from-white via-[#f7f3ec] to-[#eef7f5] p-4 sm:grid-cols-2 md:p-6">
+            <div className="fade-up min-w-0 flex flex-col items-center rounded-3xl border border-pli-border bg-white/85 p-4 text-center">
+              <CharacterIllustration character="nimal" size="md" />
               <p className="mt-2 text-lg font-semibold">Nimal</p>
               <p className="mt-1 text-sm text-pli-slate">Choose Nimal for the male story pathway.</p>
             </div>
-            <div className="fade-up flex flex-col items-center rounded-3xl border border-pli-border bg-white/80 p-4 text-center">
-              <CharacterIllustration character="maya" size="lg" />
+            <div className="fade-up min-w-0 flex flex-col items-center rounded-3xl border border-pli-border bg-white/85 p-4 text-center">
+              <CharacterIllustration character="maya" size="md" />
               <p className="mt-2 text-lg font-semibold">Maya</p>
-              <p className="mt-1 text-sm text-pli-slate">Choose Maya for the female story pathway.</p>
+              <p className="mt-1 text-sm text-pli-slate">Choose Maya for the female pathway.</p>
             </div>
           </div>
           <div className="grid gap-3 border-t border-pli-border p-6 sm:grid-cols-2">

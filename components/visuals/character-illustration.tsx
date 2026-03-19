@@ -11,7 +11,7 @@ export function CharacterIllustration({
   className?: string;
 }) {
   const src = character === 'maya' ? '/characters/maya.svg' : '/characters/nimal.svg';
-  const dim = size === 'sm' ? 96 : size === 'md' ? 168 : 248;
+  const dim = size === 'sm' ? 96 : size === 'md' ? 168 : 216;
   const motion = size === 'lg' ? 'float-gentle-delayed' : 'float-gentle';
   return (
     <div className={`relative shrink-0 ${className}`} aria-hidden="true" style={{ width: dim }}>

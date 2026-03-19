@@ -123,12 +123,7 @@ export function ResultsDashboard() {
           <div className="card p-6">
             <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Domain profile</p>
             <div className="mt-4">
-              <PliRadarChart
-                data={domainScores.map(score => {
-                  const rule = RULES.find(item => item.id === score.ruleId);
-                  return { label: rule?.shortTitle ?? score.ruleId, value: score.adjusted };
-                })}
-              />
+              <PliRadarChart scores={domainScores} />
             </div>
           </div>
 

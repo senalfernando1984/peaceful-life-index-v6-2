@@ -1,6 +1,6 @@
 {
-  "name": "peaceful-life-index-v6-premium-portraits-lite",
-  "version": "0.6.17-lite",
+  "name": "peaceful-life-index-v6-realistic-cartoon-characters",
+  "version": "0.6.16",
   "private": true,
   "scripts": {
     "dev": "next dev",

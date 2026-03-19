@@ -1,6 +1,6 @@
 {
-  "name": "peaceful-life-index-v6-character-visuals",
-  "version": "0.6.14",
+  "name": "peaceful-life-index-v6-realistic-visuals-mobile",
+  "version": "0.6.15",
   "private": true,
   "scripts": {
     "dev": "next dev",

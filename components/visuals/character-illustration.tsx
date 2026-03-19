@@ -11,15 +11,16 @@ export function CharacterIllustration({
   className?: string;
 }) {
   const src = character === 'maya' ? '/characters/maya.svg' : '/characters/nimal.svg';
-  const dim = size === 'sm' ? 88 : size === 'md' ? 150 : 220;
+  const dim = size === 'sm' ? 96 : size === 'md' ? 168 : 248;
+  const motion = size === 'lg' ? 'float-gentle-delayed' : 'float-gentle';
   return (
-    <div className={`relative ${className}`} aria-hidden="true">
+    <div className={`relative shrink-0 ${className}`} aria-hidden="true" style={{ width: dim }}>
       <Image
         src={src}
         alt=""
         width={dim}
         height={dim}
-        className={size === 'lg' ? 'float-gentle-delayed' : 'float-gentle'}
+        className={`h-auto max-w-full drop-shadow-[0_16px_30px_rgba(15,94,100,0.14)] ${motion}`}
         priority
       />
     </div>

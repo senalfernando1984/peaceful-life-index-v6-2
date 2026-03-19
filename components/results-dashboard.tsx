@@ -92,7 +92,7 @@ export function ResultsDashboard() {
   return (
     <div className="space-y-6">
       <div className="card overflow-hidden p-0">
-        <div className="grid gap-6 bg-gradient-to-br from-white via-[#f7f3ec] to-[#eef7f5] p-8 md:grid-cols-[1fr_auto] md:items-center">
+        <div className="grid gap-6 bg-gradient-to-br from-white via-[#f7f3ec] to-[#eef7f5] p-6 sm:p-8 md:grid-cols-[1fr_auto] md:items-center">
           <div>
             <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Latest result</p>
             <h1 className="mt-2 text-3xl font-semibold">Peaceful Life Index Dashboard</h1>
@@ -114,7 +114,9 @@ export function ResultsDashboard() {
               </div>
             </div>
           </div>
-          <CharacterIllustration character={character} size="lg" />
+          <div className="mx-auto md:mx-0">
+            <CharacterIllustration character={character} size="lg" />
+          </div>
         </div>
       </div>
 

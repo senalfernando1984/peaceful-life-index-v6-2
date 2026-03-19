@@ -120,3 +120,11 @@ It does not include true email-auth sign-in or a backend database.
 - fixes results dashboard chart prop mismatches
 - PliRadarChart now receives `scores`
 - InteractionGrid is rendered without unsupported props
+
+
+## Version 6.15 patch
+
+- upgrades Nimal and Maya to richer semi-realistic SVG avatars
+- replaces abstract rule art with action-based scene visuals
+- improves radar-chart sizing for mobile screens
+- keeps existing v6.14.2 chart-prop fixes

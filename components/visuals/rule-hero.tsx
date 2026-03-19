@@ -16,8 +16,15 @@ const MAP: Record<string, string> = {
 export function RuleHero({ slug, title }: { slug: string; title: string }) {
   const src = MAP[slug] ?? '/rules/do-good.svg';
   return (
-    <div className="overflow-hidden rounded-3xl border border-pli-border bg-white">
-      <Image src={src} alt={`${title} visual`} width={480} height={280} className="h-auto w-full" />
+    <div className="overflow-hidden rounded-3xl border border-pli-border bg-white shadow-soft">
+      <Image
+        src={src}
+        alt={`${title} visual`}
+        width={480}
+        height={280}
+        className="h-auto w-full object-cover"
+        sizes="(max-width: 768px) 100vw, 480px"
+      />
     </div>
   );
 }

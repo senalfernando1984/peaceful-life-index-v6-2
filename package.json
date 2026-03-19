@@ -1,6 +1,6 @@
 {
-  "name": "peaceful-life-index-v6-homepage-10-rules",
-  "version": "0.6.16.1",
+  "name": "peaceful-life-index-v6-domain-detail-sbcc-quotes",
+  "version": "0.6.16.2",
   "private": true,
   "scripts": {
     "dev": "next dev",

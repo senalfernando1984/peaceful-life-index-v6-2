@@ -40,7 +40,6 @@ export function ResultsDashboard() {
   const sorted = [...domainScores].sort((a, b) => b.adjusted - a.adjusted);
   const strong = sorted.slice(0, 3);
   const weak = [...domainScores].sort((a, b) => a.adjusted - b.adjusted).slice(0, 3);
-
   const trend = [...all].reverse().map(item => ({ label: formatDate(item.createdAt), pli: item.pli }));
   const practicePlan = latest ? buildPracticePlan(latest) : null;
 
@@ -120,6 +119,45 @@ export function ResultsDashboard() {
         </div>
       </div>
 
+      <div className="card p-6">
+        <div className="flex items-center justify-between gap-4">
+          <div>
+            <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">All domain scores</p>
+            <h2 className="mt-2 text-xl font-semibold">Open any Golden Rule for domain detail</h2>
+            <p className="mt-2 text-sm text-pli-slate">
+              Tap a domain to view its score, trend, tailored SBCC activities, and a relevant quote from The Happiness Blueprint.
+            </p>
+          </div>
+        </div>
+        <div className="mt-5 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+          {RULES.map(rule => {
+            const score = domainScores.find(item => item.ruleId === rule.id);
+            return (
+              <Link
+                key={rule.id}
+                href={`/rules/${rule.slug}`}
+                className="rounded-2xl border border-pli-border bg-pli-bg p-4 transition hover:border-pli-teal hover:shadow-soft"
+              >
+                <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Rule {rule.index}</p>
+                <p className="mt-2 text-lg font-semibold text-pli-ink">{rule.title}</p>
+                <p className="mt-2 text-sm text-pli-slate">{rule.definition}</p>
+                <div className="mt-4 flex items-end justify-between gap-3">
+                  <div>
+                    <p className="text-3xl font-semibold text-pli-teal">
+                      {score ? `${score.adjusted.toFixed(1)}/10` : '—'}
+                    </p>
+                    <p className="mt-1 text-sm text-pli-slate">
+                      {score ? scoreBandLabel(score.band) : 'No score'}
+                    </p>
+                  </div>
+                  <span className="text-sm font-medium text-pli-teal">Open detail →</span>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
+      </div>
+
       <div className="grid gap-6 xl:grid-cols-[1.05fr_0.95fr]">
         <div className="space-y-6">
           <div className="card p-6">
@@ -162,10 +200,10 @@ export function ResultsDashboard() {
                 const rule = RULES.find(item => item.id === score.ruleId);
                 if (!rule) return null;
                 return (
-                  <div key={score.ruleId} className="rounded-2xl border border-pli-border bg-pli-bg p-4">
+                  <Link key={score.ruleId} href={`/rules/${rule.slug}`} className="block rounded-2xl border border-pli-border bg-pli-bg p-4">
                     <p className="font-medium">{rule.title}</p>
                     <p className="mt-1 text-sm text-pli-slate">{score.adjusted.toFixed(1)}/10 · {scoreBandLabel(score.band)}</p>
-                  </div>
+                  </Link>
                 );
               })}
             </div>
@@ -175,7 +213,7 @@ export function ResultsDashboard() {
             <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Growth areas</p>
             <div className="mt-4 space-y-4">
               {growth.map(entry => (
-                <div key={entry.rule.id} className="rounded-2xl border border-pli-border p-4">
+                <Link key={entry.rule.id} href={`/rules/${entry.rule.slug}`} className="block rounded-2xl border border-pli-border p-4">
                   <p className="font-medium">{entry.rule.title}</p>
                   <p className="mt-1 text-sm text-pli-slate">{entry.score.adjusted.toFixed(1)}/10 · {scoreBandLabel(entry.score.band)}</p>
                   {entry.interventions[0] ? (
@@ -183,7 +221,7 @@ export function ResultsDashboard() {
                       <strong className="text-pli-ink">{entry.interventions[0].title}:</strong> {entry.interventions[0].whatToDo}
                     </p>
                   ) : null}
-                </div>
+                </Link>
               ))}
             </div>
           </div>

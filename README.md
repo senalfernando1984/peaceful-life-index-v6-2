@@ -142,3 +142,10 @@ It does not include true email-auth sign-in or a backend database.
 
 - fixes homepage to show all 10 Golden Rules instead of only 4
 - keeps the rest of Version 6.16 unchanged
+
+
+## Version 6.16.2 patch
+
+- restores all 10 individual domain scores on the dashboard with clickable detail links
+- enriches each rule detail page with subdomain-tailored SBCC bundles from PLI_Scientific_Evidence_Master_Workbook_v3
+- keeps the relevant Happiness Blueprint quote section at the bottom of each rule page

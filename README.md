@@ -105,3 +105,11 @@ It does not include true email-auth sign-in or a backend database.
 - shows weakest domain and subdomain focus
 - provides an intervention table for the next 30 days
 - suggests the next PLI assessment date automatically
+
+
+## Version 6.14 patch
+
+- adds lightweight Nimal and Maya character visuals
+- adds domain hero visuals for each Golden Rule
+- adds subdomain badges and gentle motion styling
+- refreshes homepage, character selection, assessment, results, and rule detail pages with more engaging visuals

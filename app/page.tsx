@@ -1,11 +1,12 @@
 import Link from 'next/link';
 import { RULES } from '@/data/rules';
 import { ProfileForm } from '@/components/profile-form';
+import { CharacterIllustration } from '@/components/visuals/character-illustration';
 
 export default function HomePage() {
   return (
     <div className="space-y-8">
-      <section className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+      <section className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
         <div>
           <span className="inline-flex rounded-full border border-pli-border px-3 py-1 text-xs font-medium text-pli-teal">
             The Happiness Blueprint
@@ -28,9 +29,21 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="card p-6">
-          <div className="grid gap-3 sm:grid-cols-2">
-            {RULES.map(rule => (
+        <div className="card overflow-hidden p-0">
+          <div className="grid gap-6 bg-gradient-to-br from-white via-[#f7f3ec] to-[#eef7f5] p-6 md:grid-cols-[1fr_1fr]">
+            <div className="fade-up flex flex-col items-center rounded-3xl border border-pli-border bg-white/80 p-4 text-center">
+              <CharacterIllustration character="nimal" size="lg" />
+              <p className="mt-2 text-lg font-semibold">Nimal</p>
+              <p className="mt-1 text-sm text-pli-slate">Choose Nimal for the male story pathway.</p>
+            </div>
+            <div className="fade-up flex flex-col items-center rounded-3xl border border-pli-border bg-white/80 p-4 text-center">
+              <CharacterIllustration character="maya" size="lg" />
+              <p className="mt-2 text-lg font-semibold">Maya</p>
+              <p className="mt-1 text-sm text-pli-slate">Choose Maya for the female story pathway.</p>
+            </div>
+          </div>
+          <div className="grid gap-3 border-t border-pli-border p-6 sm:grid-cols-2">
+            {RULES.slice(0, 4).map(rule => (
               <div key={rule.id} className="rounded-2xl border border-pli-border bg-pli-bg p-4">
                 <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Rule {rule.index}</p>
                 <h3 className="mt-2 font-medium">{rule.title}</h3>

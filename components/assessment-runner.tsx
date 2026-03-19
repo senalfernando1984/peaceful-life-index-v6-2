@@ -7,6 +7,9 @@ import { RULES } from '@/data/rules';
 import { computeAssessment, isAssessmentComplete } from '@/lib/scoring';
 import { getAssessmentCharacter, purgeLegacyPliStorage, saveAssessment } from '@/lib/storage';
 import { ClearDataButton } from '@/components/clear-data-button';
+import { CharacterIllustration } from '@/components/visuals/character-illustration';
+import { RuleHero } from '@/components/visuals/rule-hero';
+import { SubdomainBadge } from '@/components/visuals/subdomain-badge';
 
 export function AssessmentRunner() {
   const router = useRouter();
@@ -28,14 +31,8 @@ export function AssessmentRunner() {
     setMissingIds([]);
 
     const doScroll = () => {
-      if (topRef.current) {
-        topRef.current.scrollIntoView({ behavior: 'auto', block: 'start' });
-      }
-      try {
-        window.scrollTo(0, 0);
-        document.documentElement.scrollTop = 0;
-        document.body.scrollTop = 0;
-      } catch {}
+      topRef.current?.scrollIntoView({ behavior: 'auto', block: 'start' });
+      window.scrollTo(0, 0);
     };
 
     doScroll();
@@ -53,17 +50,12 @@ export function AssessmentRunner() {
 
   const totalAnswered = QUESTIONNAIRE_ITEMS.filter(item => answers[item.id] !== undefined).length;
   const totalQuestions = QUESTIONNAIRE_ITEMS.length;
-  const startNumber = step * 4 + 1;
   const unansweredInCurrentRule = items.filter(item => answers[item.id] === undefined).length;
 
   const focusMissing = (missing: string[]) => {
     setMissingIds(missing);
     const firstMissing = missing[0];
-    const target = questionRefs.current[firstMissing];
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'center' }), 150);
-    }
+    questionRefs.current[firstMissing]?.scrollIntoView({ behavior: 'smooth', block: 'center' });
   };
 
   const handleNext = () => {
@@ -95,29 +87,34 @@ export function AssessmentRunner() {
   };
 
   return (
-    <div ref={topRef} className="grid gap-6 lg:grid-cols-[0.82fr_1.18fr]">
-      <div className="card p-6">
-        <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Assessment progress</p>
-        <div className="mt-4 h-2 rounded-full bg-pli-border">
-          <div
-            className="h-2 rounded-full bg-pli-teal"
-            style={{ width: `${((step + 1) / RULES.length) * 100}%` }}
-          />
+    <div ref={topRef} className="grid gap-6 lg:grid-cols-[0.84fr_1.16fr]">
+      <div className="space-y-6">
+        <div className="card overflow-hidden p-0">
+          <div className="grid gap-4 bg-gradient-to-br from-white via-[#f7f3ec] to-[#eef7f5] p-6 md:grid-cols-[1fr_auto] md:items-center">
+            <div>
+              <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Assessment progress</p>
+              <h2 className="mt-2 text-2xl font-semibold">{selectedCharacter === 'maya' ? 'Maya' : 'Nimal'} story pathway</h2>
+              <p className="mt-2 text-sm text-pli-slate">
+                Rule {currentRule.index} of {RULES.length}. {totalAnswered} of {totalQuestions} scenarios answered.
+              </p>
+              <div className="mt-4 h-2 rounded-full bg-pli-border">
+                <div className="h-2 rounded-full bg-pli-teal" style={{ width: `${((step + 1) / RULES.length) * 100}%` }} />
+              </div>
+            </div>
+            <CharacterIllustration character={selectedCharacter} size="md" />
+          </div>
         </div>
-        <p className="mt-4 text-sm text-pli-slate">
-          Rule {currentRule.index} of {RULES.length}. {totalAnswered} of {totalQuestions} scenarios answered.
-        </p>
 
-        <div className="mt-6 rounded-2xl border border-pli-border bg-pli-bg p-4 text-sm text-pli-slate">
+        <div className="card p-6">
           <p className="font-medium text-pli-ink">How this scenario-based assessment works</p>
-          <p className="mt-2">
-            Each rule contains <strong className="text-pli-ink">4 real-life story scenarios</strong>. Read each story carefully,
-            imagine yourself in that situation over the <strong className="text-pli-ink">last 30 days</strong>, and select the
-            answer that best matches how you would most likely respond.
+          <p className="mt-2 text-sm text-pli-slate">
+            Each rule contains <strong className="text-pli-ink">4 connected real-life story scenarios</strong>. Read each story carefully,
+            imagine yourself in that situation over the <strong className="text-pli-ink">last 30 days</strong>, and choose the response
+            that best matches how you would most likely act.
           </p>
         </div>
 
-        <div className="mt-6 rounded-2xl bg-pli-bg p-4">
+        <div className="card p-6">
           <p className="text-sm text-pli-slate">PLI preview</p>
           {preview ? (
             <>
@@ -129,7 +126,7 @@ export function AssessmentRunner() {
           )}
         </div>
 
-        <div className="mt-6 rounded-2xl border border-pli-border p-4 text-sm text-pli-slate">
+        <div className="card p-6 text-sm text-pli-slate">
           <p className="font-medium text-pli-ink">Current rule completion</p>
           <p className="mt-2">{4 - unansweredInCurrentRule} of 4 scenarios answered in Rule {currentRule.index}.</p>
           {unansweredInCurrentRule > 0 ? (
@@ -141,32 +138,32 @@ export function AssessmentRunner() {
           )}
         </div>
 
-        <div className="mt-4">
-          <ClearDataButton label="Clear browser data and restart" />
-        </div>
+        <ClearDataButton label="Clear browser data and restart" />
       </div>
 
-      <div className="card p-6">
-        <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Rule {currentRule.index}</p>
-        <h1 className="mt-2 text-2xl font-semibold">{currentRule.title}</h1>
-        <p className="mt-2 text-sm text-pli-slate">{currentRule.definition}</p>
-        <div className="mt-3 flex flex-wrap gap-2">
-          {currentRule.subdomains.map(tag => (
-            <span key={tag} className="rounded-full bg-pli-bg px-3 py-1 text-xs text-pli-slate">
-              {tag}
-            </span>
-          ))}
+      <div className="space-y-6">
+        <div className="card p-6">
+          <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Rule {currentRule.index}</p>
+          <h1 className="mt-2 text-2xl font-semibold">{currentRule.title}</h1>
+          <p className="mt-2 text-sm text-pli-slate">{currentRule.definition}</p>
+          <div className="mt-4">
+            <RuleHero slug={currentRule.slug} title={currentRule.title} />
+          </div>
+          <div className="mt-4 flex flex-wrap gap-2">
+            {currentRule.subdomains.map((tag, index) => (
+              <SubdomainBadge key={tag} label={tag} index={index} />
+            ))}
+          </div>
         </div>
 
         {validationMessage ? (
-          <div className="mt-5 rounded-2xl border border-red-300 bg-red-50 p-4 text-sm text-red-700">
+          <div className="rounded-2xl border border-red-300 bg-red-50 p-4 text-sm text-red-700">
             {validationMessage}
           </div>
         ) : null}
 
-        <div className="mt-6 space-y-5">
+        <div className="space-y-5">
           {items.map((item, idx) => {
-            const absoluteNumber = startNumber + idx;
             const isMissing = missingIds.includes(item.id);
 
             return (
@@ -175,13 +172,18 @@ export function AssessmentRunner() {
                 ref={el => {
                   questionRefs.current[item.id] = el;
                 }}
-                className={`rounded-2xl border p-5 ${isMissing ? 'border-red-400 bg-red-50 shadow-sm' : 'border-pli-border'}`}
+                className={`rounded-3xl border p-5 ${isMissing ? 'border-red-400 bg-red-50 shadow-sm' : 'border-pli-border bg-white'} fade-up`}
               >
-                <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">
-                  Rule {currentRule.index} · Scenario {idx + 1} of 4
+                <div className="flex flex-wrap items-center justify-between gap-3">
+                  <div>
+                    <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Rule {currentRule.index} · Scenario {idx + 1} of 4</p>
+                    <p className="mt-2 text-sm font-semibold text-pli-ink">{item.subdomain}</p>
+                  </div>
+                  <SubdomainBadge label={item.subdomain} index={idx} />
+                </div>
+                <p className="mt-4 whitespace-pre-line text-sm leading-7 text-pli-slate">
+                  {item.stories?.[selectedCharacter] ?? item.story}
                 </p>
-                <p className="mt-2 text-sm font-semibold text-pli-ink">{item.subdomain}</p>
-                <p className="mt-3 whitespace-pre-line text-sm leading-7 text-pli-slate">{item.stories?.[selectedCharacter] ?? item.story}</p>
                 {isMissing ? (
                   <p className="mt-3 text-xs font-medium text-red-700">Please choose one response before you continue.</p>
                 ) : null}
@@ -196,12 +198,12 @@ export function AssessmentRunner() {
                         setMissingIds(prev => prev.filter(id => id !== item.id));
                         setValidationMessage('');
                       }}
-                      className={`w-full rounded-2xl border px-4 py-3 text-left text-sm ${
+                      className={`w-full rounded-2xl border px-4 py-3 text-left text-sm transition ${
                         answers[item.id] === optionIndex
                           ? 'border-pli-teal bg-pli-teal text-white'
                           : isMissing
                             ? 'border-red-300 bg-white'
-                            : 'border-pli-border bg-white text-pli-ink'
+                            : 'border-pli-border bg-white text-pli-ink hover:border-pli-teal/40 hover:bg-pli-bg'
                       }`}
                     >
                       <span className="mr-2 font-semibold">{option.key}.</span>
@@ -214,7 +216,7 @@ export function AssessmentRunner() {
           })}
         </div>
 
-        <div className="mt-6 flex items-center justify-between">
+        <div className="flex items-center justify-between">
           <button
             type="button"
             onClick={() => setStep(prev => Math.max(0, prev - 1))}

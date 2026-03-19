@@ -13,6 +13,8 @@ import { scoreBandLabel } from '@/lib/scoring';
 import { AssessmentResult } from '@/types/pli';
 import { INTERVENTIONS } from '@/data/interventions';
 import { buildPracticePlan } from '@/lib/practice-plan';
+import { CharacterIllustration } from '@/components/visuals/character-illustration';
+import { RuleHero } from '@/components/visuals/rule-hero';
 
 function overallBandLabel(score: number) {
   if (score < 2) return 'Very Low';
@@ -39,9 +41,8 @@ export function ResultsDashboard() {
   const strong = sorted.slice(0, 3);
   const weak = [...domainScores].sort((a, b) => a.adjusted - b.adjusted).slice(0, 3);
 
-  const trend = [...all]
-    .reverse()
-    .map(item => ({ label: formatDate(item.createdAt), pli: item.pli }));
+  const trend = [...all].reverse().map(item => ({ label: formatDate(item.createdAt), pli: item.pli }));
+  const practicePlan = latest ? buildPracticePlan(latest) : null;
 
   const growth = useMemo(
     () =>
@@ -70,8 +71,6 @@ export function ResultsDashboard() {
     interventions: typeof INTERVENTIONS;
   }>;
 
-  const practicePlan = latest ? buildPracticePlan(latest) : null;
-
   if (!latest || !Array.isArray(latest.domainScores)) {
     return (
       <div className="card p-10 text-center">
@@ -79,188 +78,132 @@ export function ResultsDashboard() {
         <p className="mt-3 text-sm text-pli-slate">
           Complete your first assessment or clear old browser data if this device holds an older incompatible version.
         </p>
-        <div className="mt-5 flex flex-wrap justify-center gap-3">
-          <Link href="/assessment" className="inline-flex rounded-full bg-pli-teal px-5 py-3 text-sm font-medium text-white">
-            Start assessment
-          </Link>
-          <ClearDataButton />
+        <div className="mt-6 flex justify-center gap-4">
+          <Link href="/assessment" className="rounded-full bg-pli-teal px-5 py-3 text-sm font-medium text-white">Start assessment</Link>
+          <ClearDataButton label="Clear browser data" />
         </div>
       </div>
     );
   }
 
+  const strongestRule = RULES.find(rule => rule.id === strong[0]?.ruleId);
+  const character = latest.selectedCharacter ?? 'nimal';
+
   return (
     <div className="space-y-6">
-      <div className="grid gap-6 xl:grid-cols-[0.95fr_1.05fr]">
-        <div className="card p-6">
-          <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Overall Peaceful Life Index</p>
-          <div className="mt-4 flex items-end gap-4">
-            <p className="text-5xl font-semibold text-pli-teal">{latest.pli.toFixed(2)}</p>
-            <div className="pb-1 text-sm text-pli-slate">
-              <p>out of 10</p>
-              <p>{latest.pli100.toFixed(1)} / 100</p>
-              <p className="mt-1 font-medium text-pli-ink">{overallBandLabel(latest.pli)}</p>
-            </div>
-          </div>
-
-          <div className="mt-6 grid gap-4 sm:grid-cols-3">
-            <div className="rounded-2xl bg-pli-bg p-4">
-              <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Base</p>
-              <p className="mt-2 text-2xl font-semibold">{latest.pliBase.toFixed(2)}</p>
-            </div>
-            <div className="rounded-2xl bg-pli-bg p-4">
-              <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Balance factor</p>
-              <p className="mt-2 text-2xl font-semibold">{latest.balanceFactor.toFixed(2)}</p>
-            </div>
-            <div className="rounded-2xl bg-pli-bg p-4">
-              <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Spread</p>
-              <p className="mt-2 text-2xl font-semibold">{latest.profileSpread.toFixed(2)}</p>
-            </div>
-          </div>
-
-          <div className="mt-4 flex flex-wrap items-center gap-3">
-            <p className="text-sm text-pli-slate">Latest saved: {formatDate(latest.createdAt)}</p>
-            <ClearDataButton />
-          </div>
-        </div>
-
-        <div className="card p-6">
-          <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Radar profile</p>
-          <PliRadarChart scores={latest.domainScores} />
-        </div>
-      </div>
-
-      <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-5">
-        {latest.domainScores.map(score => {
-          const rule = RULES.find(item => item.id === score.ruleId);
-          if (!rule) return null;
-
-          return (
-            <Link key={score.ruleId} href={`/rules/${rule.slug}`} className="card block p-5 hover:-translate-y-0.5">
-              <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Rule {rule.index}</p>
-              <h3 className="mt-2 font-semibold">{rule.shortTitle}</h3>
-              <p className="mt-4 text-3xl font-semibold text-pli-teal">{score.adjusted.toFixed(1)}</p>
-              <p className="mt-2 text-xs text-pli-slate">{scoreBandLabel(score.band)}</p>
-            </Link>
-          );
-        })}
-      </div>
-
-      <div className="grid gap-6 lg:grid-cols-2">
-        <div className="card p-6">
-          <h2 className="font-semibold">Strengths</h2>
-          <ul className="mt-4 space-y-3 text-sm text-pli-slate">
-            {strong.map(score => {
-              const rule = RULES.find(item => item.id === score.ruleId);
-              if (!rule) return null;
-
-              return (
-                <li key={score.ruleId}>
-                  <strong className="text-pli-ink">{rule.title}</strong> · {score.adjusted.toFixed(1)}/10 ·{' '}
-                  {scoreBandLabel(score.band)}
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-
-        <div className="card p-6">
-          <h2 className="font-semibold">Growth areas</h2>
-          <div className="mt-4 space-y-4">
-            {growth.map(({ rule, score, interventions }) => (
-              <div key={rule.id} className="rounded-2xl bg-pli-bg p-4 text-sm text-pli-slate">
-                <p>
-                  <strong className="text-pli-ink">{rule.title}</strong> · {score.adjusted.toFixed(1)}/10 ·{' '}
-                  {scoreBandLabel(score.band)}
-                </p>
-                {interventions.length ? interventions.map(item => (
-                  <div key={item.id} className="mt-3 space-y-2">
-                    <p>
-                      <strong className="text-pli-ink">Tailored SBCC action:</strong> {item.title}
-                    </p>
-                    <p>
-                      <strong className="text-pli-ink">What to do:</strong> {item.whatToDo}
-                    </p>
-                    <p>
-                      <strong className="text-pli-ink">Quick action:</strong> {item.quickAction}
-                    </p>
-                    <p>
-                      <strong className="text-pli-ink">Why it may help:</strong> {item.whyItHelps}
-                    </p>
-                    <p>
-                      <strong className="text-pli-ink">Weekly practice:</strong> {item.weeklyPractice}
-                    </p>
-                    <p>
-                      <strong className="text-pli-ink">Longer habit:</strong> {item.longerHabit}
-                    </p>
-                  </div>
-                )) : (
-                  <p className="mt-3">No intervention card mapped yet for this score band.</p>
-                )}
+      <div className="card overflow-hidden p-0">
+        <div className="grid gap-6 bg-gradient-to-br from-white via-[#f7f3ec] to-[#eef7f5] p-8 md:grid-cols-[1fr_auto] md:items-center">
+          <div>
+            <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Latest result</p>
+            <h1 className="mt-2 text-3xl font-semibold">Peaceful Life Index Dashboard</h1>
+            <p className="mt-3 text-sm text-pli-slate">
+              Completed on {formatDate(latest.createdAt)} through the {character === 'maya' ? 'Maya' : 'Nimal'} story pathway.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-6">
+              <div>
+                <p className="text-sm text-pli-slate">Overall PLI</p>
+                <p className="mt-1 text-5xl font-semibold text-pli-teal">{latest.pli.toFixed(2)}/10</p>
+                <p className="mt-2 text-sm text-pli-slate">{overallBandLabel(latest.pli)}</p>
               </div>
-            ))}
+              <div className="min-w-[180px] rounded-2xl border border-pli-border bg-white/80 p-4">
+                <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Priority growth domain</p>
+                <p className="mt-2 text-lg font-semibold">{practicePlan?.weakestDomain ?? 'Growth area'}</p>
+                <p className="mt-2 text-sm text-pli-slate">
+                  Next recommended PLI: <strong className="text-pli-ink">{practicePlan?.nextAssessmentDate ?? '—'}</strong>
+                </p>
+              </div>
+            </div>
           </div>
+          <CharacterIllustration character={character} size="lg" />
         </div>
       </div>
 
-      {practicePlan ? (
-        <div className="card p-6">
-          <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Next month improvement plan</p>
-          <h2 className="mt-2 text-2xl font-semibold">Create your SBCC practice plan</h2>
-          <p className="mt-3 text-sm text-pli-slate">
-            Your weakest domain right now is <strong className="text-pli-ink">{practicePlan.weakestDomain}</strong>.
-            Focus especially on <strong className="text-pli-ink">{practicePlan.weakestSubdomains.join(' and ')}</strong> over the next 30 days.
-          </p>
-          <div className="mt-4 rounded-2xl bg-pli-bg p-4 text-sm text-pli-slate">
-            <p>
-              <strong className="text-pli-ink">Next recommended PLI assessment date:</strong> {practicePlan.nextAssessmentDate}
+      <div className="grid gap-6 xl:grid-cols-[1.05fr_0.95fr]">
+        <div className="space-y-6">
+          <div className="card p-6">
+            <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Domain profile</p>
+            <div className="mt-4">
+              <PliRadarChart
+                data={domainScores.map(score => {
+                  const rule = RULES.find(item => item.id === score.ruleId);
+                  return { label: rule?.shortTitle ?? score.ruleId, value: score.adjusted };
+                })}
+              />
+            </div>
+          </div>
+
+          <div className="card p-6">
+            <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Interaction matrix</p>
+            <div className="mt-4">
+              <InteractionGrid scores={domainScores} />
+            </div>
+          </div>
+
+          <div className="card p-6">
+            <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Trend over time</p>
+            <div className="mt-4">
+              <TrendChart data={trend} />
+            </div>
+          </div>
+        </div>
+
+        <div className="space-y-6">
+          {strongestRule ? (
+            <div className="card p-6">
+              <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Strongest area</p>
+              <h2 className="mt-2 text-xl font-semibold">{strongestRule.title}</h2>
+              <div className="mt-4">
+                <RuleHero slug={strongestRule.slug} title={strongestRule.title} />
+              </div>
+            </div>
+          ) : null}
+
+          <div className="card p-6">
+            <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Strengths</p>
+            <div className="mt-4 space-y-3">
+              {strong.map(score => {
+                const rule = RULES.find(item => item.id === score.ruleId);
+                if (!rule) return null;
+                return (
+                  <div key={score.ruleId} className="rounded-2xl border border-pli-border bg-pli-bg p-4">
+                    <p className="font-medium">{rule.title}</p>
+                    <p className="mt-1 text-sm text-pli-slate">{score.adjusted.toFixed(1)}/10 · {scoreBandLabel(score.band)}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          <div className="card p-6">
+            <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Growth areas</p>
+            <div className="mt-4 space-y-4">
+              {growth.map(entry => (
+                <div key={entry.rule.id} className="rounded-2xl border border-pli-border p-4">
+                  <p className="font-medium">{entry.rule.title}</p>
+                  <p className="mt-1 text-sm text-pli-slate">{entry.score.adjusted.toFixed(1)}/10 · {scoreBandLabel(entry.score.band)}</p>
+                  {entry.interventions[0] ? (
+                    <p className="mt-3 text-sm text-pli-slate">
+                      <strong className="text-pli-ink">{entry.interventions[0].title}:</strong> {entry.interventions[0].whatToDo}
+                    </p>
+                  ) : null}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="card p-6">
+            <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Priority growth planning</p>
+            <p className="mt-3 text-sm text-pli-slate">
+              Create a guided monthly practice plan based on your weakest domain and subdomain pattern.
             </p>
-            <p className="mt-2">
-              Practice your selected SBCC activities during the next month, revisit them weekly, then reassess on the date above.
-            </p>
+            <div className="mt-4">
+              <Link href="/practice-plan" className="inline-block rounded-full bg-pli-teal px-5 py-3 text-sm font-medium text-white">
+                Open My Practice Plan
+              </Link>
+            </div>
           </div>
-          <div className="mt-5 flex flex-wrap gap-3">
-            <Link href="/practice-plan" className="rounded-full bg-pli-teal px-5 py-3 text-sm font-medium text-white">
-              Open My Practice Plan
-            </Link>
-            <Link href="/assessment" className="rounded-full border border-pli-border px-5 py-3 text-sm font-medium text-pli-ink">
-              Revisit Assessment
-            </Link>
-          </div>
-        </div>
-      ) : null}
 
-      <div className="card p-6">
-        <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">Interaction grid</p>
-        <div className="mt-4">
-          <InteractionGrid />
-        </div>
-      </div>
-
-      <div className="card p-6">
-        <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">PLI trend over time</p>
-        <TrendChart data={trend} />
-      </div>
-
-      <div className="card p-6 text-sm text-pli-slate">
-        <p className="text-xs uppercase tracking-[0.16em] text-pli-gold">About the book and developer</p>
-        <p className="mt-3">
-          <strong className="text-pli-ink">The Happiness Blueprint: The 10 Golden Rules for a Peaceful and Purposeful Life</strong> by
-          <strong className="text-pli-ink"> Dr Senal Fernando</strong> is the conceptual foundation of the Peaceful Life Index.
-          The book offers a practical guide to understanding the 10 Golden Rules and applying them in daily life to build greater peace, purpose, balance, and happiness.
-        </p>
-        <p className="mt-3">
-          If you want to improve your Peaceful Life Index in a deeper and more meaningful way, this book is an ideal companion to the assessment.
-          <strong className="text-pli-ink"> Dr Senal Fernando</strong> is the developer and conceptual creator of the
-          <strong className="text-pli-ink"> Peaceful Life Index (PLI)</strong>.
-        </p>
-        <div className="mt-5 flex flex-wrap gap-3">
-          <Link href="/about-book" className="rounded-full bg-pli-teal px-5 py-3 text-sm font-medium text-white">
-            About the book
-          </Link>
-          <Link href="/about-developer" className="rounded-full border border-pli-border px-5 py-3 text-sm font-medium text-pli-ink">
-            About the developer
-          </Link>
+          <ClearDataButton label="Clear browser data and restart" />
         </div>
       </div>
     </div>

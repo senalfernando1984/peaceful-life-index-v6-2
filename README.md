@@ -166,3 +166,11 @@ It does not include true email-auth sign-in or a backend database.
 - improves trend chart sizing and label handling on phones
 - converts monthly practice table to mobile cards under small screens
 - reduces oversized mobile hero and chart sections while keeping desktop layout intact
+
+
+## Version 6.16.5 patch
+
+- optimizes homepage desktop layout to reduce wasted left-side whitespace
+- keeps hero text on the left and character cards on the right
+- moves the 10 Golden Rules into a wider dedicated section below
+- improves overall visual balance on large screens while preserving mobile responsiveness

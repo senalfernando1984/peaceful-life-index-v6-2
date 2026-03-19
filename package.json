@@ -1,6 +1,6 @@
 {
-  "name": "peaceful-life-index-v6-mobile-rescaling-fixes",
-  "version": "0.6.16.4",
+  "name": "peaceful-life-index-v6-homepage-layout-optimized",
+  "version": "0.6.16.5",
   "private": true,
   "scripts": {
     "dev": "next dev",

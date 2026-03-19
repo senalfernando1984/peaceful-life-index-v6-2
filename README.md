@@ -174,3 +174,11 @@ It does not include true email-auth sign-in or a backend database.
 - keeps hero text on the left and character cards on the right
 - moves the 10 Golden Rules into a wider dedicated section below
 - improves overall visual balance on large screens while preserving mobile responsiveness
+
+
+## Version 6.16.6 patch
+
+- removes Nimal and Maya from the homepage for a cleaner premium landing-page look
+- rebalances the homepage hero into a brand-first full-width section
+- keeps character selection inside the assessment flow instead of the homepage
+- preserves the 10 Golden Rules preview section below the hero

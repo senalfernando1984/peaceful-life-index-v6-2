@@ -1,60 +1,37 @@
 import Link from 'next/link';
 import { RULES } from '@/data/rules';
 import { ProfileForm } from '@/components/profile-form';
-import { CharacterIllustration } from '@/components/visuals/character-illustration';
 
 export default function HomePage() {
   return (
     <div className="space-y-6">
       <section className="space-y-6">
-        <div className="grid gap-6 xl:grid-cols-[minmax(0,1.08fr)_420px] xl:items-start">
-          <div className="min-w-0">
-            <span className="inline-flex rounded-full border border-pli-border px-3 py-1 text-xs font-medium text-pli-teal">
-              The Happiness Blueprint
-            </span>
+        <div className="card overflow-hidden p-0">
+          <div className="bg-gradient-to-br from-white via-[#f8f5ee] to-[#eef7f5] px-5 py-8 sm:px-8 sm:py-10 xl:px-10 xl:py-12">
+            <div className="max-w-5xl">
+              <span className="inline-flex rounded-full border border-pli-border bg-white/80 px-3 py-1 text-xs font-medium text-pli-teal">
+                The Happiness Blueprint
+              </span>
 
-            <h1 className="mt-4 max-w-5xl text-3xl font-semibold tracking-tight sm:text-4xl xl:text-[4.2rem] xl:leading-[1.02]">
-              Measure your <span className="text-pli-teal">Peaceful Life Index</span> through the 10 Golden Rules.
-            </h1>
+              <h1 className="mt-4 max-w-5xl text-3xl font-semibold tracking-tight sm:text-4xl xl:text-[4.5rem] xl:leading-[1.02]">
+                Measure your <span className="text-pli-teal">Peaceful Life Index</span> through the 10 Golden Rules.
+              </h1>
 
-            <p className="mt-4 max-w-3xl text-base leading-8 text-pli-slate sm:text-lg">
-              The Peaceful Life Index translates the philosophy of{' '}
-              <strong className="text-pli-ink">The Happiness Blueprint: The 10 Golden Rules</strong>{' '}
-              into a practical self-assessment. It helps you reflect on peace, balance,
-              everyday behaviour, relationships, health, financial stability, humility,
-              calmness, and adaptability, then shows your strengths, growth areas, and practical next steps.
-            </p>
+              <p className="mt-5 max-w-4xl text-base leading-8 text-pli-slate sm:text-lg">
+                The Peaceful Life Index translates the philosophy of{' '}
+                <strong className="text-pli-ink">The Happiness Blueprint: The 10 Golden Rules</strong>{' '}
+                into a practical self-assessment. It helps you reflect on peace, balance,
+                everyday behaviour, relationships, health, financial stability, humility,
+                calmness, and adaptability, then shows your strengths, growth areas, and practical next steps.
+              </p>
 
-            <div className="mt-7 flex flex-wrap gap-4">
-              <Link href="/assessment" className="rounded-full bg-pli-teal px-6 py-3 font-medium text-white">
-                Start assessment
-              </Link>
-              <Link href="/results" className="rounded-full border border-pli-border px-6 py-3 font-medium">
-                Open dashboard
-              </Link>
-            </div>
-          </div>
-
-          <div className="card overflow-hidden p-0">
-            <div className="grid gap-4 bg-gradient-to-br from-white via-[#f7f3ec] to-[#eef7f5] p-4 sm:grid-cols-2 xl:grid-cols-1">
-              <div className="min-w-0 rounded-3xl border border-pli-border bg-white/85 p-4 text-center">
-                <div className="mx-auto w-fit">
-                  <CharacterIllustration character="nimal" size="md" />
-                </div>
-                <p className="mt-2 text-lg font-semibold">Nimal</p>
-                <p className="mx-auto mt-1 max-w-[16rem] text-sm leading-6 text-pli-slate">
-                  Choose Nimal for the male story pathway.
-                </p>
-              </div>
-
-              <div className="min-w-0 rounded-3xl border border-pli-border bg-white/85 p-4 text-center">
-                <div className="mx-auto w-fit">
-                  <CharacterIllustration character="maya" size="md" />
-                </div>
-                <p className="mt-2 text-lg font-semibold">Maya</p>
-                <p className="mx-auto mt-1 max-w-[16rem] text-sm leading-6 text-pli-slate">
-                  Choose Maya for the female pathway.
-                </p>
+              <div className="mt-7 flex flex-wrap gap-4">
+                <Link href="/assessment" className="rounded-full bg-pli-teal px-6 py-3 font-medium text-white">
+                  Start assessment
+                </Link>
+                <Link href="/results" className="rounded-full border border-pli-border bg-white/75 px-6 py-3 font-medium">
+                  Open dashboard
+                </Link>
               </div>
             </div>
           </div>
